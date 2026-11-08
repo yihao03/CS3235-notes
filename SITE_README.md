@@ -1,45 +1,38 @@
-# Building the study site
+# Build and publish
 
-Requires the installed global MarkBind CLI, version 7.2.1.
+Requires global MarkBind 7.2.1.
 
 ```sh
 markbind serve
 markbind build
-```
-
-`serve` opens a local preview on port 8080. `build` writes the static site to `_site/`.
-
-All study notes remain in their original Markdown locations. `site.json` selects published pages explicitly; skill files and generated output are excluded. Source-review ledgers are available by link but excluded from search. Mermaid diagrams use MarkBind's bundled plugin, which loads Mermaid from its configured CDN and requires network access. Diagrams use native `<mermaid>` tags. Exact copies of the earlier Markdown notes are preserved in `original-notes/`.
-
-Deployment is configured for `yihao03/CS3235-notes`, with `baseUrl` set to `/CS3235-notes` and output pushed to `gh-pages` by `markbind deploy`.
-
-The original sketches referenced three absent figures: `canaries.png`, `fast-sfi.png`, and `lock-and-key.png`. Their site pages show explicit missing-figure notices with links to the fuller explanations. No replacement source figures were invented.
-
-Source coverage records and the writing guide are under `part2/webbook-7-12/`; they are excluded from search. Runtime browser checks could not run in the restricted environment: local sockets and Chromium startup were denied. Static generation and generated-link checks were used instead.
-
-## First publication
-
-Run from this directory in a terminal with working GitHub access and writable Git metadata:
-
-```sh
-gh auth status
-git init -b main
-git add .gitignore 404.md SITE_README.md index.md site.json _markbind/layouts _markbind/variables.md _markbind/variables.json assets memory_vulnerabilities original-notes part2 stylesheets
-git commit -m "Add CS3235 study notes and MarkBind site"
-gh auth setup-git
-gh repo create yihao03/CS3235-notes --private --source=. --remote=origin --push
-markbind deploy
-gh api --method POST repos/yihao03/CS3235-notes/pages -f build_type=legacy -f 'source[branch]=gh-pages' -f 'source[path]=/'
-gh api repos/yihao03/CS3235-notes/pages --jq .html_url
-```
-
-If the Pages resource already exists, use `--method PUT` for its configuration instead. Private-repository Pages requires an eligible GitHub plan. Repository privacy does not make the published Pages site private. [GitHub Pages requirements](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
-
-After later edits:
-
-```sh
-git add <changed-files>
-git commit -m "Update notes"
-git push
 markbind deploy
 ```
+
+Source: `yihao03/CS3235-notes`, private, branch `main`.
+
+Publishing uses `markbind deploy` to push `_site/` to `gh-pages`. Pushes to `main` also run `markbind deploy --ci` through `.github/workflows/deploy.yml`. The workflow verifies the output branch and requests a Pages build.
+
+In GitHub Settings > Pages, select **Deploy from a branch**, **gh-pages**, **/ (root)**. Private-repository Pages requires an eligible plan; the published site is normally public. [GitHub requirements](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
+
+The configured project path is `/CS3235-notes`. Change `baseUrl` and `deploy.repo` together if the repository moves.
+
+## Local Git synchronization
+
+The connected GitHub tools uploaded the initial sources because this environment mounts `.git` read-only. The local branch has no commits. Run once in a terminal with Git metadata write access:
+
+```sh
+git fetch origin
+git reset --mixed origin/main
+git branch -m main
+git branch --set-upstream-to=origin/main main
+```
+
+`reset --mixed` updates Git metadata without changing working files. Afterwards, commit and push edits normally, then use `markbind deploy` for manual publication.
+
+## Source and checks
+
+- Notes remain in their Markdown locations. Earlier originals are preserved in `original-notes/`.
+- Mermaid uses native `<mermaid>` tags and loads its renderer from a CDN.
+- Three original figures were absent: `canaries.png`, `fast-sfi.png`, `lock-and-key.png`. Their pages link to fuller explanations.
+- Static generation and local-link checks passed. Browser testing was blocked by local socket/Chromium restrictions.
+- Coverage records are under `part2/webbook-7-12/` and excluded from search.
