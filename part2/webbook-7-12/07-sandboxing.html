@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html data-dark-mode="true" data-code-theme="light">
+<head>
+    <script src="/CS3235-notes/markbind/js/theme-manager.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 7.2.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title> | CS3235 notes</title> <link rel="stylesheet" href="/CS3235-notes/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    
+    
+    <link rel="stylesheet" id="markbind-highlight-light" href="/CS3235-notes/markbind/css/codeblock-light.min.css">
+    <link rel="stylesheet" id="markbind-highlight-dark" href="/CS3235-notes/markbind/css/codeblock-dark.min.css">
+    <script src="/CS3235-notes/markbind/js/code-theme.js"></script><link rel="stylesheet" href="/CS3235-notes/markbind/css/markbind.min.css"><link rel="stylesheet" href="/CS3235-notes/plugins/codeBlockCopyButtons/codeBlockButtons.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/main.css">
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/study.css">
+</head>
+<script>
+  const baseUrl = '/CS3235-notes'
+</script>
+<body 
+   data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100"  
+  data-code-theme="light">
+<div id="app"><!--[--><header sticky><div data-v-94b60ff6><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-94b60ff6><div class="container-fluid" data-v-94b60ff6><div class="navbar-left" data-v-94b60ff6><!--[--><a href="/CS3235-notes/index.html" class="navbar-brand">CS3235 notes</a><!--]--></div><div class="navbar-default" data-v-94b60ff6><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-94b60ff6><!--[--> <li><a href="/CS3235-notes/memory_vulnerabilities/README.html" class="nav-link">Memory safety</a></li> <li><a href="/CS3235-notes/part2/webbook-7-12/README.html" class="nav-link">Sandboxing to cryptography</a></li>  <!--]--></ul></div><div class="navbar-right" data-v-94b60ff6><ul class="navbar-nav" data-v-94b60ff6><!--[--><li><form class="navbar-form" role="search"><div style="position:relative;" class="dropdown" data-v-103d5c4e><!--[--><input value="" data-bs-toggle="dropdown" type="text" class="form-control" placeholder="Search notes" autocomplete="off" data-v-103d5c4e><div class="form-control placeholder-div-hidden" data-v-103d5c4e>Search notes</div><!--]--><ul class="dropdown-menu search-dropdown-menu dropdown-menu-hidden dropdown-menu-end" data-v-103d5c4e><!--[--><!--]--></ul></div></form></li><!--]--></ul><!----></div></div></nav><div style="display:none;" class="lower-navbar-container" data-v-94b60ff6><!--[--><!----><!----><!--]--></div></div></header> <div id="flex-body"><nav id="site-nav" aria-label="Chapters" data-v-6b1b63d2><!--[--><div class="site-nav-top">Course notes</div> <div class="nav-component slim-scroll"><div class="site-nav-root"><!--[--><ul class="site-nav-list site-nav-list-root" data-v-6b1b63d2><!--[--><li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/index.html">Overview</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Memory safety 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">0. Introduction</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial-1a1b.html">1A/1B. Spatial errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal-2.html">2. Temporal errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/exploits-3.html">3. Memory exploits</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">4. Partial safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">5. Full safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/rust-6.html">6. Rust</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Sandboxing and isolation 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">7. Sandboxing</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">8. Policies</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">9. Capabilities</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/10-virtual-machines.html">10. Virtual machines</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/11-tee.html">11. Trusted execution environments</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/12-cryptography.html">12. Cryptography</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Revision 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/cheatsheet.html">Memory safety cheatsheet</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/review-checkpoints.html">Review checkpoints</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/INDEX.html">Topics 7 to 12 index</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/prerequisites.html">Prerequisites</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/assignment-overview.html">Assignment</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Original sketches
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/c_basics.html">C basics</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial.html">Spatial</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal.html">Temporal</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/2a.html">Sandboxing</a></div></li></ul></li><!--]--><!--v-if--></ul><!--]--></div></div><!--]--><!--v-if--></nav> <main id="content-wrapper"><div data-v-9ff38b52><nav aria-label="breadcrumb" class="breadcrumb-divider" data-v-9ff38b52><ol class="breadcrumb" data-v-9ff38b52><li class="notlink breadcrumb-marker" data-v-9ff38b52> ››   </li><!--[--><!--]--></ol></nav></div> <h1 id="7-sandboxing-and-privilege-separation">7. Sandboxing and privilege separation<a class="fa fa-anchor" href="#7-sandboxing-and-privilege-separation" onclick="event.stopPropagation()"></a></h1> <h2 id="7-1-containment">7.1 Containment<a class="fa fa-anchor" href="#7-1-containment" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Defense/design</th> <th>Purpose</th></tr></thead> <tbody class="table-group-divider"><tr><td>Prevention</td> <td>Stop compromise using memory safety, canaries, DEP, ASLR or CFI</td></tr> <tr><td>Containment</td> <td>Limit a compromised component&#39;s resources, including after dependency or non-memory-safety bugs</td></tr> <tr><td>Policy/enforcement separation</td> <td>Specify allowed requests separately from their checks</td></tr> <tr><td>Small trusted computing base (TCB)</td> <td>Minimize components whose correctness protects the resource</td></tr> <tr><td>Least privilege</td> <td>Give each component only required permissions</td></tr></tbody></table></div><p>Prevention and containment coexist. A small trusted broker can authenticate users and create sessions for a larger untrusted parser. <a href="https://blog.chromium.org/2008/09/security-architecture.html?hl=sk">Chromium</a>, <a href="https://usenix.org/legacy/events/sec03/tech/full_papers/provos_et_al/provos_et_al_html/index.html">Provos, Friedl and Honeyman: privilege separation</a></p> <blockquote><p>Fail-safe defaults require explicit grants; economy of mechanism favors simple protection code. See <a href="/CS3235-notes/part2/webbook-7-12/08-policies.html#8-1-choosing-the-default">policy defaults</a>. <a href="https://web.mit.edu/Saltzer/www/publications/protection/Basic.html">Original design principles</a></p></blockquote> <h2 id="7-2-reference-monitors-and-neat">7.2 Reference monitors and NEAT<a class="fa fa-anchor" href="#7-2-reference-monitors-and-neat" onclick="event.stopPropagation()"></a></h2> <p>A reference monitor checks a principal&#39;s requested operation on an object. Examples: users/processes/origins accessing files/sockets/DOMs. See <a href="/CS3235-notes/part2/webbook-7-12/08-policies.html#8-2-access-matrix">access models</a>.</p> <pre class="mermaid">flowchart LR
+    P[Principal] --&gt; R[Reference monitor]
+    Policy[Access policy] --&gt; R
+    R --&gt;|Allow operation| O[Protected object]
+    R --&gt;|Deny| D[Reject request]
+</pre> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>NEAT</th> <th>Standard requirement</th></tr></thead> <tbody class="table-group-divider"><tr><td>Non-bypassable</td> <td>Complete mediation: no unchecked access path</td></tr> <tr><td>Evaluable</td> <td>Small and simple enough to verify</td></tr> <tr><td>Always invoked</td> <td>Complete mediation: every protected access is checked</td></tr> <tr><td>Tamper-proof</td> <td>Tamper resistance: monitored code cannot alter checks or rules</td></tr></tbody></table></div><p>Non-bypassable and always invoked overlap: both require complete mediation. <a href="https://csrc.nist.gov/glossary/term/reference_monitor">NIST: reference monitor</a></p> <blockquote><p>Complete mediation includes initialization, recovery and shutdown. Cached authorization decisions need invalidation when authority changes. <a href="https://web.mit.edu/Saltzer/www/publications/protection/Basic.html">Saltzer and Schroeder</a></p></blockquote> <h2 id="7-3-syscall-policies">7.3 Syscall policies<a class="fa fa-anchor" href="#7-3-syscall-policies" onclick="event.stopPropagation()"></a></h2> <p>A 30-byte stack-buffer overflow redirects execution to shellcode. <code class="hljs inline no-lang">/bin/sh</code> needs <code class="hljs inline no-lang">execve</code>; file theft can use <code class="hljs inline no-lang">openat</code>, <code class="hljs inline no-lang">read</code>, then <code class="hljs inline no-lang">write</code>.</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Policy</th> <th>Consequence</th></tr></thead> <tbody class="table-group-divider"><tr><td>Deny <code class="hljs inline no-lang">execve</code>; allow everything else</td> <td>Stops shell execution; permits file theft through other calls</td></tr> <tr><td>Deny <code class="hljs inline no-lang">execve</code> after the first <code class="hljs inline no-lang">read</code></td> <td>Requires remembered execution history</td></tr> <tr><td>Allow <code class="hljs inline no-lang">read</code>, <code class="hljs inline no-lang">write(fd=1)</code>, <code class="hljs inline no-lang">exit_group</code></td> <td>Constrains operations and output destination; does not classify output bytes</td></tr></tbody></table></div><p>A parser holding a private key can leak it through an allowed <code class="hljs inline no-lang">write</code>. Separate the key and <a href="/CS3235-notes/part2/webbook-7-12/08-policies.html#8-9-information-flow">release decision</a> from parsing. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/sandboxing-and-privilege-separation.dc.html">Workbook: syscall playground</a></p> <h3 id="linux-enforcement-mechanisms">Linux enforcement mechanisms<a class="fa fa-anchor" href="#linux-enforcement-mechanisms" onclick="event.stopPropagation()"></a></h3> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Mechanism</th> <th>Checks and behavior</th> <th>Limit</th></tr></thead> <tbody class="table-group-divider"><tr><td>seccomp strict</td> <td>Only <code class="hljs inline no-lang">read</code>, <code class="hljs inline no-lang">write</code>, raw <code class="hljs inline no-lang">_exit</code> and <code class="hljs inline no-lang">sigreturn</code>; disallowed calls terminate the thread, with <code class="hljs inline no-lang">SIGKILL</code> process termination for a single-threaded process</td> <td>Fixed policy; <code class="hljs inline no-lang">exit_group</code> is forbidden</td></tr> <tr><td>seccomp-bpf</td> <td>Filter over syscall metadata, including number, architecture and six argument slots</td> <td>Cannot dereference argument pointers</td></tr> <tr><td>Linux Security Modules (LSMs)</td> <td>Hooks inside kernel operations, with security attributes on objects</td> <td>LSM framework needs an actual module/policy to enforce access rules</td></tr></tbody></table></div><p><a href="https://man7.org/linux/man-pages/man2/seccomp.2.html">seccomp manual</a>, <a href="https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html">kernel filter documentation</a>, <a href="https://www.kernel.org/doc/html/latest/security/lsm.html">LSM framework</a>.</p> <p>Strict mode permits raw <code class="hljs inline no-lang">_exit</code>; a library calling <code class="hljs inline no-lang">exit_group</code> kills even an honest program. <a href="https://man7.org/linux/man-pages/man2/seccomp.2.html">seccomp manual</a></p> <h3 id="filter-limits-and-installation">Filter limits and installation<a class="fa fa-anchor" href="#filter-limits-and-installation" onclick="event.stopPropagation()"></a></h3> <ul><li><code class="hljs inline no-lang">openat(dirfd, pathname, flags, mode)</code>: BPF sees the pathname pointer, not the filename. Dereferencing mutable userspace memory would permit TOCTOU: another thread changes it before kernel use.</li> <li>Classic filters are stateless. Finish startup before tightening restrictions for input handling.</li> <li>Filters survive allowed <code class="hljs inline no-lang">fork</code>/<code class="hljs inline no-lang">clone</code> and <code class="hljs inline no-lang">execve</code>; additional filters tighten restrictions.</li> <li>Installation needs <code class="hljs inline no-lang">no_new_privs</code> or <code class="hljs inline no-lang">CAP_SYS_ADMIN</code> in the caller&#39;s user namespace, preventing malicious filters on later-executed privileged programs. <a href="https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html">Kernel seccomp documentation</a>, <a href="https://man7.org/linux/man-pages/man2/seccomp.2.html">seccomp manual</a></li></ul> <p>File policies can use kernel inode/file hooks or a broker that validates and performs requests. <a href="https://www.kernel.org/doc/html/latest/security/lsm.html">LSM object hooks</a>, <a href="https://usenix.org/legacy/events/sec03/tech/full_papers/provos_et_al/provos_et_al_html/index.html">OpenSSH broker design</a></p> <blockquote><p>Check architecture: syscall numbers differ across ABIs. Actions include allow, error, trap, thread/process termination and notification. <a href="https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html">Kernel seccomp documentation</a></p></blockquote> <h3 id="expressing-an-allow-list-with-libseccomp">Expressing an allow-list with libseccomp<a class="fa fa-anchor" href="#expressing-an-allow-list-with-libseccomp" onclick="event.stopPropagation()"></a></h3> <pre><code class="hljs text"><span>ctx := seccomp_init(KILL_PROCESS)
+</span><span>require ctx != null
+</span><span>require rule_add(ctx, ALLOW, read) succeeds
+</span><span>require rule_add(ctx, ALLOW, write, argument[0] == 1) succeeds
+</span><span>require rule_add(ctx, ALLOW, exit_group) succeeds
+</span><span>require seccomp_load(ctx) succeeds
+</span><span>seccomp_release(ctx)
+</span><span>process_untrusted_input()
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><ul><li>Default <code class="hljs inline no-lang">KILL_PROCESS</code>: unmatched calls terminate the process with <code class="hljs inline no-lang">SIGSYS</code>.</li> <li><code class="hljs inline no-lang">SCMP_A0(SCMP_CMP_EQ, 1)</code>: first argument (output FD) must equal 1.</li> <li><code class="hljs inline no-lang">seccomp_load</code> activates the filter; releasing the library context leaves it installed.</li> <li>Abort on installation failure. Startup and platform-specific syscalls are omitted. <a href="https://man7.org/linux/man-pages/man3/seccomp_init.3.html">Initialization</a>, <a href="https://man7.org/linux/man-pages/man3/seccomp_rule_add.3.html">argument comparisons</a>, <a href="https://man7.org/linux/man-pages/man3/seccomp_load.3.html">loading</a></li></ul> <blockquote><p>Seccomp reduces kernel attack surface; information-flow rules and other sandbox boundaries need separate enforcement. Test every required path, including library syscalls. <a href="https://www.kernel.org/doc/html/latest/userspace-api/seccomp_filter.html">Kernel scope statement</a>, <a href="https://chromium.googlesource.com/chromium/src.git/+/master/sandbox/linux">Chromium Linux sandbox</a></p></blockquote> <h2 id="7-4-openssh">7.4 OpenSSH<a class="fa fa-anchor" href="#7-4-openssh" onclick="event.stopPropagation()"></a></h2> <p>Architecture adopted in 2002, documented in 2003:</p> <pre class="mermaid">flowchart LR
+    N[Untrusted network] --&gt; C[Unprivileged parser child]
+    C --&gt;|Typed IPC requests| M[Privileged monitor]
+    M --&gt;|Validate and perform| A[Authentication and session resources]
+    M --&gt;|Result or descriptor| C
+</pre> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Component</th> <th>Authority and responsibility</th></tr></thead> <tbody class="table-group-divider"><tr><td>Pre-authentication child</td> <td>Empty filesystem root via <code class="hljs inline no-lang">chroot</code>; dedicated UID/GID; network processing</td></tr> <tr><td>Monitor</td> <td>Retains privileged operations; validates requests and authentication state</td></tr> <tr><td>Post-authentication child</td> <td>Runs with authenticated user&#39;s permissions; requests remaining privileged operations</td></tr></tbody></table></div><p><code class="hljs inline no-lang">socketpair</code> IPC returns information, transfers descriptors and supports identity changes. For pseudo-terminals, the monitor creates the terminal and passes its FD; the child needs no general root authority.</p> <p>The monitor must independently validate requests, protocol state and authorization, even from a compromised child. <a href="https://usenix.org/legacy/events/sec03/tech/full_papers/provos_et_al/provos_et_al_html/index.html">Original OpenSSH design</a></p> <h2 id="7-5-browsers">7.5 Browsers<a class="fa fa-anchor" href="#7-5-browsers" onclick="event.stopPropagation()"></a></h2> <h3 id="historical-firefox-vulnerability-study">Historical Firefox vulnerability study<a class="fa fa-anchor" href="#historical-firefox-vulnerability-study" onclick="event.stopPropagation()"></a></h3> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Category</th> <th>Meaning</th> <th style="text-align:right;">Count</th></tr></thead> <tbody class="table-group-divider"><tr><td>WEB-TO-COMP</td> <td>Execute native code in a browser component, often through memory corruption</td> <td style="text-align:right;">277</td></tr> <tr><td>CROSS-ORIGIN</td> <td>Obtain another origin&#39;s data or privileges</td> <td style="text-align:right;">38</td></tr> <tr><td>USER</td> <td>Confuse or manipulate user decisions through browser interfaces</td> <td style="text-align:right;">20</td></tr> <tr><td>INTRA-ORIGIN</td> <td>Execute with a site&#39;s authority, including XSS-style attacks</td> <td style="text-align:right;">14</td></tr> <tr><td>WEB-TO-SYS</td> <td>Escalate through exposed browser or plugin APIs</td> <td style="text-align:right;">11</td></tr> <tr><td>Unclassified</td> <td>Insufficient information</td> <td style="text-align:right;">2</td></tr> <tr><td>Total</td> <td>Historical sample</td> <td style="text-align:right;">362</td></tr></tbody></table></div><p>WEB-TO-COMP: 76.5%; JavaScript: 88 cases. Historical sample only. In a single process, component compromise exposes other resources in that protection domain. <a href="https://www.comp.nus.edu.sg/~prateeks/papers/BrowserQuant.pdf">Dong et al., Figure 2 and vulnerability study</a></p> <h3 id="original-chromium-architecture-2008">Original Chromium architecture (2008)<a class="fa fa-anchor" href="#original-chromium-architecture-2008" onclick="event.stopPropagation()"></a></h3> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Sandboxed rendering engine</th> <th>Privileged browser kernel</th> <th>Needed on both sides</th></tr></thead> <tbody class="table-group-divider"><tr><td>HTML/CSS, images, JavaScript, regular expressions, layout, DOM, rendering, SVG, XML, XSLT</td> <td>Cookies, history, passwords, windows, address bar, Safe Browsing, networking/TLS, cache, downloads, clipboard</td> <td>URL and Unicode parsing</td></tr></tbody></table></div><ul><li>Renderer: unparsed content to bitmaps, with restricted permissions.</li> <li>Browser: validates IPC requests; shared URL/Unicode parsing remains trusted.</li> <li>Original boundary protects OS resources; a compromised renderer can still attack sites whose data it handles. <a href="https://seclab.stanford.edu/websec/chromium/chromium-security-architecture.pdf">2008 Chromium architecture, Table 1 and threat model</a></li></ul> <h3 id="later-layers">Later layers<a class="fa fa-anchor" href="#later-layers" onclick="event.stopPropagation()"></a></h3> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Layer</th> <th>Boundary it supplies</th></tr></thead> <tbody class="table-group-divider"><tr><td>Linux namespaces</td> <td>Restrict process/resource views</td></tr> <tr><td>seccomp-bpf</td> <td>Reduce reachable kernel operations</td></tr> <tr><td>Site isolation</td> <td>Separate sites&#39; documents and sensitive data across renderer processes</td></tr></tbody></table></div><p>Site isolation includes cross-site iframes. Site = scheme + registrable domain; <a href="/CS3235-notes/part2/webbook-7-12/08-policies.html#origins-and-selinux">origin</a> also distinguishes host/port. Android isolates a subset of sites to reduce overhead. <a href="https://chromium.googlesource.com/chromium/src.git/+/master/sandbox/linux">Chromium Linux sandbox</a>, <a href="https://www.chromium.org/Home/chromium-security/site-isolation/">site isolation design and scope</a></p> <blockquote><p>Extra processes cost memory; frequent boundary crossings cost IPC. Tight JavaScript/DOM interaction was a potential bottleneck in the browser study. Partition by privileges and communication patterns. <a href="https://www.comp.nus.edu.sg/~prateeks/papers/BrowserQuant.pdf">Dong et al., partitioning tradeoffs</a></p></blockquote> <h2 id="7-6-android">7.6 Android<a class="fa fa-anchor" href="#7-6-android" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Property</th> <th>Enforcement consequence</th></tr></thead> <tbody class="table-group-divider"><tr><td>App normally receives its own Linux UID and process</td> <td>Kernel DAC separates its private files from other apps</td></tr> <tr><td>Sandbox enforced below the runtime</td> <td>Native and interpreted app code share the sandbox boundary</td></tr> <tr><td>Developer signs the APK</td> <td>Package identity and update trust rely on signing keys</td></tr> <tr><td>IPC provides controlled sharing</td> <td>Access still depends on the receiving interface and permissions</td></tr></tbody></table></div><p>Android 8 added app seccomp-bpf; Android 9 required individual SELinux sandboxes for nonprivileged apps targeting API 28+. Browser compromise inherits the browser app&#39;s grants. <a href="https://source.android.com/docs/security/app-sandbox">Android application sandbox</a></p> <p>Certificates may be self-signed; no CA is required. Same-key apps historically could request a shared UID; <code class="hljs inline no-lang">sharedUserId</code> is deprecated since API 29 (Android 10). <a href="https://source.android.com/docs/security/features/apksigning">Android app signing</a>, <a href="https://developer.android.com/guide/topics/manifest/manifest-element#uid">manifest shared UID rules</a></p> <blockquote><p>APK signing proves integrity/key possession, not harmlessness. <code class="hljs inline no-lang">jarsigner</code> uses JAR/v1 signing; v2+ covers the whole APK, including ZIP metadata unprotected by v1. <a href="https://source.android.com/docs/security/features/apksigning">APK signing schemes</a></p></blockquote> <h2 id="7-7-namespaces">7.7 Namespaces<a class="fa fa-anchor" href="#7-7-namespaces" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Namespace</th> <th>Resource view</th></tr></thead> <tbody class="table-group-divider"><tr><td>PID</td> <td>Process identifiers</td></tr> <tr><td>Network</td> <td>Interfaces, protocol stacks, routing, firewall rules and ports</td></tr> <tr><td>Mount</td> <td>Mount points</td></tr> <tr><td>User</td> <td>User/group IDs and capabilities</td></tr> <tr><td>UTS</td> <td>Hostname and NIS domain name</td></tr> <tr><td>IPC</td> <td>System V IPC and POSIX message queues</td></tr> <tr><td>Cgroup</td> <td>Cgroup root directory</td></tr> <tr><td>Time</td> <td>Boot and monotonic clocks</td></tr></tbody></table></div><p>Containers use namespace views. <code class="hljs inline no-lang">clone</code> creates a process in new namespaces; <code class="hljs inline no-lang">unshare</code> separates execution context; <code class="hljs inline no-lang">setns</code> joins an existing namespace where permitted. <a href="https://man7.org/linux/man-pages/man7/namespaces.7.html">Linux namespace overview</a></p> <ul><li>PID hierarchy: first child is PID 1; descendants cannot address ancestors by PID. Ancestors can see descendants, subject to permissions. <a href="https://man7.org/linux/man-pages/man7/pid_namespaces.7.html">PID namespaces</a></li> <li>User namespaces map external UIDs to local UID 0. Capabilities govern namespace-scoped resources; local root has no host-root grant. <a href="https://man7.org/linux/man-pages/man7/user_namespaces.7.html">User namespaces</a></li> <li>Network namespaces isolate routes/interfaces; virtual Ethernet pairs can add connectivity. <a href="https://man7.org/linux/man-pages/man7/network_namespaces.7.html">Network namespaces</a></li></ul> <pre><code class="hljs bash"><span>unshare --user --map-root-user --pid --fork --mount-proc --net bash
+</span><span>ps ax
+</span><span>ip link
+</span><span><span class="hljs-built_in">exit</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Shell: PID 1, no external connectivity. <code class="hljs inline no-lang">--fork</code> creates the PID-namespace child; <code class="hljs inline no-lang">--mount-proc</code> supplies its <code class="hljs inline no-lang">/proc</code> view. Host policy may disable unprivileged user namespaces. <a href="https://man7.org/linux/man-pages/man1/unshare.1.html">unshare options</a></p> <blockquote><p>Namespaces share the host kernel. Syscall filtering reduces reachable kernel paths; permitted paths remain trusted. A kernel compromise defeats these boundaries. <a href="https://chromium.googlesource.com/chromium/src.git/+/master/sandbox/linux">Chromium Linux sandbox layers</a></p></blockquote> <h2 id="7-8-isolation-boundaries">7.8 Isolation boundaries<a class="fa fa-anchor" href="#7-8-isolation-boundaries" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Mechanism</th> <th>Protected boundary / checking location</th> <th>Trust consideration</th></tr></thead> <tbody class="table-group-divider"><tr><td>Process syscall sandbox</td> <td>Kernel mediates OS operations</td> <td>Kernel and filter policy</td></tr> <tr><td>Namespaces</td> <td>Kernel separates resource views</td> <td>Shared host kernel</td></tr> <tr><td>Inline monitor, such as SFI</td> <td>Checks within program</td> <td>Correct checks and protection against bypass</td></tr> <tr><td>Virtualization</td> <td>Hypervisor separates guest OSs</td> <td>Hypervisor and exposed interfaces</td></tr> <tr><td>Hardware isolation / TEE</td> <td>Hardware protects selected execution and data</td> <td>Hardware/platform security assumptions</td></tr></tbody></table></div><p>Guarantees depend on policy and enforcement correctness. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/sandboxing-and-privilege-separation.dc.html">Workbook: policy versus enforcement</a></p> <p><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">Topic 8: permissions and information flow</a>.</p></main> <nav id="page-nav" aria-label="On this page" data-v-6b1b63d2><!--[--><div class="nav-component slim-scroll"><a class="navbar-brand page-nav-title" href="#">On this page</a> <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-6b1b63d2><!--[--><a class="nav-link py-1" href="#7-sandboxing-and-privilege-separation">7. Sandboxing and privilege separation‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#7-1-containment">7.1 Containment‎</a> <a class="nav-link py-1" href="#7-2-reference-monitors-and-neat">7.2 Reference monitors and NEAT‎</a> <a class="nav-link py-1" href="#7-3-syscall-policies">7.3 Syscall policies‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#linux-enforcement-mechanisms">Linux enforcement mechanisms‎</a> <a class="nav-link py-1" href="#filter-limits-and-installation">Filter limits and installation‎</a> <a class="nav-link py-1" href="#expressing-an-allow-list-with-libseccomp">Expressing an allow-list with libseccomp‎</a></nav> <a class="nav-link py-1" href="#7-4-openssh">7.4 OpenSSH‎</a> <a class="nav-link py-1" href="#7-5-browsers">7.5 Browsers‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#historical-firefox-vulnerability-study">Historical Firefox vulnerability study‎</a> <a class="nav-link py-1" href="#original-chromium-architecture-2008">Original Chromium architecture (2008)‎</a> <a class="nav-link py-1" href="#later-layers">Later layers‎</a></nav> <a class="nav-link py-1" href="#7-6-android">7.6 Android‎</a> <a class="nav-link py-1" href="#7-7-namespaces">7.7 Namespaces‎</a> <a class="nav-link py-1" href="#7-8-isolation-boundaries">7.8 Isolation boundaries‎</a></nav><!--]--><!--v-if--></nav></div><!--]--><!--v-if--></nav> <div class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;" aria-hidden="true"><!--[--><i class="fas fa-arrow-circle-up"></i><!--]--></div></div> <footer><div class="text-center"><small>CS3235 study notes. Built with <a href="https://markbind.org/">MarkBind</a>.</small></div></footer><!--]--></div>
+</body><script src="/CS3235-notes/markbind/js/bootstrap-utility.min.js"></script>
+<script src="/CS3235-notes/markbind/js/polyfill.min.js"></script>
+<script src="/CS3235-notes/markbind/js/vue.global.prod.min.js"></script>
+<script src="/CS3235-notes/markbind/js/markbind.min.js"></script>
+<script src="07-sandboxing.page-vue-render.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script type="module">
+    window.mermaidPromise = null;
+    
+    const loadMermaid = () => {
+      if (window.mermaidPromise === null) {
+        window.mermaidPromise = import('https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs')
+          .then(({ default: mermaid }) => {
+            mermaid.initialize({
+              startOnLoad: false,
+            });
+            console.log('Mermaid loaded successfully');
+            return mermaid;
+          })
+          .catch((error) => {
+            console.error('Mermaid failed to load:', error);
+            window.mermaidPromise = false;
+            return null;
+          });
+      }
+      return window.mermaidPromise;
+    };
+
+    const renderMermaidDiagrams = (elements) => {
+      if (!elements || elements.length === 0) {
+        return Promise.resolve();
+      }
+
+      return loadMermaid().then(mermaid => {
+        if (!mermaid) return;
+        return mermaid.run({ nodes: Array.from(elements) })
+          .catch(err => console.error('Error rendering mermaid diagrams:', err));
+      });
+    };
+
+    const setupMermaidObserver = () => {
+      const observer = new MutationObserver((mutations) => {
+        let newMermaidElements = [];
+        
+        mutations.forEach(mutation => {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeType === 1 && node.classList && 
+                  node.classList.contains('mermaid')) {
+                newMermaidElements.push(node);
+              }
+              
+              if (node.nodeType === 1 && node.querySelectorAll) {
+                const mermaidInNode = node.querySelectorAll('.mermaid');
+                if (mermaidInNode.length) {
+                  newMermaidElements = [...newMermaidElements, ...mermaidInNode];
+                }
+              }
+            });
+          }
+        });
+        
+        if (newMermaidElements.length > 0) {
+          renderMermaidDiagrams(newMermaidElements);
+        }
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      
+      return observer;
+    };
+
+    // Initialize on DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const existingDiagrams = document.querySelectorAll('.mermaid');
+      if (existingDiagrams.length > 0) {
+        renderMermaidDiagrams(existingDiagrams);
+      }
+      
+      setupMermaidObserver();
+    });
+
+  </script>
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+        const copyButtonBody = element.querySelector('.function-btn-body');
+        const tooltipText = element.querySelector(".tooltiptext");
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+        copyButtonBody.innerHTML = `
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="2 2 22 22"
+  >
+    <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875
+    L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z"></path>
+  </svg>
+`;
+        console.log("Running tooltip");
+        tooltipText.innerText  = `Copied!`;
+        setTimeout(() => {
+            copyButtonBody.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "/>
+    </g>
+</svg>
+`;
+            tooltipText.innerText  = `Copy`;
+        }, 3000);
+    }
+    </script>
+</html>

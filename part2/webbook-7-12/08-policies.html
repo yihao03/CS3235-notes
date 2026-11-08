@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html data-dark-mode="true" data-code-theme="light">
+<head>
+    <script src="/CS3235-notes/markbind/js/theme-manager.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 7.2.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title> | CS3235 notes</title> <link rel="stylesheet" href="/CS3235-notes/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    
+    
+    <link rel="stylesheet" id="markbind-highlight-light" href="/CS3235-notes/markbind/css/codeblock-light.min.css">
+    <link rel="stylesheet" id="markbind-highlight-dark" href="/CS3235-notes/markbind/css/codeblock-dark.min.css">
+    <script src="/CS3235-notes/markbind/js/code-theme.js"></script><link rel="stylesheet" href="/CS3235-notes/markbind/css/markbind.min.css"><link rel="stylesheet" href="/CS3235-notes/plugins/codeBlockCopyButtons/codeBlockButtons.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/main.css">
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/study.css">
+</head>
+<script>
+  const baseUrl = '/CS3235-notes'
+</script>
+<body 
+   data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100"  
+  data-code-theme="light">
+<div id="app"><!--[--><header sticky><div data-v-94b60ff6><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-94b60ff6><div class="container-fluid" data-v-94b60ff6><div class="navbar-left" data-v-94b60ff6><!--[--><a href="/CS3235-notes/index.html" class="navbar-brand">CS3235 notes</a><!--]--></div><div class="navbar-default" data-v-94b60ff6><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-94b60ff6><!--[--> <li><a href="/CS3235-notes/memory_vulnerabilities/README.html" class="nav-link">Memory safety</a></li> <li><a href="/CS3235-notes/part2/webbook-7-12/README.html" class="nav-link">Sandboxing to cryptography</a></li>  <!--]--></ul></div><div class="navbar-right" data-v-94b60ff6><ul class="navbar-nav" data-v-94b60ff6><!--[--><li><form class="navbar-form" role="search"><div style="position:relative;" class="dropdown" data-v-103d5c4e><!--[--><input value="" data-bs-toggle="dropdown" type="text" class="form-control" placeholder="Search notes" autocomplete="off" data-v-103d5c4e><div class="form-control placeholder-div-hidden" data-v-103d5c4e>Search notes</div><!--]--><ul class="dropdown-menu search-dropdown-menu dropdown-menu-hidden dropdown-menu-end" data-v-103d5c4e><!--[--><!--]--></ul></div></form></li><!--]--></ul><!----></div></div></nav><div style="display:none;" class="lower-navbar-container" data-v-94b60ff6><!--[--><!----><!----><!--]--></div></div></header> <div id="flex-body"><nav id="site-nav" aria-label="Chapters" data-v-6b1b63d2><!--[--><div class="site-nav-top">Course notes</div> <div class="nav-component slim-scroll"><div class="site-nav-root"><!--[--><ul class="site-nav-list site-nav-list-root" data-v-6b1b63d2><!--[--><li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/index.html">Overview</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Memory safety 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">0. Introduction</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial-1a1b.html">1A/1B. Spatial errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal-2.html">2. Temporal errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/exploits-3.html">3. Memory exploits</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">4. Partial safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">5. Full safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/rust-6.html">6. Rust</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Sandboxing and isolation 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">7. Sandboxing</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">8. Policies</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">9. Capabilities</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/10-virtual-machines.html">10. Virtual machines</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/11-tee.html">11. Trusted execution environments</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/12-cryptography.html">12. Cryptography</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Revision 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/cheatsheet.html">Memory safety cheatsheet</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/review-checkpoints.html">Review checkpoints</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/INDEX.html">Topics 7 to 12 index</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/prerequisites.html">Prerequisites</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/assignment-overview.html">Assignment</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Original sketches
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/c_basics.html">C basics</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial.html">Spatial</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal.html">Temporal</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/2a.html">Sandboxing</a></div></li></ul></li><!--]--><!--v-if--></ul><!--]--></div></div><!--]--><!--v-if--></nav> <main id="content-wrapper"><div data-v-9ff38b52><nav aria-label="breadcrumb" class="breadcrumb-divider" data-v-9ff38b52><ol class="breadcrumb" data-v-9ff38b52><li class="notlink breadcrumb-marker" data-v-9ff38b52> ››   </li><!--[--><!--]--></ol></nav></div> <h1 id="8-sandboxing-policies">8. Sandboxing policies<a class="fa fa-anchor" href="#8-sandboxing-policies" onclick="event.stopPropagation()"></a></h1> <p>Prerequisite: <a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">7. Sandboxing and privilege separation</a>.</p> <h2 id="8-1-choosing-the-default">8.1 Choosing the default<a class="fa fa-anchor" href="#8-1-choosing-the-default" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Policy</th> <th>Default</th> <th>Author must identify</th> <th>Failure from an omitted rule</th></tr></thead> <tbody class="table-group-divider"><tr><td>Allow-list</td> <td>Deny</td> <td>Required access</td> <td>Legitimate action fails</td></tr> <tr><td>Block-list</td> <td>Allow</td> <td>Every dangerous action</td> <td>Dangerous action succeeds</td></tr></tbody></table></div><p>Allow-listing implements fail-safe defaults. <a href="https://www.cs.virginia.edu/~evans/cs551/saltzer/">Saltzer and Schroeder, §I.A.3</a></p> <p><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html#7-3-syscall-policies">Syscall policies</a> illustrate both failures: blocking <code class="hljs inline no-lang">execve</code> leaves file theft possible; seccomp strict rejects needed calls but preserves existing descriptors.</p> <blockquote><p>Least privilege limits required authority. Psychological acceptability favors protection users can work with. <a href="https://www.cs.virginia.edu/~evans/cs551/saltzer/">Saltzer and Schroeder</a></p></blockquote> <h2 id="8-2-access-matrix">8.2 Access matrix<a class="fa fa-anchor" href="#8-2-access-matrix" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Term</th> <th>Meaning</th> <th>Examples</th></tr></thead> <tbody class="table-group-divider"><tr><td>Principal</td> <td>Authority holder</td> <td>User/app/origin</td></tr> <tr><td>Object</td> <td>Protected resource</td> <td>File/socket/DOM/camera</td></tr> <tr><td>Right</td> <td>Allowed operation</td> <td>Read/write/execute</td></tr> <tr><td>Protection domain</td> <td>Accessible objects/rights</td> <td>Parser/authentication service</td></tr></tbody></table></div><p>Applications can span domains. <a href="https://www.cs.virginia.edu/~evans/cs551/saltzer/">Saltzer and Schroeder, glossary and protected subsystems</a></p> <p>Lampson&#39;s sparse matrix: rows = domains; columns = objects; cells = rights. Access requires the requested right in the cell. Implementations store rows or columns. <a href="https://cseweb.ucsd.edu/classes/wi19/cse221-a/papers/lampson74.pdf">Lampson, <em>Protection</em>, §§2 and 3</a></p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Domain</th> <th>Report</th> <th>Audit log</th> <th>Executable</th></tr></thead> <tbody class="table-group-divider"><tr><td>Alice</td> <td><code class="hljs inline no-lang">r,w</code></td> <td><code class="hljs inline no-lang">r</code></td> <td><code class="hljs inline no-lang">x</code></td></tr> <tr><td>Auditor</td> <td><code class="hljs inline no-lang">r</code></td> <td><code class="hljs inline no-lang">r</code></td> <td>None</td></tr> <tr><td>Service</td> <td><code class="hljs inline no-lang">r</code></td> <td><code class="hljs inline no-lang">w</code></td> <td><code class="hljs inline no-lang">x</code></td></tr></tbody></table></div><div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Representation</th> <th>Rights organized by</th> <th>Lookup</th> <th>Limitation</th></tr></thead> <tbody class="table-group-divider"><tr><td>ACL</td> <td>Object: matrix column</td> <td>Report readers</td> <td>Listing Alice&#39;s authority requires multiple ACLs</td></tr> <tr><td>Capability list</td> <td>Holder/domain: matrix row</td> <td>Domain authority</td> <td>Revocation/delegated-copy tracking need extra design</td></tr></tbody></table></div><p>Capabilities are unforgeable authority-bearing references; object names alone grant no authority. <a href="https://cseweb.ucsd.edu/classes/wi19/cse221-a/papers/lampson74.pdf">Lampson, implementation techniques</a></p> <p><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">Delegation and revocation</a>.</p> <h2 id="8-3-policy-authority">8.3 Policy authority<a class="fa fa-anchor" href="#8-3-policy-authority" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Model</th> <th>Decision</th> <th>Example</th> <th>Consequence</th></tr></thead> <tbody class="table-group-divider"><tr><td>Discretionary access control, DAC</td> <td>Owner controls grants</td> <td>Unix file mode</td> <td>An owner&#39;s program can exercise the owner&#39;s authority</td></tr> <tr><td>Mandatory access control, MAC</td> <td>System policy constrains subjects</td> <td>SELinux type enforcement</td> <td>Owners cannot override the mandatory restrictions</td></tr> <tr><td>Role-based access control, RBAC</td> <td>Permissions assigned to roles; users assigned to roles</td> <td>Operations role can restart a service</td> <td>Job changes can be handled through role membership</td></tr></tbody></table></div><p>DAC/MAC govern policy control; RBAC organizes permissions. They can coexist. <a href="https://github.com/SELinuxProject/selinux-notebook/blob/main/src/mac.md">SELinux MAC documentation</a>, <a href="https://csrc.nist.gov/Projects/role-based-access-control/faqs">NIST RBAC FAQ</a></p> <h3 id="unix-dac">Unix DAC<a class="fa fa-anchor" href="#unix-dac" onclick="event.stopPropagation()"></a></h3> <pre><code class="hljs text"><span>-rwxrw----  alice students  thesis.tex
+</span><span> owner rwx | group rw- | others ---
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><ul><li><code class="hljs inline no-lang">chmod o+r thesis.tex</code> grants others read access; requires ownership or appropriate privilege.</li> <li>Alice&#39;s malicious process can change her file modes or copy contents elsewhere. DAC alone cannot constrain it. <a href="https://man7.org/linux/man-pages/man2/chmod.2.html">Linux <code class="hljs inline no-lang">chmod(2)</code></a>, <a href="https://man7.org/linux/man-pages/man7/credentials.7.html">process credentials</a></li></ul> <h3 id="origins-and-selinux">Origins and SELinux<a class="fa fa-anchor" href="#origins-and-selinux" onclick="event.stopPropagation()"></a></h3> <p>HTTP(S) origin:</p> <pre><code class="hljs text"><span>https://www.nus.edu.sg:443/~prateeks/add.php?q=x
+</span><span>└ scheme └──── host ───┘ port
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><ul><li>Origin = scheme + host + effective port; any difference separates origins. Path/query are irrelevant.</li> <li>Cross-origin object access is restricted; controlled network exceptions still permit some cross-origin requests. <a href="https://datatracker.ietf.org/doc/html/rfc6454">RFC 6454, §§3 to 5</a></li></ul> <p>SELinux labels subjects/objects with types. Kernel object managers enforce permitted type interactions; Unix ownership cannot override a mandatory denial. <a href="https://github.com/SELinuxProject/selinux-notebook/blob/main/src/type_enforcement.md">SELinux type enforcement</a></p> <h3 id="roles">Roles<a class="fa fa-anchor" href="#roles" onclick="event.stopPropagation()"></a></h3> <pre><code class="hljs text"><span>Alice -&gt; webops role -&gt; restart/status nginx
+</span><span>Bob   -&gt; auditor role -&gt; read logs
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Administrator-controlled <code class="hljs inline no-lang">sudoers</code> rules can map Unix groups to command permissions. Moving Alice to auditing changes membership, not each resource entry. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/sandboxing-policies.dc.html">Workbook, RBAC example</a></p> <blockquote><p>Static separation of duty forbids conflicting role assignments; dynamic separation restricts simultaneous session roles. Example: separate payment preparation and approval. <a href="https://csrc.nist.gov/Projects/role-based-access-control/faqs">NIST RBAC FAQ</a></p></blockquote> <h2 id="8-4-confidentiality-and-integrity-labels">8.4 Confidentiality and integrity labels<a class="fa fa-anchor" href="#8-4-confidentiality-and-integrity-labels" onclick="event.stopPropagation()"></a></h2> <p>For <code class="hljs inline no-lang">Low &lt; High</code>, fixed labels per access, simplified Bell-LaPadula and strict Biba:</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Model</th> <th>High means</th> <th>Read allowed when</th> <th>Write allowed when</th> <th>Forbidden directions</th></tr></thead> <tbody class="table-group-divider"><tr><td>Bell-LaPadula</td> <td>Secret</td> <td><code class="hljs inline no-lang">object &lt;= subject</code></td> <td><code class="hljs inline no-lang">subject &lt;= object</code></td> <td>Read up; write down</td></tr> <tr><td>Strict Biba</td> <td>Trusted</td> <td><code class="hljs inline no-lang">subject &lt;= object</code></td> <td><code class="hljs inline no-lang">object &lt;= subject</code></td> <td>Read down; write up</td></tr></tbody></table></div><p>Read: object to subject. Write: subject to object.</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Subject</th> <th>Operation</th> <th>Object</th> <th>Bell-LaPadula</th> <th>Strict Biba</th></tr></thead> <tbody class="table-group-divider"><tr><td>Low</td> <td>Read</td> <td>Low</td> <td>Allow</td> <td>Allow</td></tr> <tr><td>Low</td> <td>Read</td> <td>High</td> <td>Deny</td> <td>Allow</td></tr> <tr><td>High</td> <td>Read</td> <td>Low</td> <td>Allow</td> <td>Deny</td></tr> <tr><td>High</td> <td>Read</td> <td>High</td> <td>Allow</td> <td>Allow</td></tr> <tr><td>Low</td> <td>Write</td> <td>Low</td> <td>Allow</td> <td>Allow</td></tr> <tr><td>Low</td> <td>Write</td> <td>High</td> <td>Allow</td> <td>Deny</td></tr> <tr><td>High</td> <td>Write</td> <td>Low</td> <td>Deny</td> <td>Allow</td></tr> <tr><td>High</td> <td>Write</td> <td>High</td> <td>Allow</td> <td>Allow</td></tr></tbody></table></div><ul><li>Confidentiality: upward flow. Integrity: downward flow.</li> <li>Both on one label: same-level access only. Separate labels express independent requirements. <a href="https://scispace.com/pdf/integrity-considerations-for-secure-computer-systems-1euz8w4arz.pdf">Biba, §§III and IV, including combined security/integrity constraints</a></li></ul> <p>Guarantees require correct checks and labels. <a href="https://www.cerias.purdue.edu/apps/reports_and_papers/view/2834/">Biba, original report abstract</a></p> <h2 id="8-5-browser-extensions-2010">8.5 Browser extensions (2010)<a class="fa fa-anchor" href="#8-5-browser-extensions-2010" onclick="event.stopPropagation()"></a></h2> <p>Barth et al. studied 25 popular Firefox extensions in 2010. Extensions could access arbitrary files and launch processes; page exploits could inherit that authority.</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Finding in that sample</th> <th>Result</th></tr></thead> <tbody class="table-group-divider"><tr><td>Needed fewer than full privileges</td> <td>88%</td></tr> <tr><td>Used unnecessarily powerful APIs</td> <td>76%</td></tr></tbody></table></div><div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Task needs</th> <th>API used</th></tr></thead> <tbody class="table-group-divider"><tr><td>User-selected file (N)</td> <td>Arbitrary file access (C)</td></tr> <tr><td>Own SQLite database (N)</td> <td>Any SQLite database (H)</td></tr> <tr><td>One domain (M)</td> <td>Arbitrary network access (H)</td></tr> <tr><td>Display a page (L)</td> <td>Arbitrary DOM access (H)</td></tr> <tr><td>Own preferences (N)</td> <td>Browser/all-extension preferences (H)</td></tr></tbody></table></div><p>Severity: C critical, H high, M medium, L low, N none.</p> <p>Chrome architecture in the paper:</p> <pre class="mermaid">flowchart LR
+    P[Untrusted page] &lt;--&gt;|Shared DOM| C[Content script]
+    C &lt;--&gt;|Messages| E[Extension core]
+    E &lt;--&gt;|Messages| N[Optional native binary]
+<!------><!------><!------></pre> <ul><li>Content script: DOM access, JavaScript heap separate from page scripts.</li> <li>Core: declared install-time privileges. Gmail Checker requested <code class="hljs inline no-lang">tabs</code>, <code class="hljs inline no-lang">http://*.google.com/</code>, <code class="hljs inline no-lang">https://*.google.com/</code>.</li> <li>Optional native code: full user authority.</li> <li>Compromised scripts need the core to accept privileged messages. <a href="https://www.ndss-symposium.org/wp-content/uploads/2017/09/barth.pdf">Barth et al., 2010</a></li></ul> <p>Users choose grants; platforms enforce them against extensions. DAC/MAC classification depends on the authority considered. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/sandboxing-policies.dc.html">Workbook, extension exercise answer</a></p> <blockquote><p>Chrome still uses isolated worlds and messages for other extension APIs. The shared DOM remains untrusted input. Modern manifests separate API/host permissions and allow optional runtime grants; the 2010 manifest is historical. <a href="https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts">Chrome content scripts</a>, <a href="https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions">declaring permissions</a></p></blockquote> <h2 id="8-6-permission-prompts">8.6 Permission prompts<a class="fa fa-anchor" href="#8-6-permission-prompts" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>When</th> <th>Benefit</th> <th>Cost</th></tr></thead> <tbody class="table-group-divider"><tr><td>Install time</td> <td>Fixed authority is easier to inspect</td> <td>User has little usage context; historical Android acceptance was all-or-nothing</td></tr> <tr><td>Time of use</td> <td>Request accompanies the relevant action</td> <td>Repeated interruptions consume attention</td></tr></tbody></table></div><p>Felt et al. (2012): Internet survey of 308 Android users; laboratory study of 25.</p> <ul><li>17% paid attention to permissions during installation.</li> <li>Only 3% of survey respondents answered all three comprehension questions correctly.</li></ul> <p>Historical interface/sample only. <a href="https://research.google/pubs/android-permissions-user-attention-comprehension-and-behavior/">Felt et al., SOUPS 2012</a></p> <p>Android 6.0 added runtime requests for dangerous permissions. Request in context; handle denial/revocation; check permission before access. <a href="https://developer.android.com/training/permissions/requesting">Android runtime permission guide</a></p> <blockquote><p>After denial, preserve unrelated functionality. Prompts identify the resource; apps must explain its purpose. <a href="https://developer.android.com/training/permissions/requesting">Android runtime permission guide</a></p></blockquote> <h2 id="8-7-confused-deputies">8.7 Confused deputies<a class="fa fa-anchor" href="#8-7-confused-deputies" onclick="event.stopPropagation()"></a></h2> <p>Editor holds <code class="hljs inline no-lang">{L1,L3}</code>; camera A requires <code class="hljs inline no-lang">L1</code>, B requires <code class="hljs inline no-lang">L2</code>. Editor can call A but cannot call B directly. A forwarding to B must preserve that restriction. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/sandboxing-policies.dc.html">Workbook, ICC example</a></p> <p>Permission re-delegation: a privileged app acts for an unauthorized app. The confused deputy uses its own authority without checking the requester&#39;s entitlement.</p> <p>Historical Android 2.2 Settings attack:</p> <pre class="mermaid">sequenceDiagram
+    participant M as App with no permissions
+    participant S as Settings receiver
+    participant O as Protected Wi-Fi API
+    M-&gt;&gt;S: Intent resembling widget request
+    S-&gt;&gt;O: Change Wi-Fi state
+    O--&gt;&gt;S: Allowed: Settings has permission
+</pre> <ul><li>Settings accepted widget control messages from arbitrary apps; Wi-Fi checks saw Settings&#39; authority.</li> <li>Felt et al. (2011): 15 vulnerabilities in 5 core system apps.</li> <li>Defenses: check requester authority at the deputy boundary; or reduce effective permissions after less-privileged IPC (IPC Inspection).</li> <li>Preventing re-delegation does not prevent sharing already-accessed data. <a href="https://static.usenix.org/events/sec11/tech/full_papers/Felt.pdf">Felt et al., 2011, §§4 to 6</a></li></ul> <h2 id="8-8-permission-lists-and-malware">8.8 Permission lists and malware<a class="fa fa-anchor" href="#8-8-permission-lists-and-malware" onclick="event.stopPropagation()"></a></h2> <p>Zhou and Jiang (2012): 1,260 malware samples versus 1,260 top free Android Market apps, collected October 2011.</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Observation</th> <th>Interpretation</th></tr></thead> <tbody class="table-group-divider"><tr><td>Internet, phone-state, network-state and external-storage access common in both</td> <td>Broad permissions alone poorly distinguish intent</td></tr> <tr><td><code class="hljs inline no-lang">READ_SMS</code>: 790 malware samples, 62.7%</td> <td>SMS access was much more common in this malware sample</td></tr> <tr><td>Paper reports fewer than 33 benign apps with <code class="hljs inline no-lang">READ_SMS</code></td> <td>Do not treat absence from the top-20 chart as zero</td></tr> <tr><td>Boot-completed: 688 malware versus 137 benign</td> <td>Fits malware seeking unattended execution</td></tr></tbody></table></div><p>SMS access enabled premium-rate fraud and confirmation-message interception. Permission patterns cannot prove individual malice; these historical samples give no current malware rate. <a href="https://oaklandsok.github.io/papers/zhou2012.pdf">Zhou and Jiang, §III.D and Figure 5</a></p> <h2 id="8-9-information-flow">8.9 Information flow<a class="fa fa-anchor" href="#8-9-information-flow" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Goal</th> <th>Forbidden influence</th></tr></thead> <tbody class="table-group-divider"><tr><td>Confidentiality</td> <td>Secret input affects public observations beyond authorized release</td></tr> <tr><td>Integrity</td> <td>Attacker-controlled input corrupts trusted output</td></tr></tbody></table></div><p>Strict noninterference: public observations are independent of secret inputs. Declassification permits specified release, such as a password checker revealing whether a guess matches. <a href="https://research.chalmers.se/en/publication/2026">Sabelfeld and Myers, <em>A model for delimited information release</em></a></p> <pre><code class="hljs text"><span>Stored secret + supplied guess -&gt; trusted checker -&gt; success/failure
+</span><span>Stored secret                 -X-&gt; public raw-secret response
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html#7-3-syscall-policies">Syscall filters</a> cannot distinguish authorized results from secret bytes. Keep secrets and release decisions behind a narrow trusted interface. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/sandboxing-policies.dc.html">workbook, false positives</a></p> <blockquote><p>Specify the released value: login outcome, never stored credentials. Unrestricted declassification can leak arbitrary secrets; repeated guesses accumulate observations. <a href="https://research.chalmers.se/en/publication/2026">Sabelfeld and Myers</a></p></blockquote></main> <nav id="page-nav" aria-label="On this page" data-v-6b1b63d2><!--[--><div class="nav-component slim-scroll"><a class="navbar-brand page-nav-title" href="#">On this page</a> <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-6b1b63d2><!--[--><a class="nav-link py-1" href="#8-sandboxing-policies">8. Sandboxing policies‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#8-1-choosing-the-default">8.1 Choosing the default‎</a> <a class="nav-link py-1" href="#8-2-access-matrix">8.2 Access matrix‎</a> <a class="nav-link py-1" href="#8-3-policy-authority">8.3 Policy authority‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#unix-dac">Unix DAC‎</a> <a class="nav-link py-1" href="#origins-and-selinux">Origins and SELinux‎</a> <a class="nav-link py-1" href="#roles">Roles‎</a></nav> <a class="nav-link py-1" href="#8-4-confidentiality-and-integrity-labels">8.4 Confidentiality and integrity labels‎</a> <a class="nav-link py-1" href="#8-5-browser-extensions-2010">8.5 Browser extensions (2010)‎</a> <a class="nav-link py-1" href="#8-6-permission-prompts">8.6 Permission prompts‎</a> <a class="nav-link py-1" href="#8-7-confused-deputies">8.7 Confused deputies‎</a> <a class="nav-link py-1" href="#8-8-permission-lists-and-malware">8.8 Permission lists and malware‎</a> <a class="nav-link py-1" href="#8-9-information-flow">8.9 Information flow‎</a></nav><!--]--><!--v-if--></nav></div><!--]--><!--v-if--></nav> <div class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;" aria-hidden="true"><!--[--><i class="fas fa-arrow-circle-up"></i><!--]--></div></div> <footer><div class="text-center"><small>CS3235 study notes. Built with <a href="https://markbind.org/">MarkBind</a>.</small></div></footer><!--]--></div>
+</body><script src="/CS3235-notes/markbind/js/bootstrap-utility.min.js"></script>
+<script src="/CS3235-notes/markbind/js/polyfill.min.js"></script>
+<script src="/CS3235-notes/markbind/js/vue.global.prod.min.js"></script>
+<script src="/CS3235-notes/markbind/js/markbind.min.js"></script>
+<script src="08-policies.page-vue-render.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script type="module">
+    window.mermaidPromise = null;
+    
+    const loadMermaid = () => {
+      if (window.mermaidPromise === null) {
+        window.mermaidPromise = import('https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs')
+          .then(({ default: mermaid }) => {
+            mermaid.initialize({
+              startOnLoad: false,
+            });
+            console.log('Mermaid loaded successfully');
+            return mermaid;
+          })
+          .catch((error) => {
+            console.error('Mermaid failed to load:', error);
+            window.mermaidPromise = false;
+            return null;
+          });
+      }
+      return window.mermaidPromise;
+    };
+
+    const renderMermaidDiagrams = (elements) => {
+      if (!elements || elements.length === 0) {
+        return Promise.resolve();
+      }
+
+      return loadMermaid().then(mermaid => {
+        if (!mermaid) return;
+        return mermaid.run({ nodes: Array.from(elements) })
+          .catch(err => console.error('Error rendering mermaid diagrams:', err));
+      });
+    };
+
+    const setupMermaidObserver = () => {
+      const observer = new MutationObserver((mutations) => {
+        let newMermaidElements = [];
+        
+        mutations.forEach(mutation => {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeType === 1 && node.classList && 
+                  node.classList.contains('mermaid')) {
+                newMermaidElements.push(node);
+              }
+              
+              if (node.nodeType === 1 && node.querySelectorAll) {
+                const mermaidInNode = node.querySelectorAll('.mermaid');
+                if (mermaidInNode.length) {
+                  newMermaidElements = [...newMermaidElements, ...mermaidInNode];
+                }
+              }
+            });
+          }
+        });
+        
+        if (newMermaidElements.length > 0) {
+          renderMermaidDiagrams(newMermaidElements);
+        }
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      
+      return observer;
+    };
+
+    // Initialize on DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const existingDiagrams = document.querySelectorAll('.mermaid');
+      if (existingDiagrams.length > 0) {
+        renderMermaidDiagrams(existingDiagrams);
+      }
+      
+      setupMermaidObserver();
+    });
+
+  </script>
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+        const copyButtonBody = element.querySelector('.function-btn-body');
+        const tooltipText = element.querySelector(".tooltiptext");
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+        copyButtonBody.innerHTML = `
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="2 2 22 22"
+  >
+    <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875
+    L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z"></path>
+  </svg>
+`;
+        console.log("Running tooltip");
+        tooltipText.innerText  = `Copied!`;
+        setTimeout(() => {
+            copyButtonBody.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "/>
+    </g>
+</svg>
+`;
+            tooltipText.innerText  = `Copy`;
+        }, 3000);
+    }
+    </script>
+</html>

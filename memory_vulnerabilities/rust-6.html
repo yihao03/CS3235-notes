@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html data-dark-mode="true" data-code-theme="light">
+<head>
+    <script src="/CS3235-notes/markbind/js/theme-manager.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 7.2.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title> | CS3235 notes</title> <link rel="stylesheet" href="/CS3235-notes/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    
+    
+    <link rel="stylesheet" id="markbind-highlight-light" href="/CS3235-notes/markbind/css/codeblock-light.min.css">
+    <link rel="stylesheet" id="markbind-highlight-dark" href="/CS3235-notes/markbind/css/codeblock-dark.min.css">
+    <script src="/CS3235-notes/markbind/js/code-theme.js"></script><link rel="stylesheet" href="/CS3235-notes/markbind/css/markbind.min.css"><link rel="stylesheet" href="/CS3235-notes/plugins/codeBlockCopyButtons/codeBlockButtons.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/main.css">
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/study.css">
+</head>
+<script>
+  const baseUrl = '/CS3235-notes'
+</script>
+<body 
+   data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100"  
+  data-code-theme="light">
+<div id="app"><!--[--><header sticky><div data-v-94b60ff6><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-94b60ff6><div class="container-fluid" data-v-94b60ff6><div class="navbar-left" data-v-94b60ff6><!--[--><a href="/CS3235-notes/index.html" class="navbar-brand">CS3235 notes</a><!--]--></div><div class="navbar-default" data-v-94b60ff6><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-94b60ff6><!--[--> <li><a href="/CS3235-notes/memory_vulnerabilities/README.html" class="nav-link">Memory safety</a></li> <li><a href="/CS3235-notes/part2/webbook-7-12/README.html" class="nav-link">Sandboxing to cryptography</a></li>  <!--]--></ul></div><div class="navbar-right" data-v-94b60ff6><ul class="navbar-nav" data-v-94b60ff6><!--[--><li><form class="navbar-form" role="search"><div style="position:relative;" class="dropdown" data-v-103d5c4e><!--[--><input value="" data-bs-toggle="dropdown" type="text" class="form-control" placeholder="Search notes" autocomplete="off" data-v-103d5c4e><div class="form-control placeholder-div-hidden" data-v-103d5c4e>Search notes</div><!--]--><ul class="dropdown-menu search-dropdown-menu dropdown-menu-hidden dropdown-menu-end" data-v-103d5c4e><!--[--><!--]--></ul></div></form></li><!--]--></ul><!----></div></div></nav><div style="display:none;" class="lower-navbar-container" data-v-94b60ff6><!--[--><!----><!----><!--]--></div></div></header> <div id="flex-body"><nav id="site-nav" aria-label="Chapters" data-v-6b1b63d2><!--[--><div class="site-nav-top">Course notes</div> <div class="nav-component slim-scroll"><div class="site-nav-root"><!--[--><ul class="site-nav-list site-nav-list-root" data-v-6b1b63d2><!--[--><li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/index.html">Overview</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Memory safety 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">0. Introduction</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial-1a1b.html">1A/1B. Spatial errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal-2.html">2. Temporal errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/exploits-3.html">3. Memory exploits</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">4. Partial safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">5. Full safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/rust-6.html">6. Rust</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Sandboxing and isolation 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">7. Sandboxing</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">8. Policies</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">9. Capabilities</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/10-virtual-machines.html">10. Virtual machines</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/11-tee.html">11. Trusted execution environments</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/12-cryptography.html">12. Cryptography</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Revision 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/cheatsheet.html">Memory safety cheatsheet</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/review-checkpoints.html">Review checkpoints</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/INDEX.html">Topics 7 to 12 index</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/prerequisites.html">Prerequisites</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/assignment-overview.html">Assignment</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Original sketches
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/c_basics.html">C basics</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial.html">Spatial</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal.html">Temporal</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/2a.html">Sandboxing</a></div></li></ul></li><!--]--><!--v-if--></ul><!--]--></div></div><!--]--><!--v-if--></nav> <main id="content-wrapper"><div data-v-9ff38b52><nav aria-label="breadcrumb" class="breadcrumb-divider" data-v-9ff38b52><ol class="breadcrumb" data-v-9ff38b52><li class="notlink breadcrumb-marker" data-v-9ff38b52> ››   </li><!--[--><!--]--></ol></nav></div> <h1 id="memory-safety-in-rust">Memory safety in Rust<a class="fa fa-anchor" href="#memory-safety-in-rust" onclick="event.stopPropagation()"></a></h1> <blockquote><p>Source: <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html">07 Memory Safety in Rust</a>, including all six ownership and six aliasing/reborrow interactive examples. Builds on <a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">Full Memory Safety</a>; notes grouped by mechanism, following <code class="hljs inline no-lang">spatial-1a1b.md</code>.</p></blockquote> <p><a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#summary">Source summary</a>.</p> <h2 id="0-c-smart-pointers-and-non-owning-aliases-01">0. C++ smart pointers and non-owning aliases (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#smartptr">§01</a>)<a class="fa fa-anchor" href="#0-c-smart-pointers-and-non-owning-aliases-01" onclick="event.stopPropagation()"></a></h2> <ul><li>A smart pointer owns/manages a resource through a pointer and releases it automatically. C++11 <code class="hljs inline no-lang">std::unique_ptr&lt;T&gt;</code>: exclusive owner, moves rather than copies, moved-from handle empty, no reference-counting cost (destruction itself still runtime). <code class="hljs inline no-lang">std::shared_ptr&lt;T&gt;</code>: copying an owning handle increments runtime strong reference count; releasing decrements it and count zero destroys object. Cycles of owning handles can leak; raw pointer aliases do not count; counting ownership does not synchronize accesses to the object.</li> <li>Neither enforces safe lifetime of non-owning aliases. Example: <code class="hljs inline no-lang">auto owner = std::make_unique&lt;int&gt;(7); int *alias = owner.get(); owner.reset(); /* *alias = 9; would be UAF */</code>. Rust checks borrows: non-owning references must cease use before destruction or invalidation.</li></ul> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Question</th> <th>Mechanism</th></tr></thead> <tbody class="table-group-divider"><tr><td>Who destroys this value?</td> <td>Exclusive owner / shared owner count</td></tr> <tr><td>May this alias still access it?</td> <td>Borrow and referent lifetimes, plus permitted access mode</td></tr> <tr><td>Is this element index valid?</td> <td>Proven or checked bounds</td></tr></tbody></table></div><h2 id="1-spatial-safety-02">1. Spatial safety (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#spatial">§02</a>)<a class="fa fa-anchor" href="#1-spatial-safety-02" onclick="event.stopPropagation()"></a></h2> <ul><li>Safe indexing is either statically proved in range or dynamically checked before access. Known index/array length may permit compile-time proof; optimizers remove redundant checks and iterator loops often avoid individual indexing checks, depending on code/build settings.</li> <li><code class="hljs inline no-lang">[T; N]</code> is an array type with length <code class="hljs inline no-lang">N</code> in the type; <code class="hljs inline no-lang">&amp;[T]</code> is a slice reference carrying address + runtime length (a fat pointer; length is metadata, not part of slice type). Unknown indices are compared with length. Unlike SoftBound&#39;s separate base/bound metadata for arbitrary C pointers, slice metadata travels directly with the reference; safe Rust APIs preserve its validity, while unsafe slice construction must establish invariants.</li> <li>Invalid indexing panics before invalid memory access; panic can unwind the current thread and be caught, or abort the process by configuration. Memory safety does not ensure every program succeeds.</li></ul> <h2 id="2-exclusive-ownership-and-moves-03">2. Exclusive ownership and moves (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#ownership">§03</a>)<a class="fa fa-anchor" href="#2-exclusive-ownership-and-moves-03" onclick="event.stopPropagation()"></a></h2> <ul><li>C&#39;s <code class="hljs inline no-lang">p=malloc(sizeof(int)); q=p; free(p); free(q);</code> duplicates an unchecked alias and double-frees. <code class="hljs inline no-lang">String</code>, <code class="hljs inline no-lang">Box&lt;T&gt;</code> etc. are non-<code class="hljs inline no-lang">Copy</code>; assigning/passing one transfers ownership without duplicating it. The old binding cannot be used until reinitialized. <code class="hljs inline no-lang">Copy</code> types such as ordinary integers instead copy independent values. Borrowed references do not acquire ownership of allocation.</li> <li>Interactive six-step progression (distinct alternatives, not a single executable program):</li></ul> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Step</th> <th>Rust fragment</th> <th>Why</th></tr></thead> <tbody class="table-group-divider"><tr><td>1 Own</td> <td><code class="hljs inline no-lang">let country = String::from(&quot;Singapore&quot;); println!(&quot;{}&quot;, country);</code></td> <td><code class="hljs inline no-lang">country</code> owns heap buffer and remains usable</td></tr> <tr><td>2 Move</td> <td><code class="hljs inline no-lang">let country_name = country;</code></td> <td><code class="hljs inline no-lang">country_name</code> now owns; unlike C++ moved-from <code class="hljs inline no-lang">unique_ptr</code>, old Rust binding is unavailable until reinitialized</td></tr> <tr><td>3 Use after move</td> <td><code class="hljs inline no-lang">println!(&quot;{}&quot;, country);</code> after step 2</td> <td>compile-time <strong>E0382</strong>, use/borrow of moved value</td></tr> <tr><td>4 Drop</td> <td><code class="hljs inline no-lang">{ let country_name = country; }</code></td> <td>inner owner drops buffer once on scope exit; old binding does not drop twice; explicit <code class="hljs inline no-lang">drop</code> also consumes owner</td></tr> <tr><td>5 Borrow</td> <td><code class="hljs inline no-lang">fn char_count(s: &amp;str)-&gt;usize { s.chars().count() } let n=char_count(&amp;country); println!(&quot;{} {}&quot;,country,n);</code></td> <td>temporary access, ownership retained; function need not consume argument</td></tr> <tr><td>6 Outlive</td> <td><code class="hljs inline no-lang">let r; { let s=String::from(&quot;Singapore&quot;); r=&amp;s; } println!(&quot;{}&quot;,r);</code></td> <td>compile-time <strong>E0597</strong>: <code class="hljs inline no-lang">s</code> dropped before last use of <code class="hljs inline no-lang">r</code></td></tr></tbody></table></div><ul><li>The compiler knows local/static bindings and types, though not necessarily their runtime values. A heap allocation may be owned by a local, static, or another owned object; simple exclusive-ownership chains root in locals/statics. The compiler follows transfers and inserts drops along control-flow paths without discovering the entire heap alias graph at runtime. Ordinary moves/borrows do not require reference counts (allocation and drop still cost runtime). <code class="hljs inline no-lang">Rc</code>/<code class="hljs inline no-lang">Arc</code> introduce explicit runtime bookkeeping. Deliberate leaks are possible: memory safety does not imply all allocated memory is reclaimed.</li></ul> <pre class="mermaid">flowchart LR
+  A[&quot;country owns String&quot;] --&gt;|move| B[&quot;country_name owns String&quot;]
+  A --&gt;|old binding used| E[&quot;Compile-time error E0382&quot;]
+  B --&gt;|scope exit or drop| D[&quot;Destroy once&quot;]
+  B --&gt;|borrow| R[&quot;temporary reference; owner unchanged&quot;]
+</pre> <h2 id="3-borrowing-lifetime-reborrowing-04">3. Borrowing, lifetime, reborrowing (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#borrow">§04</a>)<a class="fa fa-anchor" href="#3-borrowing-lifetime-reborrowing-04" onclick="event.stopPropagation()"></a></h2> <ul><li>A borrow gives temporary access without transferring destruction responsibility. An old moved-from non-<code class="hljs inline no-lang">Copy</code> binding cannot be used or borrowed until reinitialized. A reference cannot remain in use after referent invalidation: <code class="hljs inline no-lang">Lifetime(borrow) ≤ Lifetime(referent)</code>; the compiler infers the region actually needed, which can end at last use rather than the closing brace (non-lexical lifetimes). Keeping a reference live prevents conflicting operations that could invalidate its referent.</li> <li>Reborrowing derives another reference through an existing one; a mutable reborrow temporarily restricts conflicting uses of the original. After the reborrow&#39;s last use, the original reference becomes usable again even if the reborrow binding remains in scope. This prevents use-after-free/reallocation without runtime per-pointer lifetime checks for ordinary references.</li></ul> <h2 id="4-aliasing-xor-mutability-axm-05">4. Aliasing xor mutability (AXM) (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#axm">§05</a>)<a class="fa fa-anchor" href="#4-aliasing-xor-mutability-axm-05" onclick="event.stopPropagation()"></a></h2> <ul><li>C++ example: <code class="hljs inline no-lang">std::vector&lt;int&gt; v(300,10); int &amp;first=v[0];</code> prints <code class="hljs inline no-lang">10</code>; <code class="hljs inline no-lang">v.resize(4000)</code> <strong>may</strong> exceed capacity, relocate buffer and release old one; later read of <code class="hljs inline no-lang">first</code> is undefined <strong>if reallocated</strong> (no promised output). The reference reads only but is declared mutable <code class="hljs inline no-lang">int&amp;</code>. Container still lives; its element&#39;s old storage may not.</li> <li>For overlapping ordinary Rust references to the same data, multiple shared <code class="hljs inline no-lang">&amp;T</code> or one exclusive <code class="hljs inline no-lang">&amp;mut T</code> can be in use. Unsynchronized conflicting access is disallowed. The rules depend on overlapping live uses, not the number of reference variables lexically in scope. Interior-mutability types move checks to runtime or synchronization; they are controlled exceptions rather than blanket unsafety.</li> <li>Six interactive cases (each has independent setup):</li></ul> <pre><code class="hljs rust"><span><span class="hljs-comment">// 1. OK: two shared references read.</span>
+</span><span><span class="hljs-keyword">let</span> buf = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]; <span class="hljs-keyword">let</span> a = &amp;buf; <span class="hljs-keyword">let</span> a1 = &amp;buf;
+</span><span><span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{} {}&quot;</span>, a[<span class="hljs-number">0</span>], a1[<span class="hljs-number">0</span>]);
+</span><span>
+</span><span><span class="hljs-comment">// 2. OK: one exclusive mutable borrow.</span>
+</span><span><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> buf = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]; <span class="hljs-keyword">let</span> x = &amp;<span class="hljs-keyword">mut</span> buf; x.push(<span class="hljs-number">1</span>);
+</span><span>
+</span><span><span class="hljs-comment">// 3. REJECT E0502: shared reference used after attempted mutable borrow.</span>
+</span><span><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> buf = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]; <span class="hljs-keyword">let</span> a = &amp;buf;
+</span><span><span class="hljs-keyword">let</span> x = &amp;<span class="hljs-keyword">mut</span> buf; <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{}&quot;</span>, a[<span class="hljs-number">0</span>]);
+</span><span>
+</span><span><span class="hljs-comment">// 4. REJECT E0499: first mutable borrow still used after second is requested.</span>
+</span><span><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> buf = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]; <span class="hljs-keyword">let</span> x = &amp;<span class="hljs-keyword">mut</span> buf;
+</span><span><span class="hljs-keyword">let</span> x0 = &amp;<span class="hljs-keyword">mut</span> buf; x.push(<span class="hljs-number">1</span>);
+</span><span>
+</span><span><span class="hljs-comment">// 5. OK: mutable reborrow ends at last use before push.</span>
+</span><span><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> buf = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]; <span class="hljs-keyword">let</span> x = &amp;<span class="hljs-keyword">mut</span> buf;
+</span><span><span class="hljs-keyword">let</span> x0 = &amp;<span class="hljs-keyword">mut</span> x[<span class="hljs-number">0</span>]; *x0 = <span class="hljs-number">2</span>; x.push(<span class="hljs-number">3</span>);
+</span><span>
+</span><span><span class="hljs-comment">// 6. REJECT E0499: push before last use of element reborrow.</span>
+</span><span><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> buf = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>]; <span class="hljs-keyword">let</span> x = &amp;<span class="hljs-keyword">mut</span> buf;
+</span><span><span class="hljs-keyword">let</span> x0 = &amp;<span class="hljs-keyword">mut</span> x[<span class="hljs-number">0</span>]; x.push(<span class="hljs-number">3</span>); *x0 = <span class="hljs-number">2</span>;
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>In case 6, <code class="hljs inline no-lang">push</code> could reallocate and dangle <code class="hljs inline no-lang">x0</code>; in case 5, <code class="hljs inline no-lang">x0</code> is not used afterwards. A long-lived name alone does not mean an ongoing borrow.</p> <h2 id="5-concurrency-and-explicit-shared-access-06">5. Concurrency and explicit shared access (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#concurrency">§06</a>)<a class="fa fa-anchor" href="#5-concurrency-and-explicit-shared-access-06" onclick="event.stopPropagation()"></a></h2> <ul><li>C-like race: main allocates <code class="hljs inline no-lang">p</code>, starts worker with alias, writes <code class="hljs inline no-lang">p[10]=0</code>, then <code class="hljs inline no-lang">free(p)</code>; worker later writes <code class="hljs inline no-lang">p[10]=1</code>. With <code class="hljs inline no-lang">SIZE&gt;10</code> and successful allocation, worker can UAF. Even a lock/key monitor can check a live key, then main free, then worker access: <strong>check-to-access race</strong>. Original CETS is single-threaded; concurrent deallocation needs synchronization.</li> <li>Rust threads combine ownership/borrowing with <code class="hljs inline no-lang">Send</code> (type can transfer between threads) and <code class="hljs inline no-lang">Sync</code> (shared references can cross threads). Ordinary references rule out unsynchronized conflicting accesses; synchronized mutation remains possible. Programs without data races can still have logical races or deadlocks.</li></ul> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Type</th> <th>Owners / access rule</th> <th>Threading / caveat</th></tr></thead> <tbody class="table-group-divider"><tr><td><code class="hljs inline no-lang">Rc&lt;T&gt;</code></td> <td>Single-thread shared ownership; <code class="hljs inline no-lang">clone</code> increments strong count, drop decrements; zero drops value; <code class="hljs inline no-lang">Weak</code> does not keep it alive</td> <td>Neither <code class="hljs inline no-lang">Send</code> nor <code class="hljs inline no-lang">Sync</code>; cycles of strong <code class="hljs inline no-lang">Rc</code> leak</td></tr> <tr><td><code class="hljs inline no-lang">RefCell&lt;T&gt;</code></td> <td>Runtime AXM: multiple <code class="hljs inline no-lang">borrow()</code> shared guards or one <code class="hljs inline no-lang">borrow_mut()</code> exclusive; conflict panics, <code class="hljs inline no-lang">try_borrow[_mut]</code> returns error; guard lifetimes checked statically</td> <td>Not <code class="hljs inline no-lang">Sync</code>; checks borrow access, <strong>not</strong> owner count</td></tr> <tr><td><code class="hljs inline no-lang">Arc&lt;T&gt;</code></td> <td>Atomic reference count, shared lifetime across threads</td> <td>Counting alone does not synchronize mutation of <code class="hljs inline no-lang">T</code></td></tr> <tr><td><code class="hljs inline no-lang">Arc&lt;Mutex&lt;T&gt;&gt;</code></td> <td>Counted ownership <strong>and</strong> exclusive locked access</td> <td>Guard releases lock on drop; <code class="hljs inline no-lang">RwLock</code>/atomics are other controlled patterns</td></tr></tbody></table></div><ul><li>Shared ownership is a design choice, not necessary for every graph: indices into one exclusively owned collection are an alternative. Runtime cost follows the explicit chosen primitives.</li></ul> <pre><code class="hljs rust"><span><span class="hljs-keyword">use</span> std::sync::{Arc, Mutex};
+</span><span><span class="hljs-keyword">use</span> std::thread;
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+</span><span>    <span class="hljs-keyword">let</span> count = Arc::new(Mutex::new(<span class="hljs-number">0</span>));
+</span><span>    <span class="hljs-keyword">let</span> worker_count = Arc::clone(&amp;count);
+</span><span>    <span class="hljs-keyword">let</span> worker = thread::spawn(<span class="hljs-keyword">move</span> || {
+</span><span>        <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> value = worker_count.lock().unwrap();
+</span><span>        *value += <span class="hljs-number">1</span>;
+</span><span>    }); <span class="hljs-comment">// guard unlocks on closure exit</span>
+</span><span>    worker.join().unwrap();
+</span><span>    <span class="hljs-built_in">assert_eq!</span>(*count.lock().unwrap(), <span class="hljs-number">1</span>);
+</span><span>}
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p><code class="hljs inline no-lang">Arc</code> keeps allocation alive across worker lifetime; mutex guard protects mutation; <code class="hljs inline no-lang">join</code> waits for worker before assertion.</p> <h2 id="6-scope-of-the-guarantee-07">6. Scope of the guarantee (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#unsafe">§07</a>)<a class="fa fa-anchor" href="#6-scope-of-the-guarantee-07" onclick="event.stopPropagation()"></a></h2> <ul><li><code class="hljs inline no-lang">unsafe</code> permits specific operations the compiler cannot prove safe (e.g. raw pointer dereference); borrow checking still applies to ordinary references. Allocators, FFI, smart-pointer internals may implement unsafe operations behind safe interfaces; every permitted use of that interface must preserve invariants. Safe clients depend on sound unsafe implementations, including transitive dependencies/foreign code. Review the whole abstraction: surrounding safe code may undermine an assumption relied on later in unsafe code; no fixed number of adjacent lines contains every bug.</li> <li>RustBelt machine-checks a model of a realistic Rust subset and verified unsafe-library contracts, not the entire real compiler/ecosystem. Xu et al.&#39;s 186-report dataset, including known Rust memory-safety CVEs by 31 Dec 2020, found every memory-safety bug in that dataset involved unsafe code; Evans et al.&#39;s 2020 ecosystem study found transitive dependency use of unsafe even without local unsafe. These findings apply to those datasets and do not prove that future vulnerabilities must look identical.</li></ul> <h2 id="7-readings-source-bibliography">7. Readings (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/07-memory-safety-in-rust.dc.html#references">source bibliography</a>)<a class="fa fa-anchor" href="#7-readings-source-bibliography" onclick="event.stopPropagation()"></a></h2> <ul><li><a href="https://eel.is/c++draft/unique.ptr">C++ <code class="hljs inline no-lang">unique_ptr</code> specification</a>, <a href="https://eel.is/c++draft/util.smartptr.shared">C++ <code class="hljs inline no-lang">shared_ptr</code> specification</a>.</li> <li>Rust docs: <a href="https://doc.rust-lang.org/std/ptr/trait.Pointee.html">pointer/slice metadata</a>, <a href="https://doc.rust-lang.org/std/panic/fn.catch_unwind.html">panic/unwind catching</a>, <a href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html">borrowing and last-use lifetimes</a>, <a href="https://doc.rust-lang.org/book/ch16-04-extensible-concurrency-sync-and-send.html"><code class="hljs inline no-lang">Send</code>/<code class="hljs inline no-lang">Sync</code></a>, <a href="https://doc.rust-lang.org/std/rc/index.html"><code class="hljs inline no-lang">Rc</code></a>, <a href="https://doc.rust-lang.org/std/cell/struct.RefCell.html"><code class="hljs inline no-lang">RefCell</code></a>, <a href="https://doc.rust-lang.org/std/sync/struct.Arc.html"><code class="hljs inline no-lang">Arc</code></a>, <a href="https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html">Unsafe Rust</a>, <a href="https://doc.rust-lang.org/nomicon/working-with-unsafe.html">Rustonomicon: working with unsafe</a>.</li> <li><a href="https://acg.cis.upenn.edu/papers/ismm10_cets.pdf">CETS paper §3.4</a>: concurrent-free limitation. <a href="https://doi.org/10.1145/3158154">RustBelt, POPL 2018</a>: model/verified-contract soundness. <a href="https://doi.org/10.1145/3466642">Xu et al., TOSEM 2021</a>: 186 reports and known CVEs. <a href="https://doi.org/10.1145/3377811.3380413">Evans et al., ICSE 2020</a>: direct/transitive unsafe ecosystem usage.</li></ul></main> <nav id="page-nav" aria-label="On this page" data-v-6b1b63d2><!--[--><div class="nav-component slim-scroll"><a class="navbar-brand page-nav-title" href="#">On this page</a> <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-6b1b63d2><!--[--><a class="nav-link py-1" href="#memory-safety-in-rust">Memory safety in Rust‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#0-c-smart-pointers-and-non-owning-aliases-01">0. C++ smart pointers and non-owning aliases (§01)‎</a> <a class="nav-link py-1" href="#1-spatial-safety-02">1. Spatial safety (§02)‎</a> <a class="nav-link py-1" href="#2-exclusive-ownership-and-moves-03">2. Exclusive ownership and moves (§03)‎</a> <a class="nav-link py-1" href="#3-borrowing-lifetime-reborrowing-04">3. Borrowing, lifetime, reborrowing (§04)‎</a> <a class="nav-link py-1" href="#4-aliasing-xor-mutability-axm-05">4. Aliasing xor mutability (AXM) (§05)‎</a> <a class="nav-link py-1" href="#5-concurrency-and-explicit-shared-access-06">5. Concurrency and explicit shared access (§06)‎</a> <a class="nav-link py-1" href="#6-scope-of-the-guarantee-07">6. Scope of the guarantee (§07)‎</a> <a class="nav-link py-1" href="#7-readings-source-bibliography">7. Readings (source bibliography)‎</a></nav><!--]--><!--v-if--></nav></div><!--]--><!--v-if--></nav> <div class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;" aria-hidden="true"><!--[--><i class="fas fa-arrow-circle-up"></i><!--]--></div></div> <footer><div class="text-center"><small>CS3235 study notes. Built with <a href="https://markbind.org/">MarkBind</a>.</small></div></footer><!--]--></div>
+</body><script src="/CS3235-notes/markbind/js/bootstrap-utility.min.js"></script>
+<script src="/CS3235-notes/markbind/js/polyfill.min.js"></script>
+<script src="/CS3235-notes/markbind/js/vue.global.prod.min.js"></script>
+<script src="/CS3235-notes/markbind/js/markbind.min.js"></script>
+<script src="rust-6.page-vue-render.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script type="module">
+    window.mermaidPromise = null;
+    
+    const loadMermaid = () => {
+      if (window.mermaidPromise === null) {
+        window.mermaidPromise = import('https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs')
+          .then(({ default: mermaid }) => {
+            mermaid.initialize({
+              startOnLoad: false,
+            });
+            console.log('Mermaid loaded successfully');
+            return mermaid;
+          })
+          .catch((error) => {
+            console.error('Mermaid failed to load:', error);
+            window.mermaidPromise = false;
+            return null;
+          });
+      }
+      return window.mermaidPromise;
+    };
+
+    const renderMermaidDiagrams = (elements) => {
+      if (!elements || elements.length === 0) {
+        return Promise.resolve();
+      }
+
+      return loadMermaid().then(mermaid => {
+        if (!mermaid) return;
+        return mermaid.run({ nodes: Array.from(elements) })
+          .catch(err => console.error('Error rendering mermaid diagrams:', err));
+      });
+    };
+
+    const setupMermaidObserver = () => {
+      const observer = new MutationObserver((mutations) => {
+        let newMermaidElements = [];
+        
+        mutations.forEach(mutation => {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeType === 1 && node.classList && 
+                  node.classList.contains('mermaid')) {
+                newMermaidElements.push(node);
+              }
+              
+              if (node.nodeType === 1 && node.querySelectorAll) {
+                const mermaidInNode = node.querySelectorAll('.mermaid');
+                if (mermaidInNode.length) {
+                  newMermaidElements = [...newMermaidElements, ...mermaidInNode];
+                }
+              }
+            });
+          }
+        });
+        
+        if (newMermaidElements.length > 0) {
+          renderMermaidDiagrams(newMermaidElements);
+        }
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      
+      return observer;
+    };
+
+    // Initialize on DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const existingDiagrams = document.querySelectorAll('.mermaid');
+      if (existingDiagrams.length > 0) {
+        renderMermaidDiagrams(existingDiagrams);
+      }
+      
+      setupMermaidObserver();
+    });
+
+  </script>
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+        const copyButtonBody = element.querySelector('.function-btn-body');
+        const tooltipText = element.querySelector(".tooltiptext");
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+        copyButtonBody.innerHTML = `
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="2 2 22 22"
+  >
+    <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875
+    L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z"></path>
+  </svg>
+`;
+        console.log("Running tooltip");
+        tooltipText.innerText  = `Copied!`;
+        setTimeout(() => {
+            copyButtonBody.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "/>
+    </g>
+</svg>
+`;
+            tooltipText.innerText  = `Copy`;
+        }, 3000);
+    }
+    </script>
+</html>

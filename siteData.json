@@ -1,0 +1,413 @@
+{
+  "enableSearch": true,
+  "pages": [
+    {
+      "src": "memory_vulnerabilities/README.md",
+      "headings": {
+        "memory-safety-webbook-course-notes": "Memory safety webbook course notes"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/assignment-overview.md",
+      "headings": {
+        "assignment-libheif-memory-safety-chain": "Assignment: libheif memory-safety chain",
+        "objective-environment-rules-overview": "Objective, environment, rules (overview)",
+        "setup-and-scoring-getting-started": "Setup and scoring (getting started)",
+        "overflow-cve-2026-47178-tasks-1-2": "Overflow: CVE-2026-47178 (tasks 1–2)",
+        "disclosure-cve-2026-47247-tasks-3-4": "Disclosure: CVE-2026-47247 (tasks 3–4)",
+        "derive-addresses-tasks-5-8": "Derive addresses (tasks 5–8)",
+        "final-stage-tasks-9-11": "Final stage (tasks 9–11)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/c_basics.md",
+      "headings": {
+        "c-basics": "C Basics",
+        "common-registers": "Common registers",
+        "32-bit-registers": "32-bit registers",
+        "64-bit-registers": "64-bit registers",
+        "compiling-a-program": "Compiling a program",
+        "function-calling-convention": "Function calling convention",
+        "calling-a-function": "Calling a function",
+        "returning-from-a-function": "Returning from a function"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/cheatsheet.md",
+      "headings": {
+        "memory-vulnerabilities-cheatsheet": "Memory vulnerabilities cheatsheet",
+        "systems-facts-to-remember": "Systems facts to remember",
+        "security-reasoning": "Security reasoning",
+        "stack-and-input-boundaries": "Stack and input boundaries",
+        "format-strings-and-integer-sizes": "Format strings and integer sizes",
+        "heap-layout-and-casts": "Heap layout and casts",
+        "temporal-errors-and-allocator-reuse": "Temporal errors and allocator reuse",
+        "exploit-forms-and-address-constraints": "Exploit forms and address constraints",
+        "defenses-protected-property-and-gap": "Defenses: protected property and gap",
+        "full-memory-safety": "Full memory safety",
+        "temporal-checks": "Temporal checks",
+        "rust-and-c-ownership": "Rust and C++ ownership",
+        "borrow-stack-lecture-diagram": "Borrow stack (lecture diagram)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/exploits-3.md",
+      "headings": {
+        "memory-exploits-control-flow-hijacking-and-data-oriented-attacks": "Memory Exploits: Control-Flow Hijacking and Data-Oriented Attacks",
+        "1-from-vulnerability-to-exploit": "1. From vulnerability to exploit",
+        "2-code-injection": "2. Code injection",
+        "3-code-reuse-return-to-libc": "3. Code reuse / return-to-libc",
+        "4-return-oriented-programming-rop": "4. Return-oriented programming (ROP)",
+        "5-vtable-hijacking-and-argument-delivery": "5. Vtable hijacking and argument delivery",
+        "6-non-control-flow-attacks-and-information-disclosure": "6. Non-control-flow attacks and information disclosure",
+        "7-lab-four-targets-nineteen-levels": "7. Lab: four targets, nineteen levels",
+        "7-1-program-1-inject-gcc-fno-stack-protector-z-execstack-no-pie-g-w-o-inject-inject-c": "7.1 Program 1 inject — gcc -fno-stack-protector -z execstack -no-pie -g -w -o inject inject.c",
+        "7-2-program-2-reuse-same-bug-non-executable-stack": "7.2 Program 2 reuse — same bug, non-executable stack",
+        "7-3-program-3-rop-same-build-no-preexisting-command-string-permitted": "7.3 Program 3 rop — same build, no preexisting command string permitted",
+        "7-4-program-4-svc-leak-bases-forged-c-dispatch": "7.4 Program 4 svc — leak → bases → forged C++ dispatch",
+        "8-practical-distinctions-caveats": "8. Practical distinctions / caveats"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/full-safety-5.md",
+      "headings": {
+        "full-memory-safety": "Full memory safety",
+        "0-property-and-enforcement-01-02": "0. Property and enforcement (§01, §02)",
+        "1-spatial-metadata-storage-03": "1. Spatial metadata storage (§03)",
+        "2-softbound-five-rules-04": "2. SoftBound: five rules (§04)",
+        "cast-illustration-and-policy-05": "Cast illustration and policy (§05)",
+        "3-temporal-safety-aliasing-defeats-nullification-07": "3. Temporal safety: aliasing defeats nullification (§07)",
+        "4-cets-lock-key-08": "4. CETS lock/key (§08)",
+        "5-cost-and-deployment-09": "5. Cost and deployment (§09)",
+        "6-readings-source-bibliography": "6. Readings (source bibliography)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/introduction-0.md",
+      "headings": {
+        "introduction-security-reasoning": "Introduction: security reasoning",
+        "why-security-matters": "Why security matters",
+        "threat-models-section": "Threat models (section)",
+        "attacker-economics-section": "Attacker economics (section)",
+        "module-and-expectations-syllabus": "Module and expectations (syllabus)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/partial-safety-4.md",
+      "headings": {
+        "partial-memory-safety": "Partial memory safety",
+        "0-exploit-requirements-and-defenses": "0. Exploit requirements and defenses",
+        "1-defensive-coding-and-bug-finding": "1. Defensive coding and bug-finding",
+        "2-stack-canaries": "2. Stack canaries",
+        "3-guard-pages-and-dep": "3. Guard pages and DEP",
+        "4-address-space-layout-randomization": "4. Address space layout randomization",
+        "5-inline-reference-monitors-irm": "5. Inline reference monitors (IRM)",
+        "5-1-software-fault-isolation-sfi": "5.1 Software fault isolation (SFI)",
+        "5-2-control-flow-integrity-cfi": "5.2 Control-flow integrity (CFI)",
+        "6-six-attack-stages": "6. Six attack stages",
+        "7-further-reading": "7. Further reading"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/prerequisites.md",
+      "headings": {
+        "prerequisite-self-test-systems-background": "Prerequisite self-test: systems background"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/review-checkpoints.md",
+      "headings": {
+        "review-checkpoints": "Review checkpoints",
+        "spatial-errors-1a-1b": "Spatial errors (1A, 1B)",
+        "temporal-errors-and-ownership-2-6": "Temporal errors and ownership (2, 6)",
+        "exploitation-3": "Exploitation (3)",
+        "partial-and-full-safety-4-5": "Partial and full safety (4, 5)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/rust-6.md",
+      "headings": {
+        "memory-safety-in-rust": "Memory safety in Rust",
+        "0-c-smart-pointers-and-non-owning-aliases-01": "0. C++ smart pointers and non-owning aliases (§01)",
+        "1-spatial-safety-02": "1. Spatial safety (§02)",
+        "2-exclusive-ownership-and-moves-03": "2. Exclusive ownership and moves (§03)",
+        "3-borrowing-lifetime-reborrowing-04": "3. Borrowing, lifetime, reborrowing (§04)",
+        "4-aliasing-xor-mutability-axm-05": "4. Aliasing xor mutability (AXM) (§05)",
+        "5-concurrency-and-explicit-shared-access-06": "5. Concurrency and explicit shared access (§06)",
+        "6-scope-of-the-guarantee-07": "6. Scope of the guarantee (§07)",
+        "7-readings-source-bibliography": "7. Readings (source bibliography)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/spatial-1a1b.md",
+      "headings": {
+        "spatial-memory-errors": "Spatial Memory Errors",
+        "0-model": "0. Model",
+        "1-background-x86-stack-frame": "1. Background: x86 stack frame",
+        "2-stack-buffer-overflow-cwe-787": "2. Stack buffer overflow — CWE-787",
+        "2-1-lab-login-c-measured-layout-and-attacks": "2.1 Lab login.c: measured layout and attacks",
+        "little-endian-encoding": "Little-endian encoding",
+        "pie-aslr-and-why-the-lab-uses-no-pie": "PIE, ASLR, and why the lab uses -no-pie",
+        "2-2-stack-canaries-and-compiler-layout": "2.2 Stack canaries and compiler layout",
+        "3-format-string-bugs-cwe-134": "3. Format-string bugs — CWE-134",
+        "3-1-lab-fmt-c-locating-and-using-argument-slots": "3.1 Lab fmt.c: locating and using argument slots",
+        "4-integer-overflow-spatial-overflow": "4. Integer overflow → spatial overflow",
+        "4-1-lab-records-c-a-small-allocation-followed-by-a-large-write": "4.1 Lab records.c: a small allocation followed by a large write",
+        "5-heap-allocation-and-heap-overflow": "5. Heap allocation and heap overflow",
+        "5-1-requests-chunks-and-the-pointer-returned-by-malloc": "5.1 Requests, chunks, and the pointer returned by malloc",
+        "why-the-lab-often-calls-the-header-8-bytes": "Why the lab often calls the header “8 bytes”",
+        "5-2-lab-acct-c-two-adjacent-allocations": "5.2 Lab acct.c: two adjacent allocations",
+        "scanf-and-quot-s-and-quot-and-the-extra-nul-write": "scanf(&quot;%s&quot;) and the extra NUL write",
+        "why-41-as-can-be-accepted-by-free-in-this-run": "Why 41 As can be accepted by free in this run",
+        "5-3-allocated-versus-free-chunks": "5.3 Allocated versus free chunks",
+        "6-c-bad-casting-type-confusion": "6. C++ bad casting / type confusion",
+        "6-1-lab-badcast-allocation-size-is-not-object-size": "6.1 Lab badcast: allocation size is not object size",
+        "7-exploit-outcomes-and-data-oriented-attacks": "7. Exploit outcomes and data-oriented attacks",
+        "8-conflicts-errata-in-the-course-material": "8. ⚠️ Conflicts / errata in the course material",
+        "9-lab-workflow": "9. Lab workflow",
+        "all-lab-checkpoints-1a-nine-levels-1b-ten-levels": "All lab checkpoints (1A nine levels, 1B ten levels)",
+        "10-further-reading": "10. Further reading"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/spatial.md",
+      "headings": {
+        "spatial-memory-errors": "Spatial Memory Errors",
+        "identifying-memory-segments-from-process-memory-dump": "Identifying memory segments from process memory dump",
+        "types": "Types",
+        "buffer-overflow": "Buffer overflow",
+        "return-oriented-programming-rop": "Return oriented programming (ROP)",
+        "heap-overflow": "Heap Overflow",
+        "data-oriented-attacks": "Data oriented attacks",
+        "c-type-casting": "C++ Type casting",
+        "mitigations": "Mitigations",
+        "position-independent-executable-pie": "Position Independent Executable (PIE)",
+        "stack-canary": "Stack canary",
+        "libsafe": "Libsafe",
+        "guard-pages": "Guard Pages",
+        "non-executable-data-dep": "Non-executable Data DEP",
+        "address-space-layout-randomization-aslr": "Address Space Layout Randomization (ASLR)",
+        "inline-reference-monitor-irm": "Inline reference monitor (IRM)",
+        "software-fault-isolation-sfi": "Software Fault Isolation (SFI)",
+        "control-flow-inspection-cfi": "Control Flow Inspection (CFI)",
+        "fat-pointer-pointer-metadata-e-g-bounds": "Fat pointer: pointer + metadata (e.g. bounds)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/temporal-2.md",
+      "headings": {
+        "temporal-memory-errors": "Temporal Memory Errors",
+        "1-scope-lifetime-undefined-behavior": "1. Scope, lifetime, undefined behavior",
+        "2-use-after-free-cwe-416": "2. Use-after-free (CWE-416)",
+        "3-heap-mechanics-relevant-to-double-free": "3. Heap mechanics relevant to double-free",
+        "4-double-free-cwe-415-two-owners-then-a-write-primitive": "4. Double-free (CWE-415): two owners, then a write primitive",
+        "5-lab-three-programs-twelve-levels": "5. Lab: three programs / twelve levels",
+        "6-takeaways-references": "6. Takeaways / references"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "memory_vulnerabilities/temporal.md",
+      "headings": {
+        "temporal-memory-errors": "Temporal Memory Errors",
+        "use-after-free": "Use after free",
+        "double-free": "Double free",
+        "mitigations": "Mitigations",
+        "nullify-pointers": "Nullify pointers",
+        "lock-and-key-mechanism": "Lock and key mechanism"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/07-sandboxing.md",
+      "headings": {
+        "7-sandboxing-and-privilege-separation": "7. Sandboxing and privilege separation",
+        "7-1-containment": "7.1 Containment",
+        "7-2-reference-monitors-and-neat": "7.2 Reference monitors and NEAT",
+        "7-3-syscall-policies": "7.3 Syscall policies",
+        "linux-enforcement-mechanisms": "Linux enforcement mechanisms",
+        "filter-limits-and-installation": "Filter limits and installation",
+        "expressing-an-allow-list-with-libseccomp": "Expressing an allow-list with libseccomp",
+        "7-4-openssh": "7.4 OpenSSH",
+        "7-5-browsers": "7.5 Browsers",
+        "historical-firefox-vulnerability-study": "Historical Firefox vulnerability study",
+        "original-chromium-architecture-2008": "Original Chromium architecture (2008)",
+        "later-layers": "Later layers",
+        "7-6-android": "7.6 Android",
+        "7-7-namespaces": "7.7 Namespaces",
+        "7-8-isolation-boundaries": "7.8 Isolation boundaries"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/08-policies.md",
+      "headings": {
+        "8-sandboxing-policies": "8. Sandboxing policies",
+        "8-1-choosing-the-default": "8.1 Choosing the default",
+        "8-2-access-matrix": "8.2 Access matrix",
+        "8-3-policy-authority": "8.3 Policy authority",
+        "unix-dac": "Unix DAC",
+        "origins-and-selinux": "Origins and SELinux",
+        "roles": "Roles",
+        "8-4-confidentiality-and-integrity-labels": "8.4 Confidentiality and integrity labels",
+        "8-5-browser-extensions-2010": "8.5 Browser extensions (2010)",
+        "8-6-permission-prompts": "8.6 Permission prompts",
+        "8-7-confused-deputies": "8.7 Confused deputies",
+        "8-8-permission-lists-and-malware": "8.8 Permission lists and malware",
+        "8-9-information-flow": "8.9 Information flow"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/09-capabilities.md",
+      "headings": {
+        "9-access-control-and-capabilities": "9. Access control and capabilities",
+        "9-1-authority-and-identity": "9.1 Authority and identity",
+        "9-2-ambient-authority": "9.2 Ambient authority",
+        "confused-deputy": "Confused deputy",
+        "9-3-capability-references": "9.3 Capability references",
+        "9-4-unix-descriptors": "9.4 Unix descriptors",
+        "9-5-sandboxing-delegated-authority": "9.5 Sandboxing delegated authority",
+        "strict-seccomp": "Strict seccomp",
+        "capsicum": "Capsicum",
+        "9-6-delegation-and-revocation": "9.6 Delegation and revocation",
+        "permission-changes": "Permission changes",
+        "revocable-indirection": "Revocable indirection",
+        "9-7-page-tables-and-cheri": "9.7 Page tables and CHERI",
+        "page-table-limits": "Page-table limits",
+        "cheri-enforcement": "CHERI enforcement"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/10-virtual-machines.md",
+      "headings": {
+        "10-virtual-machines": "10. Virtual machines",
+        "10-1-trust-boundary": "10.1 Trust boundary",
+        "kernel-controlled-observations": "Kernel-controlled observations",
+        "10-2-security-uses": "10.2 Security uses",
+        "10-3-virtualization-requirements": "10.3 Virtualization requirements",
+        "10-4-trap-and-emulate": "10.4 Trap and emulate",
+        "x86-interrupt-state-failure": "x86 interrupt-state failure",
+        "10-5-x86-virtualization-methods": "10.5 x86 virtualization methods",
+        "binary-translation": "Binary translation",
+        "paravirtualization": "Paravirtualization",
+        "hardware-assistance": "Hardware assistance",
+        "10-6-memory-and-dma": "10.6 Memory and DMA",
+        "10-7-attacker-controlled-lower-layers": "10.7 Attacker-controlled lower layers",
+        "10-8-vm-detection": "10.8 VM detection",
+        "10-9-covert-channels": "10.9 Covert channels",
+        "measured-bandwidth": "Measured bandwidth"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/11-tee.md",
+      "headings": {
+        "11-trusted-execution-environments": "11. Trusted execution environments",
+        "11-1-trust-boundaries": "11.1 Trust boundaries",
+        "11-2-pcrs-and-measured-boot": "11.2 PCRs and measured boot",
+        "event-logs": "Event logs",
+        "11-3-remote-attestation": "11.3 Remote attestation",
+        "ak-ek-and-privacy": "AK, EK and privacy",
+        "11-4-measured-boot-trusted-boot-and-sealing": "11.4 Measured boot, trusted boot and sealing",
+        "sealed-objects": "Sealed objects",
+        "11-5-bitlocker": "11.5 BitLocker",
+        "pcr-11-prevents-late-unsealing": "PCR 11 prevents late unsealing",
+        "11-6-late-launch-and-drtm": "11.6 Late launch and DRTM",
+        "11-7-sgx": "11.7 SGX",
+        "measurement-coverage": "Measurement coverage",
+        "sealing-identities": "Sealing identities",
+        "memory-protection-by-generation": "Memory protection by generation",
+        "11-8-phone-tees": "11.8 Phone TEEs",
+        "11-9-failure-modes": "11.9 Failure modes"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/12-cryptography.md",
+      "headings": {
+        "12-basic-cryptographic-primitives": "12. Basic cryptographic primitives",
+        "12-1-threat-model-and-prior-knowledge": "12.1 Threat model and prior knowledge",
+        "12-2-correctness-and-perfect-secrecy": "12.2 Correctness and perfect secrecy",
+        "12-3-one-bit-ciphers": "12.3 One-bit ciphers",
+        "12-4-one-time-pad": "12.4 One-time pad",
+        "12-4-1-pad-reuse": "12.4.1 Pad reuse",
+        "12-4-2-malleability": "12.4.2 Malleability",
+        "12-5-message-authentication-codes": "12.5 Message authentication codes",
+        "12-5-1-probability-and-limits": "12.5.1 Probability and limits",
+        "12-5-2-hmac": "12.5.2 HMAC",
+        "12-6-combining-encryption-and-authentication": "12.6 Combining encryption and authentication",
+        "12-7-merkle-trees-for-untrusted-memory": "12.7 Merkle trees for untrusted memory",
+        "12-7-1-writes": "12.7.1 Writes",
+        "12-7-2-cost-and-assumptions": "12.7.2 Cost and assumptions",
+        "12-7-3-sgx-generations": "12.7.3 SGX generations"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/INDEX.md",
+      "headings": {
+        "revision-index": "Revision index",
+        "comparisons-and-common-confusions": "Comparisons and common confusions",
+        "section-lookup": "Section lookup",
+        "7-sandboxing-and-privilege-separation": "7. Sandboxing and privilege separation",
+        "8-sandboxing-policies": "8. Sandboxing policies",
+        "9-access-control-and-capabilities": "9. Access control and capabilities",
+        "10-virtual-machines": "10. Virtual machines",
+        "11-trusted-execution-environments": "11. Trusted execution environments",
+        "12-basic-cryptographic-primitives": "12. Basic cryptographic primitives"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/README.md",
+      "headings": {
+        "sandboxing-isolation-and-cryptography": "Sandboxing, isolation and cryptography"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/webbook-7-12/document-topic-map.md",
+      "headings": {
+        "topics-and-sources": "Topics and sources"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "index.md",
+      "title": "Computer security",
+      "headings": {
+        "computer-security": "Computer security",
+        "memory-safety": "Memory safety",
+        "sandboxing-isolation-and-cryptography": "Sandboxing, isolation and cryptography",
+        "practice-and-original-notes": "Practice and original notes"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "part2/2a.md",
+      "title": "Sandboxing: original sketch",
+      "headings": {
+        "sandboxing": "Sandboxing",
+        "lines-of-defense": "Lines of defense",
+        "reference-monitors": "Reference Monitors",
+        "3-security-principles": "3 Security Principles"
+      },
+      "headingKeywords": {}
+    }
+  ]
+}

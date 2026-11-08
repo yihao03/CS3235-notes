@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html data-dark-mode="true" data-code-theme="light">
+<head>
+    <script src="/CS3235-notes/markbind/js/theme-manager.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 7.2.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title> | CS3235 notes</title> <link rel="stylesheet" href="/CS3235-notes/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    
+    
+    <link rel="stylesheet" id="markbind-highlight-light" href="/CS3235-notes/markbind/css/codeblock-light.min.css">
+    <link rel="stylesheet" id="markbind-highlight-dark" href="/CS3235-notes/markbind/css/codeblock-dark.min.css">
+    <script src="/CS3235-notes/markbind/js/code-theme.js"></script><link rel="stylesheet" href="/CS3235-notes/markbind/css/markbind.min.css"><link rel="stylesheet" href="/CS3235-notes/plugins/codeBlockCopyButtons/codeBlockButtons.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/main.css">
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/study.css">
+</head>
+<script>
+  const baseUrl = '/CS3235-notes'
+</script>
+<body 
+   data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100"  
+  data-code-theme="light">
+<div id="app"><!--[--><header sticky><div data-v-94b60ff6><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-94b60ff6><div class="container-fluid" data-v-94b60ff6><div class="navbar-left" data-v-94b60ff6><!--[--><a href="/CS3235-notes/index.html" class="navbar-brand">CS3235 notes</a><!--]--></div><div class="navbar-default" data-v-94b60ff6><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-94b60ff6><!--[--> <li><a href="/CS3235-notes/memory_vulnerabilities/README.html" class="nav-link">Memory safety</a></li> <li><a href="/CS3235-notes/part2/webbook-7-12/README.html" class="nav-link">Sandboxing to cryptography</a></li>  <!--]--></ul></div><div class="navbar-right" data-v-94b60ff6><ul class="navbar-nav" data-v-94b60ff6><!--[--><li><form class="navbar-form" role="search"><div style="position:relative;" class="dropdown" data-v-103d5c4e><!--[--><input value="" data-bs-toggle="dropdown" type="text" class="form-control" placeholder="Search notes" autocomplete="off" data-v-103d5c4e><div class="form-control placeholder-div-hidden" data-v-103d5c4e>Search notes</div><!--]--><ul class="dropdown-menu search-dropdown-menu dropdown-menu-hidden dropdown-menu-end" data-v-103d5c4e><!--[--><!--]--></ul></div></form></li><!--]--></ul><!----></div></div></nav><div style="display:none;" class="lower-navbar-container" data-v-94b60ff6><!--[--><!----><!----><!--]--></div></div></header> <div id="flex-body"><nav id="site-nav" aria-label="Chapters" data-v-6b1b63d2><!--[--><div class="site-nav-top">Course notes</div> <div class="nav-component slim-scroll"><div class="site-nav-root"><!--[--><ul class="site-nav-list site-nav-list-root" data-v-6b1b63d2><!--[--><li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/index.html">Overview</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Memory safety 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">0. Introduction</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial-1a1b.html">1A/1B. Spatial errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal-2.html">2. Temporal errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/exploits-3.html">3. Memory exploits</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">4. Partial safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">5. Full safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/rust-6.html">6. Rust</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Sandboxing and isolation 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">7. Sandboxing</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">8. Policies</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">9. Capabilities</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/10-virtual-machines.html">10. Virtual machines</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/11-tee.html">11. Trusted execution environments</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/12-cryptography.html">12. Cryptography</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Revision 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/cheatsheet.html">Memory safety cheatsheet</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/review-checkpoints.html">Review checkpoints</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/INDEX.html">Topics 7 to 12 index</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/prerequisites.html">Prerequisites</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/assignment-overview.html">Assignment</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Original sketches
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/c_basics.html">C basics</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial.html">Spatial</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal.html">Temporal</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/2a.html">Sandboxing</a></div></li></ul></li><!--]--><!--v-if--></ul><!--]--></div></div><!--]--><!--v-if--></nav> <main id="content-wrapper"><div data-v-9ff38b52><nav aria-label="breadcrumb" class="breadcrumb-divider" data-v-9ff38b52><ol class="breadcrumb" data-v-9ff38b52><li class="notlink breadcrumb-marker" data-v-9ff38b52> ››   </li><!--[--><!--]--></ol></nav></div> <h1 id="spatial-memory-errors">Spatial Memory Errors<a class="fa fa-anchor" href="#spatial-memory-errors" onclick="event.stopPropagation()"></a></h1> <blockquote><p>Sources: <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html">01a Spatial</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html">01b Spatial (Advanced)</a> · <code class="hljs inline no-lang">lectures/1a</code>, <code class="hljs inline no-lang">lectures/1b</code> PDFs · Lab 1A/1B solution tutorials.
+Organized by topic, not lecture order. Code snippets preserved from sources.</p></blockquote> <p>Additional source sections: <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#threat-model">1A threat model</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#x86">1A x86 primer</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#spatial-def">1A definition</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#summary">1A summary</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html#intoverflow">1B integer overflow</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html#cpp">1B C++ subtyping</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html#badcast">1B bad casts</a> · <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html#summary">1B summary</a>.</p> <h2 id="0-model">0. Model<a class="fa fa-anchor" href="#0-model" onclick="event.stopPropagation()"></a></h2> <p><strong>Threat model:</strong> benign-but-buggy programmer. Gap between intended behavior and behavior on real hardware = vulnerability.</p> <p><strong>Definition:</strong> spatial = access outside object&#39;s bounds (wrong place). Temporal = outside lifetime (wrong time). Leak is <strong>not</strong> a safety violation.</p> <pre class="mermaid">flowchart TD
+  MV[&quot;Memory vulnerability&quot;] --&gt; S[&quot;Spatial: wrong place&quot;]
+  MV --&gt; T[&quot;Temporal: wrong time&quot;]
+  S --&gt; SO[&quot;Stack overflow&quot;]
+  S --&gt; HO[&quot;Heap overflow&quot;]
+  S --&gt; FS[&quot;Format string&quot;]
+  S --&gt; IO[&quot;Integer size error to overflow&quot;]
+  S --&gt; BC[&quot;Bad cast and type confusion&quot;]
+</pre> <p>Worst case for all below: read/write-anything-anywhere.</p> <p>Much of the request path (browser, protocols, server, OS) uses memory-unsafe C/C++; Microsoft and Chromium each attribute about 70% of serious bugs to memory safety. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#motivation">1A motivation</a> plots <a href="https://nvd.nist.gov/">NVD</a> annual published-CVE counts (2005–2025; copied in <a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">introduction</a>) and cumulative product CVEs by CPE match (July 2026 snapshot): Linux kernel 18,708; Debian 10,068; Android 9,259; macOS 6,519; Chrome 5,470; Fedora 5,368; Windows Server 2019 5,101; iOS 4,511; Ubuntu 4,190; Windows 10 4,057. Nine of this top ten are OSes; Chrome is the only application. CPE matching/count methods differ from CVE Details. Privilege escalation is a distinct outcome (e.g. user → root/kernel), not synonymous with memory corruption. Current counts: <a href="https://nvd.nist.gov/vuln/search/statistics?form_type=Basic&amp;results_type=statistics&amp;search_type=all">NVD</a>, <a href="https://www.cvedetails.com/top-50-products.php">CVE Details</a>.</p> <h2 id="1-background-x86-stack-frame">1. Background: x86 stack frame<a class="fa fa-anchor" href="#1-background-x86-stack-frame" onclick="event.stopPropagation()"></a></h2> <p>Registers: <code class="hljs inline no-lang">EIP/RIP</code> next instr, <code class="hljs inline no-lang">ESP/RSP</code> stack top (moves), <code class="hljs inline no-lang">EBP/RBP</code> frame anchor (fixed). Operands are <code class="hljs inline no-lang">[reg ± offset]</code>, e.g. <code class="hljs inline no-lang">mov -0x4[ebp], ecx</code>.</p> <p>Layout for <code class="hljs inline no-lang">f()</code> calling <code class="hljs inline no-lang">g(x,y)</code> (<code class="hljs inline no-lang">g</code> has <code class="hljs inline no-lang">char buf[50]</code>):</p> <pre><code class="hljs"><span>high addresses
+</span><span>[ebp+8]  first arg (caller&#39;s)
+</span><span>[ebp+4]  return address (pushed by call)
+</span><span>[ebp+0]  saved EBP (pushed by prologue, EBP points here)
+</span><span>[ebp-4]  first local ...
+</span><span>low addresses  &lt;- ESP moves, EBP fixed
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Key collision:</p> <pre class="mermaid">flowchart TB
+  HI[&quot;high addresses&quot;] --&gt; CTRL[&quot;return address and saved EBP&quot;]
+  CTRL --&gt; BUF[&quot;buf[49] ... buf[0]&quot;]
+  BUF --&gt; LO[&quot;low addresses&quot;]
+  ST[&quot;stack allocation grows toward lower addresses&quot;] -.-&gt; LO
+  WR[&quot;overflow from buf[0] grows toward higher addresses&quot;] -.-&gt; CTRL
+</pre> <p>With <code class="hljs inline no-lang">-fomit-frame-pointer</code> (commonly enabled in optimized builds) there may be no saved-EBP/RBP slot; the unoptimized lab binary keeps a frame pointer. On x86-64, saved <code class="hljs inline no-lang">RBP</code> and the return address are each 8 bytes. Details: <a href="https://wiki.osdev.org/Calling_Conventions">x86 calling convention</a>, <a href="https://www.cs.virginia.edu/~evans/cs216/guides/x86.html">UVA x86 guide</a>.</p> <h2 id="2-stack-buffer-overflow-cwe-787">2. Stack buffer overflow — CWE-787<a class="fa fa-anchor" href="#2-stack-buffer-overflow-cwe-787" onclick="event.stopPropagation()"></a></h2> <p>Original snippet (both sources):</p> <pre><code class="hljs c"><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">g</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+</span><span>  <span class="hljs-keyword">char</span> buf[<span class="hljs-number">50</span>];
+</span><span>  <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, buf);   <span class="hljs-comment">// no length limit!</span>
+</span><span>}
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Lab version (<code class="hljs inline no-lang">login.c</code>, built <code class="hljs inline no-lang">gcc -fno-stack-protector -no-pie -g -w</code>):</p> <pre><code class="hljs c"><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span>   authenticated = <span class="hljs-number">0</span>;
+</span><span>    <span class="hljs-keyword">char</span>  buf[<span class="hljs-number">16</span>];
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, buf);  <span class="hljs-comment">// the bug</span>
+</span><span>    <span class="hljs-keyword">if</span> (authenticated) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;*** ACCESS GRANTED ***\n&quot;</span>);
+</span><span>}
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Overflow writes toward higher addresses: <code class="hljs inline no-lang">buf[50+] → saved EBP → return address</code>. <code class="hljs inline no-lang">ret</code> pops that slot into <code class="hljs inline no-lang">EIP/RIP</code> → control hijack (Lecture 3: code injection / return-to-libc / ROP). Classic ref: <a href="http://phrack.org/issues/49/14.html">Aleph One, Phrack 1996</a>.</p> <h3 id="2-1-lab-login-c-measured-layout-and-attacks">2.1 Lab <code class="hljs inline no-lang">login.c</code>: measured layout and attacks<a class="fa fa-anchor" href="#2-1-lab-login-c-measured-layout-and-attacks" onclick="event.stopPropagation()"></a></h3> <p>For the tutorial&#39;s exact x86-64 binary (<code class="hljs inline no-lang">-O0 -fno-stack-protector -no-pie</code>), disassembly/debugging gives this layout relative to <code class="hljs inline no-lang">buf</code>:</p> <pre><code class="hljs text"><span>high addresses
+</span><span>offset 40..47   saved return address
+</span><span>offset 32..39   saved RBP
+</span><span>offset 24..31   another 8-byte local/pointer
+</span><span>offset 20..23   authenticated (int)
+</span><span>offset 16..19   alignment padding
+</span><span>offset  0..15   buf[16]
+</span><span>low addresses
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>These offsets are <strong>properties of this compiled binary, not of the C language</strong>. Variable order, padding, optimization, ABI, compiler version, frame-pointer use, and stack-protector settings can all change them. Determine offsets from the actual binary (e.g. disassembly/GDB), not just source declaration order.</p> <details><summary>Calculating offsets in the compiled stack frame</summary> <ul><li>Set the buffer&#39;s first byte as offset 0. In this build <code class="hljs inline no-lang">authenticated</code> is at +20, saved <code class="hljs inline no-lang">RBP</code> at +32 and return address at +40. Four padding bytes separate the 16-byte buffer from the flag; source declaration order alone cannot establish that.</li> <li><code class="hljs inline no-lang">scanf(&quot;%s&quot;)</code> copies <em>n</em> non-whitespace bytes then writes NUL at offset <em>n</em>: with 20 <code class="hljs inline no-lang">A</code>s byte 20 is zero; with 21 it is <code class="hljs inline no-lang">0x41</code>. Forty filler bytes reach the return-address slot; later bytes replace it.</li> <li><code class="hljs inline no-lang">ret</code> interprets eight bytes starting at +40 as a little-endian address: <code class="hljs inline no-lang">f6 11 40 00 00 00 00 00</code> is <code class="hljs inline no-lang">0x00000000004011f6</code>. The added NUL may corrupt a following byte, so inspect the complete write. Remeasure under different compiler flags, ABI and mitigations. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#overflow">1A source</a>.</li></ul></details> <ul><li><code class="hljs inline no-lang">20</code> payload bytes only reach <code class="hljs inline no-lang">authenticated</code>; with <code class="hljs inline no-lang">scanf(&quot;%s&quot;, ...)</code>, the following NUL still writes zero there. A 21st nonzero byte changes its low byte, making <code class="hljs inline no-lang">if (authenticated)</code> true.</li> <li>The saved return address begins 40 bytes after <code class="hljs inline no-lang">buf</code>. Forty filler bytes followed by an encoded code address replace it.</li> <li>Replacing <code class="hljs inline no-lang">RIP</code> with arbitrary text such as <code class="hljs inline no-lang">ABCD</code> normally crashes; useful control hijacking requires a valid code address, such as the lab&#39;s otherwise-unreachable <code class="hljs inline no-lang">win()</code>.</li></ul> <h4 id="little-endian-encoding">Little-endian encoding<a class="fa fa-anchor" href="#little-endian-encoding" onclick="event.stopPropagation()"></a></h4> <p>x86-64 stores the least-significant byte at the lowest address. Thus a value displayed as <code class="hljs inline no-lang">0x00000000004011f6</code> is injected as bytes:</p> <pre><code class="hljs text"><span>f6 11 40 00 00 00 00 00
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>If input begins with ASCII <code class="hljs inline no-lang">ABCD</code> (<code class="hljs inline no-lang">41 42 43 44</code> in increasing addresses), a debugger interpreting those four bytes as an integer displays <code class="hljs inline no-lang">0x44434241</code>. Non-printable address bytes cannot reliably be typed at a prompt, so lab payloads are generated as raw bytes and piped to the program.</p> <h4 id="pie-aslr-and-why-the-lab-uses-no-pie">PIE, ASLR, and why the lab uses <code class="hljs inline no-lang">-no-pie</code><a class="fa fa-anchor" href="#pie-aslr-and-why-the-lab-uses-no-pie" onclick="event.stopPropagation()"></a></h4> <p><code class="hljs inline no-lang">-no-pie</code> links a non-PIE executable, fixing its code addresses; therefore <code class="hljs inline no-lang">win()</code> has the same address each run. With PIE plus ASLR, the executable&#39;s load base changes each run, although offsets within the executable remain fixed. An attacker then needs an address leak, a partial-overwrite technique, or another way to recover the randomized base. ASLR may still randomize the stack even when the executable is non-PIE.</p> <p>Fix: bound the write, derive bound from buffer:</p> <pre><code class="hljs c"><span><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%49s&quot;</span>, buf);             <span class="hljs-comment">// for char buf[50]</span>
+</span><span><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%15s&quot;</span>, buf);             <span class="hljs-comment">// for the lab&#39;s char buf[16]</span>
+</span><span>fgets(buf, <span class="hljs-keyword">sizeof</span>(buf), <span class="hljs-built_in">stdin</span>);
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><h3 id="2-2-stack-canaries-and-compiler-layout">2.2 Stack canaries and compiler layout<a class="fa fa-anchor" href="#2-2-stack-canaries-and-compiler-layout" onclick="event.stopPropagation()"></a></h3> <p>A stack canary is a process/runtime secret placed between vulnerable locals and saved control data. The function checks it before returning and aborts if it changed. On common 64-bit Linux implementations it is 8 bytes, with one byte fixed to NUL and the remaining 56 bits randomized. The NUL (the low-address byte on little-endian systems) frustrates leaking/copying the complete canary through NUL-terminated string operations.</p> <p>Canaries are mitigation, not memory safety:</p> <ul><li>They detect a contiguous overwrite that crosses the canary on its way to saved <code class="hljs inline no-lang">RBP</code>/<code class="hljs inline no-lang">RIP</code>.</li> <li>They do not stop an overwrite that never crosses it, a non-contiguous arbitrary write, or heap/type-confusion corruption.</li> <li>A leaked canary can be copied back unchanged; blind guessing is normally impractical with 56 random bits unless repeated attempts or side channels help.</li> <li>Enabling optimization or <code class="hljs inline no-lang">-fstack-protector[-strong]</code> may also reorder locals. In the tutorial build, this incidentally moved <code class="hljs inline no-lang">authenticated</code> below <code class="hljs inline no-lang">buf</code>, so a forward overflow could no longer reach it—but this layout side effect is not the canary&#39;s security contract.</li></ul> <p>See Lecture 1d for full mitigations.</p> <h2 id="3-format-string-bugs-cwe-134">3. Format-string bugs — CWE-134<a class="fa fa-anchor" href="#3-format-string-bugs-cwe-134" onclick="event.stopPropagation()"></a></h2> <p><code class="hljs inline no-lang">printf/scanf</code> are vararg: format string interpreted at runtime to decide how many args to pull.</p> <p>Vulnerable pattern (slides; lab <code class="hljs inline no-lang">fmt.c</code> is same shape):</p> <pre><code class="hljs c"><span><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+</span><span>  srand(time(<span class="hljs-literal">NULL</span>));
+</span><span>  <span class="hljs-keyword">char</span> localStr[<span class="hljs-number">100</span>];
+</span><span>  <span class="hljs-keyword">int</span> magicNumber = rand() % <span class="hljs-number">100</span>;
+</span><span>  <span class="hljs-keyword">int</span> userCode = <span class="hljs-number">0xBBBBBBBB</span>;
+</span><span>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Username? &quot;</span>);
+</span><span>  fgets(localStr, <span class="hljs-keyword">sizeof</span>(localStr), <span class="hljs-built_in">stdin</span>);
+</span><span>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Hello &quot;</span>);
+</span><span>  <span class="hljs-built_in">printf</span>(localStr);   <span class="hljs-comment">// <span class="hljs-doctag">BUG:</span> user input as format</span>
+</span><span>  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;What is the access code? &quot;</span>);
+</span><span>  <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;userCode);
+</span><span>  <span class="hljs-keyword">if</span> (userCode == magicNumber) <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;You win!\n&quot;</span>);
+</span><span>}
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><pre><code class="hljs c"><span><span class="hljs-comment">// fmt.c lab</span>
+</span><span>fgets(buf, <span class="hljs-keyword">sizeof</span>(buf), <span class="hljs-built_in">stdin</span>);
+</span><span><span class="hljs-built_in">printf</span>(buf);  <span class="hljs-comment">// the bug</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><pre class="mermaid">flowchart LR
+  U[&quot;user types percent-x codes&quot;] --&gt; P[&quot;printf assumes missing args on stack or regs&quot;]
+  P --&gt; L[&quot;prints stack words, leaks secret&quot;]
+  U2[&quot;user pads input, embeds addr, uses percent-n&quot;] --&gt; W[&quot;percent-n writes count via attacker pointer&quot;]
+</pre> <ul><li>Read: <code class="hljs inline no-lang">%x/%d/%s</code> dump stack words, reach <code class="hljs inline no-lang">magicNumber</code>, <code class="hljs inline no-lang">secret</code>.</li> <li>Write: <code class="hljs inline no-lang">%n</code> stores chars-printed-so-far to <code class="hljs inline no-lang">int*</code> from arg list. Attacker controls pointer (address placed in buffer) + value (pad with <code class="hljs inline no-lang">%200x</code>). Write-anything-anywhere, same payoff as heap unlink.</li> <li>Fix (one line):</li></ul> <pre><code class="hljs c"><span><span class="hljs-built_in">printf</span>(localStr);       <span class="hljs-comment">// user picks specifiers</span>
+</span><span><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, localStr); <span class="hljs-comment">// user is just data</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Compiler helps: <code class="hljs inline no-lang">-Wformat-security</code> (normally used with <code class="hljs inline no-lang">-Wformat</code>). Ref: <a href="https://cs155.stanford.edu/papers/formatstring-1.2.pdf">scut/teso format-string paper</a>.</p> <p>x86 vs x64 plumbing: 32-bit passes all args on stack so <code class="hljs inline no-lang">%x</code> walks stack directly. Under the x86-64 System V ABI, integer/pointer arguments use <code class="hljs inline no-lang">RDI, RSI, RDX, RCX, R8, R9</code>, then the stack. For <code class="hljs inline no-lang">printf</code>, <code class="hljs inline no-lang">RDI</code> contains the format pointer, so the first five conversion arguments are fetched from <code class="hljs inline no-lang">RSI</code> through <code class="hljs inline no-lang">R9</code>; later ones come from the stack. Bug identical, offsets differ. See conflict §8 on register count.</p> <h3 id="3-1-lab-fmt-c-locating-and-using-argument-slots">3.1 Lab <code class="hljs inline no-lang">fmt.c</code>: locating and using argument slots<a class="fa fa-anchor" href="#3-1-lab-fmt-c-locating-and-using-argument-slots" onclick="event.stopPropagation()"></a></h3> <p>Useful syntax:</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Format</th> <th>Meaning</th></tr></thead> <tbody class="table-group-divider"><tr><td><code class="hljs inline no-lang">%016lx</code></td> <td>print an 8-byte value as 16 hex digits, zero-padded</td></tr> <tr><td><code class="hljs inline no-lang">%8$lx</code></td> <td>print positional argument 8 as an unsigned long in hex</td></tr> <tr><td><code class="hljs inline no-lang">%8$s</code></td> <td>treat positional argument 8 as <code class="hljs inline no-lang">char *</code> and print the pointed-to string</td></tr> <tr><td><code class="hljs inline no-lang">%9$n</code></td> <td>treat argument 9 as <code class="hljs inline no-lang">int *</code>; store the output count there</td></tr> <tr><td><code class="hljs inline no-lang">%4919u</code></td> <td>print a field at least 4919 characters wide, increasing the output count</td></tr></tbody></table></div><p>POSIX positional syntax is <code class="hljs inline no-lang">%m$conversion</code>; positions are <strong>one-based</strong>. The format pointer in <code class="hljs inline no-lang">RDI</code> is not position 1 of the conversion-argument list: <code class="hljs inline no-lang">%1$...</code> accesses the first variadic argument (<code class="hljs inline no-lang">RSI</code> on this ABI).</p> <p>A recognizable marker at the start of input (for example, <code class="hljs inline no-lang">MARK</code>) reveals where attacker-controlled buffer bytes appear while probing with repeated <code class="hljs inline no-lang">%016lx</code>. Because the bytes <code class="hljs inline no-lang">4d 41 52 4b</code> are interpreted little-endian as one integer, the numeric output appears as <code class="hljs inline no-lang">4b52414d</code>. Once the slot is known, positional formats avoid walking through all preceding slots.</p> <p>For the tutorial&#39;s compiled <code class="hljs inline no-lang">fmt.c</code> layout:</p> <ul><li>slot 8 contains a pointer to <code class="hljs inline no-lang">secret</code>, so <code class="hljs inline no-lang">%8$s</code> dereferences it and leaks the string;</li> <li>slot 9 contains <code class="hljs inline no-lang">&amp;target</code>, so <code class="hljs inline no-lang">%9$n</code> writes to <code class="hljs inline no-lang">target</code>;</li> <li>the raw value of <code class="hljs inline no-lang">target</code> may also appear in an earlier slot—do not confuse a variable&#39;s value with its address. <code class="hljs inline no-lang">%n</code> requires the latter.</li></ul> <p>To write <code class="hljs inline no-lang">0x1337</code>, first produce 4919 (<code class="hljs inline no-lang">0x1337</code>) output characters, then use the target-pointer slot: for example, <code class="hljs inline no-lang">%1$4919u%9$n</code> uses argument 1 for the padded output and argument 9 as the destination (the exact count must include any characters already printed by that same <code class="hljs inline no-lang">printf</code> call). <code class="hljs inline no-lang">%n</code> itself prints nothing. Avoid mixing positional (<code class="hljs inline no-lang">%9$...</code>) and non-positional argument conversions in one format string.</p> <p>Write-width modifiers are exact:</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Conversion</th> <th>Pointer type / bytes written</th></tr></thead> <tbody class="table-group-divider"><tr><td><code class="hljs inline no-lang">%n</code></td> <td><code class="hljs inline no-lang">int *</code> / typically 4 bytes</td></tr> <tr><td><code class="hljs inline no-lang">%hn</code></td> <td><code class="hljs inline no-lang">short *</code> / 2 bytes</td></tr> <tr><td><code class="hljs inline no-lang">%hhn</code></td> <td><code class="hljs inline no-lang">signed char *</code> / 1 byte</td></tr> <tr><td><code class="hljs inline no-lang">%ln</code></td> <td><code class="hljs inline no-lang">long *</code> / 8 bytes on x86-64 Linux</td></tr></tbody></table></div><p><code class="hljs inline no-lang">%hn</code> and <code class="hljs inline no-lang">%hhn</code> store the low 16 or 8 bits of the characters-written count, respectively. Narrow writes are useful for building a larger value piece by piece without printing an enormous number of characters.</p> <p>ASLR alone does not stop the tutorial&#39;s <code class="hljs inline no-lang">%8$s</code> leak or <code class="hljs inline no-lang">%9$n</code> write: addresses change, but the vulnerable call still fetches the already-present pointer from the same argument slot as long as the compiled frame layout is unchanged. ASLR does matter when a payload must embed an absolute address directly.</p> <details><summary>Format-string argument slots and write counts</summary> <ul><li>System V x86-64 passes <code class="hljs inline no-lang">printf</code>&#39;s format in <code class="hljs inline no-lang">RDI</code>, conversion argument positions 1–5 in <code class="hljs inline no-lang">RSI</code>, <code class="hljs inline no-lang">RDX</code>, <code class="hljs inline no-lang">RCX</code>, <code class="hljs inline no-lang">R8</code>, <code class="hljs inline no-lang">R9</code>, and subsequent positions on the stack. The vulnerable call supplied <strong>no actual conversion arguments</strong>: consuming residue is undefined behavior and measured slots are binary-specific.</li> <li><code class="hljs inline no-lang">%m$lx</code> prints slot <em>m</em>; <code class="hljs inline no-lang">%m$s</code> dereferences its value as a pointer, which may fault. <code class="hljs inline no-lang">%m$n</code> treats it as <code class="hljs inline no-lang">int *</code> and stores the output count there. A slot containing <code class="hljs inline no-lang">&amp;target</code> is not the same as one containing <code class="hljs inline no-lang">target</code>&#39;s value.</li> <li>Padding and <code class="hljs inline no-lang">%n</code> act within one <code class="hljs inline no-lang">printf</code>; count all bytes that same call already emitted. <code class="hljs inline no-lang">%hhn</code>, <code class="hljs inline no-lang">%hn</code>, <code class="hljs inline no-lang">%n</code> store low 8 bits, low 16 bits or an <code class="hljs inline no-lang">int</code> respectively; pointer type must match. Positional indexes are one-based; avoid mixing them with non-positional conversions. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#formatstr">1A source</a>.</li></ul></details> <h2 id="4-integer-overflow-spatial-overflow">4. Integer overflow → spatial overflow<a class="fa fa-anchor" href="#4-integer-overflow-spatial-overflow" onclick="event.stopPropagation()"></a></h2> <p>Same bits, two meanings. Top bit set → signed/unsigned diverge by 256 (8-bit):</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>bits</th> <th>hex</th> <th>unsigned</th> <th>signed</th></tr></thead> <tbody class="table-group-divider"><tr><td>0000 0000</td> <td>0x00</td> <td>0</td> <td>0</td></tr> <tr><td>0111 1111</td> <td>0x7F</td> <td>127</td> <td>127</td></tr> <tr><td><strong>1</strong>000 0000</td> <td>0x80</td> <td>128</td> <td>−128</td></tr> <tr><td><strong>1</strong>010 0000</td> <td>0xA0</td> <td>160</td> <td>−96</td></tr> <tr><td><strong>1</strong>111 1111</td> <td>0xFF</td> <td>255</td> <td>−1</td></tr></tbody></table></div><p>Webbook demo: feed 160 chars to <code class="hljs inline no-lang">bad_function</code>; rebuild with <code class="hljs inline no-lang">-funsigned-char</code> and same input behaves differently — whether it wraps depends on compiler/arch, no source change.</p> <p>C rules (since C89):</p> <ol><li>Narrow operands promote to <strong>signed</strong> <code class="hljs inline no-lang">int</code> before arithmetic (<code class="hljs inline no-lang">unsigned char + unsigned char : int</code>).</li> <li>Mixed signed/unsigned of same rank → signed converts to <strong>unsigned</strong> (negative becomes huge positive).</li></ol> <p>Hardware raises no fault: ALU runs same bit ops for both; signedness is compiler claim. So a wrapped length passes a guard then drives <code class="hljs inline no-lang">memcpy/malloc</code> overflow. Integer bug corrupts the <em>size</em>, not memory directly.</p> <h3 id="4-1-lab-records-c-a-small-allocation-followed-by-a-large-write">4.1 Lab <code class="hljs inline no-lang">records.c</code>: a small allocation followed by a large write<a class="fa fa-anchor" href="#4-1-lab-records-c-a-small-allocation-followed-by-a-large-write" onclick="event.stopPropagation()"></a></h3> <p>The important shape is:</p> <pre><code class="hljs c"><span><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> REC_SIZE 16</span>
+</span><span><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> count;
+</span><span><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> bytes;
+</span><span>
+</span><span><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%hu&quot;</span>, &amp;count);
+</span><span>bytes = count * REC_SIZE;
+</span><span><span class="hljs-keyword">char</span> *buf = <span class="hljs-built_in">malloc</span>(bytes);
+</span><span>
+</span><span><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; i++)
+</span><span>    <span class="hljs-built_in">memset</span>(buf + i * REC_SIZE, <span class="hljs-string">&#39;A&#39;</span>, REC_SIZE);
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>An <code class="hljs inline no-lang">unsigned short</code> is 16 bits in the lab, so assignment to <code class="hljs inline no-lang">bytes</code> keeps the result modulo <code class="hljs inline no-lang">2^16 = 65536</code>. The multiplication itself occurs after integer promotion, typically as a 32-bit <code class="hljs inline no-lang">int</code>; the truncation happens when that result is assigned back to <code class="hljs inline no-lang">unsigned short</code>.</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th style="text-align:right;"><code class="hljs inline no-lang">count</code></th> <th style="text-align:right;">Mathematical <code class="hljs inline no-lang">count * 16</code></th> <th style="text-align:right;">Stored <code class="hljs inline no-lang">bytes</code></th> <th style="text-align:right;">Loop writes</th></tr></thead> <tbody class="table-group-divider"><tr><td style="text-align:right;">4095</td> <td style="text-align:right;">65,520</td> <td style="text-align:right;">65,520</td> <td style="text-align:right;">65,520 bytes</td></tr> <tr><td style="text-align:right;">4096</td> <td style="text-align:right;">65,536</td> <td style="text-align:right;">0</td> <td style="text-align:right;">65,536 bytes</td></tr> <tr><td style="text-align:right;">4097</td> <td style="text-align:right;">65,552</td> <td style="text-align:right;">16</td> <td style="text-align:right;">65,552 bytes</td></tr></tbody></table></div><p><code class="hljs inline no-lang">4096</code> is the first wrapping count. At <code class="hljs inline no-lang">4097</code>, the mismatch is easier to see: only 16 bytes are requested, but the loop correctly follows <code class="hljs inline no-lang">count</code> and writes 65,552 bytes. The loop is not the root cause; allocation and writing use inconsistent representations of the intended size.</p> <p>Use a type suitable for object sizes and check before multiplying:</p> <pre><code class="hljs c"><span><span class="hljs-keyword">if</span> ((<span class="hljs-keyword">size_t</span>)count &gt; SIZE_MAX / REC_SIZE)
+</span><span>    <span class="hljs-comment">/* reject */</span>;
+</span><span>
+</span><span><span class="hljs-keyword">size_t</span> bytes = (<span class="hljs-keyword">size_t</span>)count * REC_SIZE;
+</span><span><span class="hljs-keyword">char</span> *buf = <span class="hljs-built_in">malloc</span>(bytes);
+</span><span><span class="hljs-keyword">if</span> (buf == <span class="hljs-literal">NULL</span> &amp;&amp; bytes != <span class="hljs-number">0</span>)
+</span><span>    <span class="hljs-comment">/* handle allocation failure */</span>;
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p><code class="hljs inline no-lang">malloc(0)</code> is implementation-defined in practical effect: it may return <code class="hljs inline no-lang">NULL</code> or a unique pointer that still must not be dereferenced. Rejecting a zero record count explicitly is usually clearer when zero is not meaningful.</p> <p>Refs: <a href="https://owasp.org/www-community/vulnerabilities/Integer_overflow">OWASP integer overflow</a>, <a href="https://dl.acm.org/doi/10.1145/2724714">TOCTOU/TOSEM&#39;15 §§1-3</a>, <a href="https://stackoverflow.com/questions/50605/signed-to-unsigned-conversion-in-c-is-it-always-safe">C99 conversions</a>, <a href="https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html"><code class="hljs inline no-lang">-funsigned-char</code></a>, <a href="https://godbolt.org/">Godbolt</a>.</p> <h2 id="5-heap-allocation-and-heap-overflow">5. Heap allocation and heap overflow<a class="fa fa-anchor" href="#5-heap-allocation-and-heap-overflow" onclick="event.stopPropagation()"></a></h2> <p><code class="hljs inline no-lang">malloc(n)</code> asks for at least <code class="hljs inline no-lang">n</code> usable bytes whose lifetime continues until <code class="hljs inline no-lang">free</code>; it does <strong>not</strong> promise that the underlying chunk is exactly <code class="hljs inline no-lang">n</code> bytes. An allocator rounds sizes for alignment/minimum-size rules and stores bookkeeping beside the user allocation. These details below describe the lab&#39;s 64-bit glibc allocator and are not part of the C standard.</p> <h3 id="5-1-requests-chunks-and-the-pointer-returned-by-malloc">5.1 Requests, chunks, and the pointer returned by <code class="hljs inline no-lang">malloc</code><a class="fa fa-anchor" href="#5-1-requests-chunks-and-the-pointer-returned-by-malloc" onclick="event.stopPropagation()"></a></h3> <p>Useful vocabulary:</p> <ul><li><strong>Request size:</strong> the <code class="hljs inline no-lang">n</code> supplied to <code class="hljs inline no-lang">malloc(n)</code>.</li> <li><strong>Chunk:</strong> allocator-managed region containing metadata plus usable storage.</li> <li><strong>User pointer:</strong> address returned by <code class="hljs inline no-lang">malloc</code>, pointing into the chunk rather than its physical beginning.</li> <li><strong>Usable size:</strong> bytes the allocator makes available; it can exceed the request.</li> <li><strong>Stride:</strong> distance from one adjacent user pointer to the next, equal to the first chunk&#39;s rounded physical size in these examples.</li></ul> <p>The webbook&#39;s probe makes two 50-byte requests:</p> <pre><code class="hljs c"><span><span class="hljs-keyword">char</span> *a = <span class="hljs-built_in">malloc</span>(<span class="hljs-number">50</span>);
+</span><span><span class="hljs-keyword">char</span> *b = <span class="hljs-built_in">malloc</span>(<span class="hljs-number">50</span>);
+</span><span><span class="hljs-built_in">strcpy</span>(a, <span class="hljs-string">&quot;hello&quot;</span>);
+</span><span>
+</span><span><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a                 = %p\n&quot;</span>, a);
+</span><span><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;b                 = %p\n&quot;</span>, b);
+</span><span><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;b - a             = %ld\n&quot;</span>, (<span class="hljs-keyword">long</span>)(b - a));
+</span><span><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;size word at a-8  = %#zx\n&quot;</span>, ((<span class="hljs-keyword">size_t</span> *)a)[<span class="hljs-number">-1</span>]);
+</span><span><span class="hljs-built_in">free</span>(a);
+</span><span><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;first word after free = %#zx\n&quot;</span>, ((<span class="hljs-keyword">size_t</span> *)a)[<span class="hljs-number">0</span>]);
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>One real run gives:</p> <pre><code class="hljs text"><span>b - a                 = 64
+</span><span>size word at a - 8    = 0x41
+</span><span>first word after free = allocator link/bookkeeping
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>The 50-byte request becomes a 64-byte chunk. The raw size word <code class="hljs inline no-lang">0x41</code> encodes a chunk size of <code class="hljs inline no-lang">0x40</code> (64) plus flag bit <code class="hljs inline no-lang">0x1</code>. Because chunk sizes are 16-byte aligned, the low bits are available as flags:</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th style="text-align:right;">Bit</th> <th>glibc name</th> <th>Meaning</th></tr></thead> <tbody class="table-group-divider"><tr><td style="text-align:right;"><code class="hljs inline no-lang">0x1</code></td> <td><code class="hljs inline no-lang">PREV_INUSE</code></td> <td>the physically preceding chunk is in use</td></tr> <tr><td style="text-align:right;"><code class="hljs inline no-lang">0x2</code></td> <td><code class="hljs inline no-lang">IS_MMAPPED</code></td> <td>this chunk came from a separate <code class="hljs inline no-lang">mmap</code> allocation</td></tr> <tr><td style="text-align:right;"><code class="hljs inline no-lang">0x4</code></td> <td><code class="hljs inline no-lang">NON_MAIN_ARENA</code></td> <td>this chunk belongs to a non-main arena</td></tr></tbody></table></div><p>Conceptually:</p> <pre><code class="hljs c"><span>chunk_size = raw_size &amp; ~(<span class="hljs-keyword">size_t</span>)<span class="hljs-number">0x7</span>;  <span class="hljs-comment">// simplified for this ABI</span>
+</span><span>flags      = raw_size &amp;  (<span class="hljs-keyword">size_t</span>)<span class="hljs-number">0x7</span>;
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Do not read <code class="hljs inline no-lang">PREV_INUSE</code> as “this chunk is currently allocated”; it describes the <strong>previous physical chunk</strong> and helps glibc decide whether backward coalescing is safe.</p> <details><summary>glibc chunk words, rounding, and the apparent header size</summary> <ul><li>On this 64-bit glibc build, a physical chunk has <code class="hljs inline no-lang">prev_size</code> and <code class="hljs inline no-lang">size</code> words before its user pointer. Alignment frees low <code class="hljs inline no-lang">size</code> bits for flags: <code class="hljs inline no-lang">0x41 &amp; ~0x7 = 0x40</code> (64-byte chunk) and low bit 1 means the preceding physical chunk is in use.</li> <li>While the preceding chunk is allocated, its usable area can overlap the following chunk&#39;s <code class="hljs inline no-lang">prev_size</code>. Only the next <code class="hljs inline no-lang">size</code> word therefore looks like an 8-byte intervening header in the lab, though a freed chunk may need both words to coalesce. For <code class="hljs inline no-lang">malloc(50)</code> here, adjacent returned pointers are 64 bytes apart, not universally <code class="hljs inline no-lang">50 + 16</code>.</li> <li>The <strong>requested C object</strong> remains 50 bytes: allocator rounding does not authorize extra object accesses. Inspecting metadata via <code class="hljs inline no-lang">a[-8]</code> or reading after <code class="hljs inline no-lang">free</code> is allocator-specific/undefined as C code, suitable only for the lab diagnostic. Heap state, arena, tcache and glibc version alter results. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html#heap-bg">1B source</a>.</li></ul></details> <h4 id="why-the-lab-often-calls-the-header-8-bytes">Why the lab often calls the header “8 bytes”<a class="fa fa-anchor" href="#why-the-lab-often-calls-the-header-8-bytes" onclick="event.stopPropagation()"></a></h4> <p>glibc&#39;s physical chunk prefix is normally described as two 8-byte words, <code class="hljs inline no-lang">prev_size</code> and <code class="hljs inline no-lang">size</code>. However, <code class="hljs inline no-lang">prev_size</code> is meaningful only when the previous chunk is free. While that previous chunk is allocated, glibc lets its user allocation use those overlapping eight bytes. Consequently, from one allocated user pointer to the next, only the next chunk&#39;s 8-byte <code class="hljs inline no-lang">size</code> word looks like an intervening header:</p> <pre><code class="hljs text"><span>high addresses
+</span><span>next user data
+</span><span>next chunk: size                 &lt;- 8 visible intervening bytes
+</span><span>next chunk: prev_size            &lt;- usable tail of previous allocation
+</span><span>previous user data
+</span><span>low addresses
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>This is why the course&#39;s simplified model says “8-byte header.” It is correct for computing the demonstrated user-pointer distances, but the full glibc chunk structure is subtler. Always use the addresses printed by the exercise rather than assuming a universal header size.</p> <h3 id="5-2-lab-acct-c-two-adjacent-allocations">5.2 Lab <code class="hljs inline no-lang">acct.c</code>: two adjacent allocations<a class="fa fa-anchor" href="#5-2-lab-acct-c-two-adjacent-allocations" onclick="event.stopPropagation()"></a></h3> <pre><code class="hljs c"><span><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">account</span> {</span>
+</span><span>    <span class="hljs-keyword">char</span> name[<span class="hljs-number">32</span>];
+</span><span>    <span class="hljs-keyword">int</span>  balance;
+</span><span>    <span class="hljs-keyword">int</span>  is_admin;
+</span><span>};                                      <span class="hljs-comment">// sizeof = 40 in this build</span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">account</span> *<span class="hljs-title">acct</span> =</span> <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span> *acct);
+</span><span><span class="hljs-keyword">char</span> *note = <span class="hljs-built_in">malloc</span>(<span class="hljs-number">64</span>);
+</span><span><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, acct-&gt;name);               <span class="hljs-comment">// unbounded write</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>In the supplied run:</p> <pre><code class="hljs text"><span>sizeof *acct                  = 40 bytes
+</span><span>note - (char *)acct           = 48 bytes
+</span><span>acct chunk size               = 0x30 = 48 bytes
+</span><span>note chunk size               = 0x50 = 80 bytes
+</span><span>note raw size word initially  = 0x51 = 0x50 | PREV_INUSE
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>The allocator rounds the 40-byte account request to a 48-byte chunk. The 64-byte note request needs an 80-byte chunk in this layout after metadata/alignment. Hence the actual adjacent layout is:</p> <pre><code class="hljs text"><span>high addresses
+</span><span>offset 48...    note user data (64 requested bytes)
+</span><span>offset 40..47   note raw size word, initially 51 00 00 00 00 00 00 00
+</span><span>offset 36..39   acct.is_admin
+</span><span>offset 32..35   acct.balance
+</span><span>offset  0..31   acct.name
+</span><span>low addresses
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>The printed pointer difference, 48, already includes both the 40-byte struct and the 8-byte intervening size word.</p> <h4 id="scanf-and-quot-s-and-quot-and-the-extra-nul-write"><code class="hljs inline no-lang">scanf(&quot;%s&quot;)</code> and the extra NUL write<a class="fa fa-anchor" href="#scanf-and-quot-s-and-quot-and-the-extra-nul-write" onclick="event.stopPropagation()"></a></h4> <p><code class="hljs inline no-lang">%s</code> skips leading whitespace, copies until whitespace/EOF, and then writes a terminating <code class="hljs inline no-lang">\0</code>. For <code class="hljs inline no-lang">name[32]</code>, the safe field width is therefore:</p> <pre><code class="hljs c"><span><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%31s&quot;</span>, acct-&gt;name);  <span class="hljs-comment">// at most 31 input bytes + terminating NUL</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Important lab boundaries:</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Input</th> <th>What is written</th></tr></thead> <tbody class="table-group-divider"><tr><td>32 characters</td> <td>fills <code class="hljs inline no-lang">name</code>; terminator starts overwriting <code class="hljs inline no-lang">balance</code></td></tr> <tr><td>36 characters</td> <td>fills through <code class="hljs inline no-lang">balance</code>; terminator writes zero into first byte of <code class="hljs inline no-lang">is_admin</code></td></tr> <tr><td>37 <code class="hljs inline no-lang">A</code>s</td> <td>first byte of <code class="hljs inline no-lang">is_admin</code> becomes <code class="hljs inline no-lang">0x41</code>, so it is nonzero</td></tr> <tr><td>47 characters</td> <td>terminator lands at offset 47, still in the size word; <code class="hljs inline no-lang">note</code> remains textually unchanged</td></tr> <tr><td>48 characters</td> <td>terminator lands at offset 48 (<code class="hljs inline no-lang">note[0]</code>), so <code class="hljs inline no-lang">note</code> prints as empty</td></tr> <tr><td>48 <code class="hljs inline no-lang">A</code>s + <code class="hljs inline no-lang">PWNED</code></td> <td>40 <code class="hljs inline no-lang">A</code>s cover the struct, 8 cover metadata, and <code class="hljs inline no-lang">PWNED</code> begins at <code class="hljs inline no-lang">note[0]</code></td></tr></tbody></table></div><p>For the final case:</p> <pre><code class="hljs text"><span>offset  0..39   A × 40       account object
+</span><span>offset 40..47   A × 8        corrupted note size word
+</span><span>offset 48..52   P W N E D    note data
+</span><span>offset 53       00           scanf terminator
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>The note changes successfully, but <code class="hljs inline no-lang">free(note)</code> later detects the corrupted metadata and aborts. Heap corruption often becomes visible only when the allocator next examines the damaged chunk.</p> <h4 id="why-41-as-can-be-accepted-by-free-in-this-run">Why 41 <code class="hljs inline no-lang">A</code>s can be accepted by <code class="hljs inline no-lang">free</code> in this run<a class="fa fa-anchor" href="#why-41-as-can-be-accepted-by-free-in-this-run" onclick="event.stopPropagation()"></a></h4> <p>The first 40 <code class="hljs inline no-lang">A</code>s fill the struct. The 41st (<code class="hljs inline no-lang">&#39;A&#39; = 0x41</code>) replaces the low byte of the note&#39;s size word, and <code class="hljs inline no-lang">scanf</code> writes NUL into the following byte:</p> <pre><code class="hljs text"><span>raw bytes:       41 00 00 00 00 00 00 00
+</span><span>raw size:        0x41
+</span><span>interpreted size 0x40 = 64, with PREV_INUSE set
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>That forged value happens to pass the checks exercised by this exact run. Other lengths produce:</p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th style="text-align:right;">Repeated-<code class="hljs inline no-lang">A</code> length</th> <th>Raw size bytes from offset 40</th> <th style="text-align:right;">Size after flag masking</th> <th>Typical result here</th></tr></thead> <tbody class="table-group-divider"><tr><td style="text-align:right;">40</td> <td><code class="hljs inline no-lang">00 00 ...</code></td> <td style="text-align:right;">0</td> <td>invalid pointer/size</td></tr> <tr><td style="text-align:right;">41</td> <td><code class="hljs inline no-lang">41 00 ...</code></td> <td style="text-align:right;"><code class="hljs inline no-lang">0x40</code> = 64</td> <td>accepted in the lab run</td></tr> <tr><td style="text-align:right;">42</td> <td><code class="hljs inline no-lang">41 41 00 ...</code></td> <td style="text-align:right;"><code class="hljs inline no-lang">0x4140</code> = 16,704</td> <td>corruption check</td></tr> <tr><td style="text-align:right;">43</td> <td><code class="hljs inline no-lang">41 41 41 00 ...</code></td> <td style="text-align:right;"><code class="hljs inline no-lang">0x414140</code> = 4,276,544</td> <td>out-of-range corruption</td></tr></tbody></table></div><p>This experiment assumes repeated uppercase <code class="hljs inline no-lang">A</code>; input length alone is insufficient because different character bytes create different flags and sizes. For example, <code class="hljs inline no-lang">&#39;B&#39; = 0x42</code> sets <code class="hljs inline no-lang">IS_MMAPPED</code>, so it does <strong>not</strong> mean merely “size 0x40.” Allocator validation is also much more involved than checking “multiple of 16 plus a flag,” and behavior varies by glibc version and heap state.</p> <p>An attacker can cross the metadata while preserving its original bytes, conceptually:</p> <pre><code class="hljs text"><span>A × 40 | 51 00 00 00 00 00 00 00 | PWNED
+</span><span>          original note size word
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Then the note changes while the size word remains plausible. Raw-byte generation is needed for the embedded NULs. This is still an out-of-bounds write even if both calls to <code class="hljs inline no-lang">free</code> finish quietly.</p> <h3 id="5-3-allocated-versus-free-chunks">5.3 Allocated versus free chunks<a class="fa fa-anchor" href="#5-3-allocated-versus-free-chunks" onclick="event.stopPropagation()"></a></h3> <p>The allocator stores bookkeeping <em>inside the heap</em>, interleaved with user data. Two layouts must be kept separate:</p> <ol><li><strong>Physical order:</strong> all chunks, allocated or free, are packed next to physical neighbors.</li> <li><strong>Logical free structures:</strong> only free chunks are linked/cached for reuse; their logical order need not match physical order.</li></ol> <p>An allocated chunk needs its size metadata, but there is no master linked list of every allocated chunk. Once a chunk is freed, the allocator may overwrite its former user bytes with free-list/cache links. In the classic simplified model:</p> <pre><code class="hljs c"><span><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">chunk</span> {</span>
+</span><span>    <span class="hljs-keyword">size_t</span>         size;  <span class="hljs-comment">/* always present */</span>
+</span><span>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">chunk</span>  *<span class="hljs-title">fd</span>;</span>    <span class="hljs-comment">/* overlaps former user data while free */</span>
+</span><span>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">chunk</span>  *<span class="hljs-title">bk</span>;</span>
+</span><span>};
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">list_unlink</span><span class="hljs-params">(struct chunk *p)</span> </span>{
+</span><span>    p-&gt;fd-&gt;bk = p-&gt;bk;
+</span><span>    p-&gt;bk-&gt;fd = p-&gt;fd;
+</span><span>}
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>If an overflow controls a free neighbor&#39;s <code class="hljs inline no-lang">fd</code> and <code class="hljs inline no-lang">bk</code>, old unsafe-unlink attacks turn those assignments into attacker-influenced writes. Modern glibc validates links and places many small chunks in a per-thread <strong>tcache</strong>, which uses a single safe-linked pointer instead; the classic code is an attack model, not a faithful description of every modern <code class="hljs inline no-lang">malloc</code>/<code class="hljs inline no-lang">free</code> operation.</p> <pre class="mermaid">flowchart LR
+  A[&quot;allocated chunk A: overflowing data&quot;] --&gt;|physical neighbor| BH[&quot;chunk B metadata&quot;]
+  BH --&gt; BD[&quot;chunk B user area / free-list links&quot;]
+  O[&quot;corrupted size or links&quot;] --&gt; USE[&quot;allocator later consumes corrupted bookkeeping&quot;]
+</pre> <p>No return address is required, so stack canaries are irrelevant. Heap metadata corruption can yield crashes, overlapping allocations, information leaks, or—under exploitable allocator behavior—an arbitrary-write primitive. Orig: <a href="http://phrack.org/issues/57/9.html">Phrack 2001 heap</a>. References: <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html">webbook §01b</a>, <a href="https://sourceware.org/glibc/wiki/MallocInternals">ptmalloc overview</a>, <a href="https://sourceware.org/glibc/wiki/MallocInternals#Tcache">tcache/safe-linking background</a>. See errata §8.</p> <details><summary>Physical neighbors and free-list links</summary> <ul><li>Physical adjacency determines which chunk an overflow reaches: A&#39;s write may hit B&#39;s size word before B&#39;s data. Free-list adjacency is different: B&#39;s logical <code class="hljs inline no-lang">fd</code>/<code class="hljs inline no-lang">bk</code> neighbors need not be its physical neighbors.</li> <li>Historical doubly linked unlink writes <code class="hljs inline no-lang">fd-&gt;bk = bk</code> and <code class="hljs inline no-lang">bk-&gt;fd = fd</code>; forged links can influence destination/value only if the allocator accepts them. This is <strong>not</strong> a claim that arbitrary forged links pass modern consistency checks.</li> <li>Modern small-allocation paths often use per-thread tcache, placing a protected singly linked next pointer in formerly user-controlled bytes. Coalescing, size checks, safe-linking and reuse depend on chunk size, heap state and glibc version; detection may occur at a later <code class="hljs inline no-lang">free()</code> rather than the bad write. <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html#heap-overflow">1B source</a>.</li></ul></details> <h2 id="6-c-bad-casting-type-confusion">6. C++ bad casting / type confusion<a class="fa fa-anchor" href="#6-c-bad-casting-type-confusion" onclick="event.stopPropagation()"></a></h2> <p><code class="hljs inline no-lang">Derived : Base</code> object = <code class="hljs inline no-lang">Base</code> sub-object followed by <code class="hljs inline no-lang">Derived</code> members. Multiple inheritance = <code class="hljs inline no-lang">B1</code> sub-object, then <code class="hljs inline no-lang">B2</code> sub-object, then <code class="hljs inline no-lang">Derived</code> members — so <code class="hljs inline no-lang">B2*</code> ≠ object start.</p> <p>Upcast (derived → base): always safe, compiler <em>adds</em> sub-object offset.</p> <pre><code class="hljs c"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Base</span> {</span> <span class="hljs-keyword">int</span> x; };
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">public</span> Base { <span class="hljs-keyword">int</span> y; };
+</span><span>Derived* d = <span class="hljs-keyword">new</span> Derived();
+</span><span>Base* b = <span class="hljs-keyword">static_cast</span>&lt;Base*&gt;(d); <span class="hljs-comment">// safe, same address (single inheritance)</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><pre><code class="hljs c"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B1</span> {</span> <span class="hljs-keyword">int</span> x; }; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B2</span> {</span> <span class="hljs-keyword">int</span> y; };
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">public</span> B1, <span class="hljs-keyword">public</span> B2 {};
+</span><span>Derived* d = <span class="hljs-keyword">new</span> Derived();
+</span><span>B2* h = <span class="hljs-keyword">static_cast</span>&lt;B2*&gt;(d); <span class="hljs-comment">// safe, h = d + sizeof(B1)</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Downcast (base → derived): safe only if object really is <code class="hljs inline no-lang">Derived</code>; compiler <em>subtracts</em> offset blindly. <code class="hljs inline no-lang">static_cast</code> does <strong>no runtime check</strong>; <code class="hljs inline no-lang">dynamic_cast</code> checks runtime type (needs polymorphic class) and returns <code class="hljs inline no-lang">nullptr</code> on failure.</p> <p>Bad cast (slides, preserved):</p> <pre><code class="hljs c"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Base</span> {</span> <span class="hljs-keyword">int</span> x; };
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">public</span> Base { <span class="hljs-keyword">int</span> y; }
+</span><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">foo</span><span class="hljs-params">(Base* b)</span> </span>{
+</span><span>  Derived* d = <span class="hljs-keyword">static_cast</span>&lt;Derived*&gt;(b); <span class="hljs-comment">// bad if b = new Base()</span>
+</span><span>  d-&gt;y = <span class="hljs-number">0</span>; <span class="hljs-comment">// writes past object — field never allocated</span>
+</span><span>}
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>Multiple-inheritance version: downcasting a <code class="hljs inline no-lang">B1*</code> that is really just a <code class="hljs inline no-lang">B1</code> shifts pointer back by <code class="hljs inline no-lang">sizeof(B1)</code> and <code class="hljs inline no-lang">b2-&gt;y</code> lands out of bounds.</p> <pre class="mermaid">flowchart TD
+  D[&quot;static cast Derived from B2&quot;] --&gt; SUB[&quot;subtract B2 offset&quot;]
+  SUB --&gt; OK{&quot;really Derived?&quot;}
+  OK --&gt;|yes| GOOD[&quot;points at object start, safe&quot;]
+  OK --&gt;|no| BAD[&quot;points before object, OOB&quot;]
+</pre> <h3 id="6-1-lab-badcast-allocation-size-is-not-object-size">6.1 Lab <code class="hljs inline no-lang">badcast</code>: allocation size is not object size<a class="fa fa-anchor" href="#6-1-lab-badcast-allocation-size-is-not-object-size" onclick="event.stopPropagation()"></a></h3> <p>The lab uses the single-inheritance equivalent of:</p> <pre><code class="hljs cpp"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Base</span> {</span>
+</span><span><span class="hljs-keyword">public</span>:
+</span><span>    <span class="hljs-keyword">int</span> x;
+</span><span>};
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Derived</span> :</span> <span class="hljs-keyword">public</span> Base {
+</span><span><span class="hljs-keyword">public</span>:
+</span><span>    <span class="hljs-keyword">int</span>  y;
+</span><span>    <span class="hljs-keyword">char</span> tag[<span class="hljs-number">64</span>];
+</span><span>};
+</span><span>
+</span><span>Base *b = <span class="hljs-keyword">new</span> Base;
+</span><span><span class="hljs-keyword">char</span> *other = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">32</span>];
+</span><span>Derived *d = <span class="hljs-keyword">static_cast</span>&lt;Derived *&gt;(b);  <span class="hljs-comment">// compiles, but b is not a Derived</span>
+</span><span><span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, d-&gt;tag);                    <span class="hljs-comment">// writes to a field that does not exist</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>The cast performs no allocation and creates no <code class="hljs inline no-lang">Derived</code> object. It merely tells subsequent generated code to use the <code class="hljs inline no-lang">Derived</code> offsets:</p> <pre><code class="hljs text"><span>Base::x       offset 0
+</span><span>Derived::y    offset 4
+</span><span>Derived::tag  offset 8, length 64
+</span><span>sizeof(Base)     = 4
+</span><span>sizeof(Derived)  = 72             (lab ABI/build)
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>For this run, glibc gives the 4-byte <code class="hljs inline no-lang">Base</code> request a minimum 32-byte chunk with 24 usable bytes. Minimum chunk size must be large enough to hold allocator metadata when the chunk is later free; the extra capacity belongs to the allocation but does <strong>not</strong> make it part of the C++ object. Access beyond <code class="hljs inline no-lang">sizeof(Base)</code> is still undefined behavior.</p> <p>If <code class="hljs inline no-lang">other</code> is the adjacent allocation, its user pointer is 32 bytes after <code class="hljs inline no-lang">b</code>, while the invalid <code class="hljs inline no-lang">tag</code> begins 8 bytes after <code class="hljs inline no-lang">b</code>:</p> <pre><code class="hljs text"><span>high addresses
+</span><span>b + 32       other[0]
+</span><span>b + 24..31   next chunk&#39;s size word
+</span><span>b + 8..23    nonexistent tag bytes / spare usable allocation bytes
+</span><span>b + 4..7     nonexistent Derived::y plus padding area
+</span><span>b + 0..3     real Base::x object
+</span><span>low addresses
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>The distance from <code class="hljs inline no-lang">d-&gt;tag</code> to <code class="hljs inline no-lang">other</code> is <code class="hljs inline no-lang">32 - 8 = 24</code> bytes. Twenty-four visible input bytes reach up to <code class="hljs inline no-lang">other</code>; the automatic NUL then lands in <code class="hljs inline no-lang">other[0]</code>, while a 25th nonzero byte makes the corruption visibly nonempty. As always, these distances rely on the two allocations actually being adjacent in this lab run.</p> <p>A checked downcast requires a polymorphic base class and a null check:</p> <pre><code class="hljs cpp"><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Base</span> {</span>
+</span><span><span class="hljs-keyword">public</span>:
+</span><span>    <span class="hljs-keyword">virtual</span> ~<span class="hljs-built_in">Base</span>() = <span class="hljs-keyword">default</span>;  <span class="hljs-comment">// makes Base polymorphic</span>
+</span><span>    <span class="hljs-keyword">int</span> x;
+</span><span>};
+</span><span>
+</span><span><span class="hljs-keyword">if</span> (Derived *d = <span class="hljs-keyword">dynamic_cast</span>&lt;Derived *&gt;(b)) {
+</span><span>    <span class="hljs-comment">// safe to use d as Derived</span>
+</span><span>} <span class="hljs-keyword">else</span> {
+</span><span>    <span class="hljs-comment">// b does not point to a Derived object</span>
+</span><span>}
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><p>For pointer casts, failed <code class="hljs inline no-lang">dynamic_cast</code> returns <code class="hljs inline no-lang">nullptr</code>; dereferencing that result without checking still crashes. A virtual function normally adds a hidden vptr and changes object size/layout (the tutorial observed <code class="hljs inline no-lang">sizeof(Base) == 16</code>), but that exact size is ABI-dependent.</p> <p>Runtime cost is one reason <code class="hljs inline no-lang">static_cast</code> persists in performance-sensitive code despite the risk. Ref: <a href="https://en.cppreference.com/w/cpp/language/static_cast.html">C++ casts</a>, <a href="https://en.cppreference.com/w/cpp/language/dynamic_cast.html">dynamic_cast</a>.</p> <h2 id="7-exploit-outcomes-and-data-oriented-attacks">7. Exploit outcomes and data-oriented attacks<a class="fa fa-anchor" href="#7-exploit-outcomes-and-data-oriented-attacks" onclick="event.stopPropagation()"></a></h2> <p>Stack/heap/format all converge on read/write-anywhere. Slides preview Lecture 3: code injection (return into attacker payload, NOP sled <code class="hljs inline no-lang">0x90</code> if address imprecise) and code reuse / return-to-libc (return into existing code, set up args on stack). Data-oriented attacks need neither: corrupt security-critical non-control data (e.g. <code class="hljs inline no-lang">safemode</code> flag, <code class="hljs inline no-lang">seteuid</code> uid, Heartbleed over-read). Refs: <a href="https://www.usenix.org/legacy/event/sec05/tech/full_papers/chen/chen.pdf">Non-control-data attacks (Chen et al., USENIX 2005)</a>, <a href="https://heartbleed.com/">Heartbleed</a>, <a href="https://seedsecuritylabs.org/Labs_20.04/Software/">SEED labs</a>.</p> <h2 id="8-conflicts-errata-in-the-course-material">8. ⚠️ Conflicts / errata in the course material<a class="fa fa-anchor" href="#8-conflicts-errata-in-the-course-material" onclick="event.stopPropagation()"></a></h2> <ol><li><strong>Allocated chunks in a list?</strong> Slides (1b): &quot;stores each allocated chunk in a linked list.&quot; Webbook (01b): &quot;There is no list of allocated chunks anywhere.&quot; <strong>Webbook is correct</strong> for glibc ptmalloc — allocated chunks carry only <code class="hljs inline no-lang">size</code>; only free chunks are linked. Trust webbook.</li> <li><strong>Unlink = current glibc?</strong> Slides present <code class="hljs inline no-lang">fd/bk</code> unlink as <em>the</em> mechanism. Webbook agrees it is the classic <a href="http://phrack.org/issues/57/9.html">Phrack 2001</a> shape but notes modern glibc parks small chunks in per-size <strong>tcache</strong> with a single (safe-linked/scrambled) pointer, not <code class="hljs inline no-lang">fd+bk</code>. Slides outdated; attack idea (overflow into neighbor metadata → controlled write on alloc/free) still holds.</li> <li><strong>x64 register args.</strong> Slides diagram: &quot;first 5 args in registers&quot;; webbook: &quot;first five in registers&quot;. Reality (System V AMD64): <strong>6</strong> registers <code class="hljs inline no-lang">rdi,rsi,rdx,rcx,r8,r9</code> (format + 5 varargs in regs for <code class="hljs inline no-lang">printf</code>). Both sources mean &quot;5 varargs after format&quot; but phrase it as &quot;5 args&quot; — off-by-one if read literally. Effect unchanged: <code class="hljs inline no-lang">%x</code> reads regs first, then stack.</li> <li><strong>Slide code typo (1b, multiple-inheritance bad cast):</strong> <code class="hljs inline no-lang">Derived* d = (Derived*)b1; B2* b2 = (B2*)&amp;d;</code> — <code class="hljs inline no-lang">&amp;d</code> takes address <em>of the pointer variable</em>, should be <code class="hljs inline no-lang">(B2*)d</code>. Webbook&#39;s offset-subtraction description is the correct mental model.</li> <li><strong>Integer promotion ranking.</strong> Slides list <code class="hljs inline no-lang">bool -&gt; char -&gt; short -&gt; int -&gt; unsigned int -&gt; long ...</code> as one chain. C rules are two-step (§4 above): promote narrow → signed <code class="hljs inline no-lang">int</code>, then signed→unsigned at same rank. Slide chain over-merges them; follow webbook + C standard.</li> <li><strong>Missing <code class="hljs inline no-lang">bad_function</code> source.</strong> Webbook exercise references <code class="hljs inline no-lang">bad_function</code> + <code class="hljs inline no-lang">-funsigned-char</code> comparison but static fetch omits the listing; slides give only OWASP/TOSEM pointers. Pattern (§4) is the intended takeaway, not the exact listing.</li> <li><strong>Tutorial positional-slot counting.</strong> The spoken Q&amp;A alternates between zero-based register counting and <code class="hljs inline no-lang">printf</code> slot numbers. Actual <code class="hljs inline no-lang">%m$...</code> syntax is one-based, and <code class="hljs inline no-lang">RDI</code> holds the format rather than a conversion argument. Use §3.1&#39;s model and confirm against the specific binary.</li> <li><strong>“Locals will always be on the stack.”</strong> Not guaranteed. The compiler may keep a local in a register, optimize it away, merge storage, or reorder stack slots as permitted by observable C behavior. Debug/unoptimized builds merely make source-like stack layouts more likely.</li> <li><strong>Why little-endian?</strong> The tutorial&#39;s truncation/casting example describes one convenience of little-endian representation, not a definitive historical reason that modern CPUs use it. Endianness does not change byte order within the input stream; it changes how a multi-byte integer interprets those bytes.</li> <li><strong>Canary and protection defaults.</strong> A NUL-leading canary and default stack-protector/PIE settings are toolchain/platform conventions, not universal C or x86 requirements. Inspect the actual build flags and binary hardening.</li> <li><strong>Bits versus bytes in the Lab 1B explanation.</strong> <code class="hljs inline no-lang">struct account</code> requests <strong>40 bytes</strong>, its chunk is 48 bytes, and the note&#39;s chunk is 80 bytes. The tutorial repeatedly says “bits” at this point; those occurrences should be “bytes.”</li> <li><strong>“<code class="hljs inline no-lang">0x41</code> in decimal is 64.”</strong> Raw <code class="hljs inline no-lang">0x41</code> is decimal 65. glibc interprets it as a 64-byte (<code class="hljs inline no-lang">0x40</code>) chunk because bit <code class="hljs inline no-lang">0x1</code> is the <code class="hljs inline no-lang">PREV_INUSE</code> flag and is masked out of the size. Likewise, the original <code class="hljs inline no-lang">0x51</code> means size <code class="hljs inline no-lang">0x50</code> (80) plus that flag.</li> <li><strong>The heap header is not universally 8 bytes.</strong> The lab&#39;s user pointers are separated by a visible 8-byte <code class="hljs inline no-lang">size</code> word, but a glibc chunk is commonly described with both <code class="hljs inline no-lang">prev_size</code> and <code class="hljs inline no-lang">size</code>. The former overlaps storage usable by the preceding allocated chunk. See §5.1.</li> <li><strong>Allocator checks are not just alignment.</strong> <code class="hljs inline no-lang">free</code> does not merely accept “a multiple of 16 plus 1, 3, or 7.” The low bits have specific meanings, and glibc performs several consistency, range, arena, mapping, and list checks depending on the path/version. A value accepted in this lab is not generally valid.</li> <li><strong><code class="hljs inline no-lang">dynamic_cast</code> failure.</strong> A failed pointer <code class="hljs inline no-lang">dynamic_cast</code> returns <code class="hljs inline no-lang">nullptr</code>; this is not itself a “null-pointer error.” An error occurs only if code fails to test the result and dereferences it. The source class must be polymorphic, but the virtual member need not specifically be a destructor.</li></ol> <h2 id="9-lab-workflow">9. Lab workflow<a class="fa fa-anchor" href="#9-lab-workflow" onclick="event.stopPropagation()"></a></h2> <h3 id="all-lab-checkpoints-1a-nine-levels-1b-ten-levels">All lab checkpoints (<a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#labs">1A nine levels</a>, <a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01b-spatial-memory-errors-advanced.dc.html#labs">1B ten levels</a>)<a class="fa fa-anchor" href="#all-lab-checkpoints-1a-nine-levels-1b-ten-levels" onclick="event.stopPropagation()"></a></h3> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Chapter / program</th> <th>Levels and observed outcomes on the course build</th></tr></thead> <tbody class="table-group-divider"><tr><td>1A <code class="hljs inline no-lang">login</code> 1–5</td> <td>(1) map flag +20, saved RIP +40 from <code class="hljs inline no-lang">buf</code>; (2) 21 input characters flip flag to <code class="hljs inline no-lang">0x41</code>; (3) overwrite RIP (e.g. <code class="hljs inline no-lang">ABCD</code> yields <code class="hljs inline no-lang">0x44434241</code>); (4) raw little-endian <code class="hljs inline no-lang">win()</code> address reaches otherwise uncalled function; (5) restoring stack protector aborts RIP overwrite, and changed local layout also blocks earlier flag trick.</td></tr> <tr><td>1A <code class="hljs inline no-lang">fmt</code> 6–9</td> <td>(6) find <code class="hljs inline no-lang">MARK</code> in argument words, typically tenth conversion (<code class="hljs inline no-lang">4b52414d</code> little-endian; counting conversions differs from positional indexes); (7) pointer slot leaks <code class="hljs inline no-lang">swordfish</code>; (8) <code class="hljs inline no-lang">%n</code> writes <code class="hljs inline no-lang">0x1337</code> to <code class="hljs inline no-lang">target</code>; (9) <code class="hljs inline no-lang">%hn</code> writes low 16 bits <code class="hljs inline no-lang">0xdead</code> of original <code class="hljs inline no-lang">0x11220000</code>, producing <code class="hljs inline no-lang">0x1122dead</code> without printing billions of characters.</td></tr> <tr><td>1B <code class="hljs inline no-lang">acct</code> 1–4</td> <td>(1) offsets name +0, balance +32, admin +36, note +48 (8-byte intervening size word); (2) 37 <code class="hljs inline no-lang">A</code>s set admin to 65; (3) 48 letters plus chosen word change separate note allocation; (4) four successive input lengths can give invalid pointer, quiet success, <code class="hljs inline no-lang">corrupted (!prev)</code>, <code class="hljs inline no-lang">corrupted (out)</code>—allocator wording/version dependent, quiet completion not proof of safety.</td></tr> <tr><td>1B <code class="hljs inline no-lang">records</code> 5–7</td> <td>(5) first overflow at count 4096: need 65,536, allocate 0; (6) 4097 requests 16 while writing 65,552; (7) loop follows intended count, <strong>multiplication result narrowed into <code class="hljs inline no-lang">unsigned short bytes</code></strong> is the defective step.</td></tr> <tr><td>1B <code class="hljs inline no-lang">badcast</code> 8–10</td> <td>(8) <code class="hljs inline no-lang">Base</code> is 4 bytes, <code class="hljs inline no-lang">Derived</code> 72; even nonexistent <code class="hljs inline no-lang">y</code> at +4 is outside object; (9) 24 input characters put NUL at neighbor&#39;s first byte, 25 place a nonzero byte there; (10) <code class="hljs inline no-lang">static_cast</code> returns unchecked pointer, <code class="hljs inline no-lang">dynamic_cast</code> returns null for a plain <code class="hljs inline no-lang">Base</code> (polymorphic base required).</td></tr></tbody></table></div><p>The 1A lab has eight browser-input levels and one shell/raw-byte level; all ten 1B levels run in browser (C for <code class="hljs inline no-lang">acct</code>/<code class="hljs inline no-lang">records</code>, C++ for <code class="hljs inline no-lang">badcast</code>). Lab builds print addresses to teach offsets; they intentionally simplify discovery. Exact program source, hints and walkthroughs: chapter links above.</p> <p>The course provides a Vagrant VM containing the expected compiler, GDB, Makefile, and lab files. Typical use is <code class="hljs inline no-lang">vagrant up</code>, <code class="hljs inline no-lang">vagrant ssh</code>, then <code class="hljs inline no-lang">make</code> inside the lab directory; initial provisioning may take several minutes. OnlineGDB is a fallback for many exercises, but its compiler, hardening, and memory layout can differ, so use the supplied VM when exact offsets or mitigations matter.</p> <p>Useful verification steps:</p> <ol><li>Record the exact compile flags (<code class="hljs inline no-lang">-O</code> level, PIE, stack protector).</li> <li>Inspect variable addresses and the frame in GDB rather than assuming source order.</li> <li>Use a marker/pattern to measure offsets and format-string slots.</li> <li>Generate binary payloads programmatically so NUL/non-printable bytes and little-endian addresses are exact.</li> <li>Re-run after any compiler or flag change; exploit constants may no longer be valid.</li></ol> <h2 id="10-further-reading">10. Further reading<a class="fa fa-anchor" href="#10-further-reading" onclick="event.stopPropagation()"></a></h2> <ul><li><a href="https://cwe.mitre.org/data/definitions/787.html">CWE-787 out-of-bounds write</a>, <a href="https://cwe.mitre.org/data/definitions/134.html">CWE-134 format string</a></li> <li><a href="https://www.cvedetails.com/browse-by-date.php">CVE Details by date / top products</a></li> <li><a href="https://godbolt.org/">Compiler Explorer</a>, <a href="https://www.onlinegdb.com/">OnlineGDB</a></li> <li><a href="https://sourceware.org/glibc/wiki/MallocInternals">glibc MallocInternals</a></li></ul></main> <nav id="page-nav" aria-label="On this page" data-v-6b1b63d2><!--[--><div class="nav-component slim-scroll"><a class="navbar-brand page-nav-title" href="#">On this page</a> <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-6b1b63d2><!--[--><a class="nav-link py-1" href="#spatial-memory-errors">Spatial Memory Errors‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#0-model">0. Model‎</a> <a class="nav-link py-1" href="#1-background-x86-stack-frame">1. Background: x86 stack frame‎</a> <a class="nav-link py-1" href="#2-stack-buffer-overflow-cwe-787">2. Stack buffer overflow — CWE-787‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#2-1-lab-login-c-measured-layout-and-attacks">2.1 Lab login.c: measured layout and attacks‎</a> <a class="nav-link py-1" href="#2-2-stack-canaries-and-compiler-layout">2.2 Stack canaries and compiler layout‎</a></nav> <a class="nav-link py-1" href="#3-format-string-bugs-cwe-134">3. Format-string bugs — CWE-134‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#3-1-lab-fmt-c-locating-and-using-argument-slots">3.1 Lab fmt.c: locating and using argument slots‎</a></nav> <a class="nav-link py-1" href="#4-integer-overflow-spatial-overflow">4. Integer overflow → spatial overflow‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#4-1-lab-records-c-a-small-allocation-followed-by-a-large-write">4.1 Lab records.c: a small allocation followed by a large write‎</a></nav> <a class="nav-link py-1" href="#5-heap-allocation-and-heap-overflow">5. Heap allocation and heap overflow‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#5-1-requests-chunks-and-the-pointer-returned-by-malloc">5.1 Requests, chunks, and the pointer returned by malloc‎</a> <a class="nav-link py-1" href="#5-2-lab-acct-c-two-adjacent-allocations">5.2 Lab acct.c: two adjacent allocations‎</a> <a class="nav-link py-1" href="#5-3-allocated-versus-free-chunks">5.3 Allocated versus free chunks‎</a></nav> <a class="nav-link py-1" href="#6-c-bad-casting-type-confusion">6. C++ bad casting / type confusion‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#6-1-lab-badcast-allocation-size-is-not-object-size">6.1 Lab badcast: allocation size is not object size‎</a></nav> <a class="nav-link py-1" href="#7-exploit-outcomes-and-data-oriented-attacks">7. Exploit outcomes and data-oriented attacks‎</a> <a class="nav-link py-1" href="#8-conflicts-errata-in-the-course-material">8. ⚠️ Conflicts / errata in the course material‎</a> <a class="nav-link py-1" href="#9-lab-workflow">9. Lab workflow‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#all-lab-checkpoints-1a-nine-levels-1b-ten-levels">All lab checkpoints (1A nine levels, 1B ten levels)‎</a></nav> <a class="nav-link py-1" href="#10-further-reading">10. Further reading‎</a></nav><!--]--><!--v-if--></nav></div><!--]--><!--v-if--></nav> <div class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;" aria-hidden="true"><!--[--><i class="fas fa-arrow-circle-up"></i><!--]--></div></div> <footer><div class="text-center"><small>CS3235 study notes. Built with <a href="https://markbind.org/">MarkBind</a>.</small></div></footer><!--]--></div>
+</body><script src="/CS3235-notes/markbind/js/bootstrap-utility.min.js"></script>
+<script src="/CS3235-notes/markbind/js/polyfill.min.js"></script>
+<script src="/CS3235-notes/markbind/js/vue.global.prod.min.js"></script>
+<script src="/CS3235-notes/markbind/js/markbind.min.js"></script>
+<script src="spatial-1a1b.page-vue-render.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script type="module">
+    window.mermaidPromise = null;
+    
+    const loadMermaid = () => {
+      if (window.mermaidPromise === null) {
+        window.mermaidPromise = import('https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs')
+          .then(({ default: mermaid }) => {
+            mermaid.initialize({
+              startOnLoad: false,
+            });
+            console.log('Mermaid loaded successfully');
+            return mermaid;
+          })
+          .catch((error) => {
+            console.error('Mermaid failed to load:', error);
+            window.mermaidPromise = false;
+            return null;
+          });
+      }
+      return window.mermaidPromise;
+    };
+
+    const renderMermaidDiagrams = (elements) => {
+      if (!elements || elements.length === 0) {
+        return Promise.resolve();
+      }
+
+      return loadMermaid().then(mermaid => {
+        if (!mermaid) return;
+        return mermaid.run({ nodes: Array.from(elements) })
+          .catch(err => console.error('Error rendering mermaid diagrams:', err));
+      });
+    };
+
+    const setupMermaidObserver = () => {
+      const observer = new MutationObserver((mutations) => {
+        let newMermaidElements = [];
+        
+        mutations.forEach(mutation => {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeType === 1 && node.classList && 
+                  node.classList.contains('mermaid')) {
+                newMermaidElements.push(node);
+              }
+              
+              if (node.nodeType === 1 && node.querySelectorAll) {
+                const mermaidInNode = node.querySelectorAll('.mermaid');
+                if (mermaidInNode.length) {
+                  newMermaidElements = [...newMermaidElements, ...mermaidInNode];
+                }
+              }
+            });
+          }
+        });
+        
+        if (newMermaidElements.length > 0) {
+          renderMermaidDiagrams(newMermaidElements);
+        }
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      
+      return observer;
+    };
+
+    // Initialize on DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const existingDiagrams = document.querySelectorAll('.mermaid');
+      if (existingDiagrams.length > 0) {
+        renderMermaidDiagrams(existingDiagrams);
+      }
+      
+      setupMermaidObserver();
+    });
+
+  </script>
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+        const copyButtonBody = element.querySelector('.function-btn-body');
+        const tooltipText = element.querySelector(".tooltiptext");
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+        copyButtonBody.innerHTML = `
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="2 2 22 22"
+  >
+    <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875
+    L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z"></path>
+  </svg>
+`;
+        console.log("Running tooltip");
+        tooltipText.innerText  = `Copied!`;
+        setTimeout(() => {
+            copyButtonBody.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "/>
+    </g>
+</svg>
+`;
+            tooltipText.innerText  = `Copy`;
+        }, 3000);
+    }
+    </script>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html data-dark-mode="true" data-code-theme="light">
+<head>
+    <script src="/CS3235-notes/markbind/js/theme-manager.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 7.2.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Computer security -  | CS3235 notes</title> <link rel="stylesheet" href="/CS3235-notes/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    
+    
+    <link rel="stylesheet" id="markbind-highlight-light" href="/CS3235-notes/markbind/css/codeblock-light.min.css">
+    <link rel="stylesheet" id="markbind-highlight-dark" href="/CS3235-notes/markbind/css/codeblock-dark.min.css">
+    <script src="/CS3235-notes/markbind/js/code-theme.js"></script><link rel="stylesheet" href="/CS3235-notes/markbind/css/markbind.min.css"><link rel="stylesheet" href="/CS3235-notes/plugins/codeBlockCopyButtons/codeBlockButtons.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/main.css">
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/study.css">
+</head>
+<script>
+  const baseUrl = '/CS3235-notes'
+</script>
+<body 
+   data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100"  
+  data-code-theme="light">
+<div id="app"><!--[--><header sticky><div data-v-94b60ff6><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-94b60ff6><div class="container-fluid" data-v-94b60ff6><div class="navbar-left" data-v-94b60ff6><!--[--><a href="/CS3235-notes/index.html" class="navbar-brand">CS3235 notes</a><!--]--></div><div class="navbar-default" data-v-94b60ff6><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-94b60ff6><!--[--> <li><a href="/CS3235-notes/memory_vulnerabilities/README.html" class="nav-link">Memory safety</a></li> <li><a href="/CS3235-notes/part2/webbook-7-12/README.html" class="nav-link">Sandboxing to cryptography</a></li>  <!--]--></ul></div><div class="navbar-right" data-v-94b60ff6><ul class="navbar-nav" data-v-94b60ff6><!--[--><li><form class="navbar-form" role="search"><div style="position:relative;" class="dropdown" data-v-103d5c4e><!--[--><input value="" data-bs-toggle="dropdown" type="text" class="form-control" placeholder="Search notes" autocomplete="off" data-v-103d5c4e><div class="form-control placeholder-div-hidden" data-v-103d5c4e>Search notes</div><!--]--><ul class="dropdown-menu search-dropdown-menu dropdown-menu-hidden dropdown-menu-end" data-v-103d5c4e><!--[--><!--]--></ul></div></form></li><!--]--></ul><!----></div></div></nav><div style="display:none;" class="lower-navbar-container" data-v-94b60ff6><!--[--><!----><!----><!--]--></div></div></header> <div id="flex-body"><nav id="site-nav" aria-label="Chapters" data-v-6b1b63d2><!--[--><div class="site-nav-top">Course notes</div> <div class="nav-component slim-scroll"><div class="site-nav-root"><!--[--><ul class="site-nav-list site-nav-list-root" data-v-6b1b63d2><!--[--><li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/index.html">Overview</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Memory safety 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">0. Introduction</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial-1a1b.html">1A/1B. Spatial errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal-2.html">2. Temporal errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/exploits-3.html">3. Memory exploits</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">4. Partial safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">5. Full safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/rust-6.html">6. Rust</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Sandboxing and isolation 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">7. Sandboxing</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">8. Policies</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">9. Capabilities</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/10-virtual-machines.html">10. Virtual machines</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/11-tee.html">11. Trusted execution environments</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/12-cryptography.html">12. Cryptography</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Revision 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/cheatsheet.html">Memory safety cheatsheet</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/review-checkpoints.html">Review checkpoints</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/INDEX.html">Topics 7 to 12 index</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/prerequisites.html">Prerequisites</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/assignment-overview.html">Assignment</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Original sketches
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/c_basics.html">C basics</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial.html">Spatial</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal.html">Temporal</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/2a.html">Sandboxing</a></div></li></ul></li><!--]--><!--v-if--></ul><!--]--></div></div><!--]--><!--v-if--></nav> <main id="content-wrapper"><div data-v-9ff38b52><nav aria-label="breadcrumb" class="breadcrumb-divider" data-v-9ff38b52><ol class="breadcrumb" data-v-9ff38b52><li class="notlink breadcrumb-marker" data-v-9ff38b52> ››   </li><!--[--><!--]--></ol></nav></div> <h1 id="computer-security">Computer security<a class="fa fa-anchor" href="#computer-security" onclick="event.stopPropagation()"></a></h1> <p>Study notes for CS3235: memory vulnerabilities, containment, isolation and cryptographic primitives.</p> <h2 id="memory-safety">Memory safety<a class="fa fa-anchor" href="#memory-safety" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Topic</th> <th>Study notes</th></tr></thead> <tbody class="table-group-divider"><tr><td>0</td> <td><a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">Introduction</a></td></tr> <tr><td>1A/1B</td> <td><a href="/CS3235-notes/memory_vulnerabilities/spatial-1a1b.html">Spatial errors</a></td></tr> <tr><td>2</td> <td><a href="/CS3235-notes/memory_vulnerabilities/temporal-2.html">Temporal errors</a></td></tr> <tr><td>3</td> <td><a href="/CS3235-notes/memory_vulnerabilities/exploits-3.html">Memory exploits</a></td></tr> <tr><td>4</td> <td><a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">Partial safety</a></td></tr> <tr><td>5</td> <td><a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">Full safety</a></td></tr> <tr><td>6</td> <td><a href="/CS3235-notes/memory_vulnerabilities/rust-6.html">Rust</a></td></tr></tbody></table></div><p><a href="/CS3235-notes/memory_vulnerabilities/cheatsheet.html">Memory safety cheatsheet</a> · <a href="/CS3235-notes/memory_vulnerabilities/review-checkpoints.html">Review checkpoints</a> · <a href="/CS3235-notes/memory_vulnerabilities/prerequisites.html">Prerequisites</a></p> <h2 id="sandboxing-isolation-and-cryptography">Sandboxing, isolation and cryptography<a class="fa fa-anchor" href="#sandboxing-isolation-and-cryptography" onclick="event.stopPropagation()"></a></h2> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Topic</th> <th>Study notes</th></tr></thead> <tbody class="table-group-divider"><tr><td>7</td> <td><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">Sandboxing</a></td></tr> <tr><td>8</td> <td><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">Policies</a></td></tr> <tr><td>9</td> <td><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">Capabilities</a></td></tr> <tr><td>10</td> <td><a href="/CS3235-notes/part2/webbook-7-12/10-virtual-machines.html">Virtual machines</a></td></tr> <tr><td>11</td> <td><a href="/CS3235-notes/part2/webbook-7-12/11-tee.html">Trusted execution environments</a></td></tr> <tr><td>12</td> <td><a href="/CS3235-notes/part2/webbook-7-12/12-cryptography.html">Cryptography</a></td></tr></tbody></table></div><p><a href="/CS3235-notes/part2/webbook-7-12/INDEX.html">Revision index</a> · <a href="/CS3235-notes/part2/webbook-7-12/document-topic-map.html">Topic and practice map</a></p> <h2 id="practice-and-original-notes">Practice and original notes<a class="fa fa-anchor" href="#practice-and-original-notes" onclick="event.stopPropagation()"></a></h2> <ul><li><a href="/CS3235-notes/memory_vulnerabilities/assignment-overview.html">Assignment overview</a></li> <li><a href="/CS3235-notes/memory_vulnerabilities/c_basics.html">C basics</a></li> <li>Original sketches: <a href="/CS3235-notes/memory_vulnerabilities/spatial.html">spatial errors</a>, <a href="/CS3235-notes/memory_vulnerabilities/temporal.html">temporal errors</a>, <a href="/CS3235-notes/part2/2a.html">sandboxing</a></li></ul> <p><a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/course-home.dc.html">Original workbook</a></p></main> <nav id="page-nav" aria-label="On this page" data-v-6b1b63d2><!--[--><div class="nav-component slim-scroll"><a class="navbar-brand page-nav-title" href="#">On this page</a> <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-6b1b63d2><!--[--><a class="nav-link py-1" href="#computer-security">Computer security‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#memory-safety">Memory safety‎</a> <a class="nav-link py-1" href="#sandboxing-isolation-and-cryptography">Sandboxing, isolation and cryptography‎</a> <a class="nav-link py-1" href="#practice-and-original-notes">Practice and original notes‎</a></nav><!--]--><!--v-if--></nav></div><!--]--><!--v-if--></nav> <div class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;" aria-hidden="true"><!--[--><i class="fas fa-arrow-circle-up"></i><!--]--></div></div> <footer><div class="text-center"><small>CS3235 study notes. Built with <a href="https://markbind.org/">MarkBind</a>.</small></div></footer><!--]--></div>
+</body><script src="/CS3235-notes/markbind/js/bootstrap-utility.min.js"></script>
+<script src="/CS3235-notes/markbind/js/polyfill.min.js"></script>
+<script src="/CS3235-notes/markbind/js/vue.global.prod.min.js"></script>
+<script src="/CS3235-notes/markbind/js/markbind.min.js"></script>
+<script src="index.page-vue-render.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script type="module">
+    window.mermaidPromise = null;
+    
+    const loadMermaid = () => {
+      if (window.mermaidPromise === null) {
+        window.mermaidPromise = import('https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs')
+          .then(({ default: mermaid }) => {
+            mermaid.initialize({
+              startOnLoad: false,
+            });
+            console.log('Mermaid loaded successfully');
+            return mermaid;
+          })
+          .catch((error) => {
+            console.error('Mermaid failed to load:', error);
+            window.mermaidPromise = false;
+            return null;
+          });
+      }
+      return window.mermaidPromise;
+    };
+
+    const renderMermaidDiagrams = (elements) => {
+      if (!elements || elements.length === 0) {
+        return Promise.resolve();
+      }
+
+      return loadMermaid().then(mermaid => {
+        if (!mermaid) return;
+        return mermaid.run({ nodes: Array.from(elements) })
+          .catch(err => console.error('Error rendering mermaid diagrams:', err));
+      });
+    };
+
+    const setupMermaidObserver = () => {
+      const observer = new MutationObserver((mutations) => {
+        let newMermaidElements = [];
+        
+        mutations.forEach(mutation => {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeType === 1 && node.classList && 
+                  node.classList.contains('mermaid')) {
+                newMermaidElements.push(node);
+              }
+              
+              if (node.nodeType === 1 && node.querySelectorAll) {
+                const mermaidInNode = node.querySelectorAll('.mermaid');
+                if (mermaidInNode.length) {
+                  newMermaidElements = [...newMermaidElements, ...mermaidInNode];
+                }
+              }
+            });
+          }
+        });
+        
+        if (newMermaidElements.length > 0) {
+          renderMermaidDiagrams(newMermaidElements);
+        }
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      
+      return observer;
+    };
+
+    // Initialize on DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const existingDiagrams = document.querySelectorAll('.mermaid');
+      if (existingDiagrams.length > 0) {
+        renderMermaidDiagrams(existingDiagrams);
+      }
+      
+      setupMermaidObserver();
+    });
+
+  </script>
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+        const copyButtonBody = element.querySelector('.function-btn-body');
+        const tooltipText = element.querySelector(".tooltiptext");
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+        copyButtonBody.innerHTML = `
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="2 2 22 22"
+  >
+    <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875
+    L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z"></path>
+  </svg>
+`;
+        console.log("Running tooltip");
+        tooltipText.innerText  = `Copied!`;
+        setTimeout(() => {
+            copyButtonBody.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "/>
+    </g>
+</svg>
+`;
+            tooltipText.innerText  = `Copy`;
+        }, 3000);
+    }
+    </script>
+</html>

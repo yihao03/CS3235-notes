@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html data-dark-mode="true" data-code-theme="light">
+<head>
+    <script src="/CS3235-notes/markbind/js/theme-manager.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 7.2.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title> | CS3235 notes</title> <link rel="stylesheet" href="/CS3235-notes/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/CS3235-notes/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    
+    
+    <link rel="stylesheet" id="markbind-highlight-light" href="/CS3235-notes/markbind/css/codeblock-light.min.css">
+    <link rel="stylesheet" id="markbind-highlight-dark" href="/CS3235-notes/markbind/css/codeblock-dark.min.css">
+    <script src="/CS3235-notes/markbind/js/code-theme.js"></script><link rel="stylesheet" href="/CS3235-notes/markbind/css/markbind.min.css"><link rel="stylesheet" href="/CS3235-notes/plugins/codeBlockCopyButtons/codeBlockButtons.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/CS3235-notes/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/main.css">
+<link rel="stylesheet" href="/CS3235-notes/stylesheets/study.css">
+</head>
+<script>
+  const baseUrl = '/CS3235-notes'
+</script>
+<body 
+   data-bs-spy="scroll" data-bs-target="#mb-page-nav" data-bs-offset="100"  
+  data-code-theme="light">
+<div id="app"><!--[--><header sticky><div data-v-94b60ff6><nav class="navbar navbar-expand-md d-print-none navbar-dark bg-dark" data-v-94b60ff6><div class="container-fluid" data-v-94b60ff6><div class="navbar-left" data-v-94b60ff6><!--[--><a href="/CS3235-notes/index.html" class="navbar-brand">CS3235 notes</a><!--]--></div><div class="navbar-default" data-v-94b60ff6><ul class="navbar-nav me-auto mt-2 mt-lg-0" data-v-94b60ff6><!--[--> <li><a href="/CS3235-notes/memory_vulnerabilities/README.html" class="nav-link">Memory safety</a></li> <li><a href="/CS3235-notes/part2/webbook-7-12/README.html" class="nav-link">Sandboxing to cryptography</a></li>  <!--]--></ul></div><div class="navbar-right" data-v-94b60ff6><ul class="navbar-nav" data-v-94b60ff6><!--[--><li><form class="navbar-form" role="search"><div style="position:relative;" class="dropdown" data-v-103d5c4e><!--[--><input value="" data-bs-toggle="dropdown" type="text" class="form-control" placeholder="Search notes" autocomplete="off" data-v-103d5c4e><div class="form-control placeholder-div-hidden" data-v-103d5c4e>Search notes</div><!--]--><ul class="dropdown-menu search-dropdown-menu dropdown-menu-hidden dropdown-menu-end" data-v-103d5c4e><!--[--><!--]--></ul></div></form></li><!--]--></ul><!----></div></div></nav><div style="display:none;" class="lower-navbar-container" data-v-94b60ff6><!--[--><!----><!----><!--]--></div></div></header> <div id="flex-body"><nav id="site-nav" aria-label="Chapters" data-v-6b1b63d2><!--[--><div class="site-nav-top">Course notes</div> <div class="nav-component slim-scroll"><div class="site-nav-root"><!--[--><ul class="site-nav-list site-nav-list-root" data-v-6b1b63d2><!--[--><li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/index.html">Overview</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Memory safety 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/introduction-0.html">0. Introduction</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial-1a1b.html">1A/1B. Spatial errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal-2.html">2. Temporal errors</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/exploits-3.html">3. Memory exploits</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">4. Partial safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/full-safety-5.html">5. Full safety</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/rust-6.html">6. Rust</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Sandboxing and isolation 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/07-sandboxing.html">7. Sandboxing</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/08-policies.html">8. Policies</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/09-capabilities.html">9. Capabilities</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/10-virtual-machines.html">10. Virtual machines</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/11-tee.html">11. Trusted execution environments</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/12-cryptography.html">12. Cryptography</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Revision 
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/cheatsheet.html">Memory safety cheatsheet</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/review-checkpoints.html">Review checkpoints</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/webbook-7-12/INDEX.html">Topics 7 to 12 index</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/prerequisites.html">Prerequisites</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/assignment-overview.html">Assignment</a></div></li></ul></li> <li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Original sketches
+
+<div class="site-nav-dropdown-btn-container"><i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode.parentNode, false); event.stopPropagation();"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div></div><ul class="site-nav-dropdown-container site-nav-list"><li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/c_basics.html">C basics</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/spatial.html">Spatial</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/memory_vulnerabilities/temporal.html">Temporal</a></div></li> <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/CS3235-notes/part2/2a.html">Sandboxing</a></div></li></ul></li><!--]--><!--v-if--></ul><!--]--></div></div><!--]--><!--v-if--></nav> <main id="content-wrapper"><div data-v-9ff38b52><nav aria-label="breadcrumb" class="breadcrumb-divider" data-v-9ff38b52><ol class="breadcrumb" data-v-9ff38b52><li class="notlink breadcrumb-marker" data-v-9ff38b52> ››   </li><!--[--><!--]--></ol></nav></div> <h1 id="spatial-memory-errors">Spatial Memory Errors<a class="fa fa-anchor" href="#spatial-memory-errors" onclick="event.stopPropagation()"></a></h1> <p><a href="https://compsec.kisp-lab.org/Memory-Safety-Webbook/01a-spatial-memory-errors.dc.html#bg-group">textbook spatial memory vulnerabilities</a>
+Reading/writing memory outside the intended bounds of a memory segment.<br>
+Memory leak is <strong>not</strong> a memory-safety issue</p> <h2 id="identifying-memory-segments-from-process-memory-dump">Identifying memory segments from process memory dump<a class="fa fa-anchor" href="#identifying-memory-segments-from-process-memory-dump" onclick="event.stopPropagation()"></a></h2> <p>look at <code class="hljs inline no-lang">proc/&lt;pid&gt;/maps</code> to identify memory segments of a process</p> <p>decide the memory segment based on the permissions:</p> <ul><li>stack: rw-p</li> <li>heap: rw-p</li> <li>data: r--p</li> <li>text: r-xp</li></ul> <h2 id="types">Types<a class="fa fa-anchor" href="#types" onclick="event.stopPropagation()"></a></h2> <h3 id="buffer-overflow">Buffer overflow<a class="fa fa-anchor" href="#buffer-overflow" onclick="event.stopPropagation()"></a></h3> <ul><li><p><strong>scanf()/strcpy()</strong>: the input buffer is not checked for size, so if the input is larger than the buffer, it will overflow into adjacent memory.</p> <ul><li>some &#39;checks&#39; may fail due to integer overflow which could be due to type narrowing or signedness issues.</li> <li>overwriting the return address on the stack can lead to arbitrary code execution.</li></ul></li> <li><p><strong>printf()</strong>: if the format string is user controlled, it can be used to read/write arbitrary memory locations.</p> <ul><li><p>read: supplying extra format specifiers (e.g. <code class="hljs inline no-lang">%x</code>) will read from the stack and print the values.</p></li> <li><p>fix: use a fixed format string (e.g. <code class="hljs inline no-lang">printf(&quot;%s&quot;, user_input)</code>) to prevent reading from the stack.</p> <pre><code class="hljs C"><span><span class="hljs-built_in">printf</span>(localStr);          <span class="hljs-comment">// the user picks the specifiers</span>
+</span><span><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, localStr);    <span class="hljs-comment">// the user is now just data</span>
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre></li> <li><p>write: supplying <code class="hljs inline no-lang">%n</code> format specifier will write the number of bytes written so far</p></li></ul></li></ul> <h3 id="return-oriented-programming-rop">Return oriented programming (ROP)<a class="fa fa-anchor" href="#return-oriented-programming-rop" onclick="event.stopPropagation()"></a></h3> <p>Unable to inject shellcode into the stack due to NX/DEP hence we reuse existing code to perform arbitary operations.</p> <p>Gadgets: existing, small snippets of assembly instructions that end with a return instruction. These gadgets can be chained together to perform arbitrary operations.</p> <ul><li>manipulate stack to modify the return address to point to the desired gadget</li> <li>place the arguments for the gadget on the stack in the correct order to set up parameters in the registers as per calling convention</li> <li>Turing complete: by chaining together enough gadgets, we can perform arbitrary computation</li> <li>often impractical to write ROP chains by hand, so tools like <a href="https://github.com/JonathanSalwan/ROPgadget">ROPgadget</a> and Ropper can be used to automate the process of finding gadgets and generating ROP chains.</li></ul> <h3 id="heap-overflow">Heap Overflow<a class="fa fa-anchor" href="#heap-overflow" onclick="event.stopPropagation()"></a></h3> <ul><li>Allocated memory consists of the metadata (size + flag = 8 byte)</li> <li>Total size of the allocated block is multiple of 16 bytes on glibc 64-bit systems</li> <li>After freeing the block, the metadata is used to link the free blocks together in a linked list</li></ul> <p>overwriting the pointer to free/occupied memory</p> <h3 id="data-oriented-attacks">Data oriented attacks<a class="fa fa-anchor" href="#data-oriented-attacks" onclick="event.stopPropagation()"></a></h3> <p>non-control flow attacks that manipulate data in memory to achieve a desired effect without changing the control flow of the program.</p> <p>e.g. Heartbleed</p> <h3 id="c-type-casting">C++ Type casting<a class="fa fa-anchor" href="#c-type-casting" onclick="event.stopPropagation()"></a></h3> <p>Downcasting a pointer to a derived class that inherits multiple base classes can lead to undefined behavior if the pointer is not actually pointing to an object of the derived class. This can result in accessing memory outside the bounds of the intended object.</p> <ul><li>write to memory outside the bounds of the intended object, which can lead to memory corruption and undefined behavior.</li> <li>downcast the second base class (class B) pointer to the derived class pointer, which will lead to accessing memory outside the bounds of the intended object. (before the class B)</li></ul> <h2 id="mitigations">Mitigations<a class="fa fa-anchor" href="#mitigations" onclick="event.stopPropagation()"></a></h2> <h3 id="position-independent-executable-pie">Position Independent Executable (PIE)<a class="fa fa-anchor" href="#position-independent-executable-pie" onclick="event.stopPropagation()"></a></h3> <p>Add a random offset to the base address of the executable at load time. This makes it harder for an attacker to predict the location of code in memory, making it more difficult to exploit memory corruption vulnerabilities.</p> <h3 id="stack-canary">Stack canary<a class="fa fa-anchor" href="#stack-canary" onclick="event.stopPropagation()"></a></h3> <p>Known value between locals and saved return address on the stack. The value is checked before returning. Usually placed right after the frame pointer (ebp) and before the saved return address. If the value is changed, the program will terminate with a stack smashing detected error.</p> <p>Enabled by default: objdump a simple program to inspect</p> <blockquote><p>Original stack-canary figure is missing (<code class="hljs inline no-lang">canaries.png</code>). See the <a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">stack-canary notes</a>.<br>
+disable using flag <code class="hljs inline no-lang">-fno-stack-protector</code> when compiling</p></blockquote> <ul><li>stack first byte is 0x00 to prevent string overflows from overwriting the canary value</li> <li>enabling canaries can move locals around, e.g. placing buffers after the canary to prevent overflows from overwriting the canary value.</li></ul> <h3 id="libsafe">Libsafe<a class="fa fa-anchor" href="#libsafe" onclick="event.stopPropagation()"></a></h3> <p>intercepts calls to unsafe functions (e.g. strcpy, strcat, sprintf) and check:</p> <p><code class="hljs inline no-lang">|frame-pointer – dest| &gt; strlen(src)</code></p> <p>otherwise abort</p> <h3 id="guard-pages">Guard Pages<a class="fa fa-anchor" href="#guard-pages" onclick="event.stopPropagation()"></a></h3> <p>Pages with No permissions (NR,NW,NX) are placed between memory segments to prevent overflows from one segment to another.</p> <ul><li>Attacker can only write linearly</li> <li>All written values are not used in dereferences</li></ul> <h3 id="non-executable-data-dep">Non-executable Data DEP<a class="fa fa-anchor" href="#non-executable-data-dep" onclick="event.stopPropagation()"></a></h3> <p>DEP/W<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex" v-pre>\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">⊕</span></span></span></span></eq>X: use NX bit<br>
+prevents code injection</p> <h3 id="address-space-layout-randomization-aslr">Address Space Layout Randomization (ASLR)<a class="fa fa-anchor" href="#address-space-layout-randomization-aslr" onclick="event.stopPropagation()"></a></h3> <ul><li>Assumption:
+<ul><li>Attacker can write arbitrary places</li></ul></li> <li>Defense Goal:
+<ul><li>Attacker can’t predict location accessed in attack</li></ul></li> <li>Mechanism:
+<ul><li>At load time, randomize stack, code, bss, etc.</li> <li>Randomize heap location at runtime</li> <li>Attacker can&#39;t predict location accessed</li></ul></li></ul> <h3 id="inline-reference-monitor-irm">Inline reference monitor (IRM)<a class="fa fa-anchor" href="#inline-reference-monitor-irm" onclick="event.stopPropagation()"></a></h3> <p><strong>Reference monitor:</strong> code that checks all references to an object
+<strong>Syscall sandbox:</strong> restricts the set of syscalls that can be made by a process</p> <p>helps w Fault isolation, but not memory safety</p> <h4 id="software-fault-isolation-sfi">Software Fault Isolation (SFI)<a class="fa fa-anchor" href="#software-fault-isolation-sfi" onclick="event.stopPropagation()"></a></h4> <blockquote><p>Original SFI figure is missing (<code class="hljs inline no-lang">fast-sfi.png</code>). See the <a href="/CS3235-notes/memory_vulnerabilities/partial-safety-4.html">SFI explanation</a>.</p></blockquote> <p>the coeercion can be bypassed if we jump after the check<br>
+Fix: use dedicaged registers to hold instead of ebp</p> <p>Can disassemble the code to check for the following patterns:</p> <ol><li><p>Check if these IRM instructions exist before memory access</p> <pre><code class="hljs"><span>and reg1, 0x00ff
+</span><span>or reg1, 0xbe00
+</span><span>mov (reg1), eax
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre></li> <li><p>All memory accesses use the dedicated register</p></li> <li><p>The dedicated registers are used only in IRM instructions</p></li></ol> <h5 id="security-principle-minimize-trusted-code-base-tcb">Security Principle: Minimize Trusted Code Base (TCB)<a class="fa fa-anchor" href="#security-principle-minimize-trusted-code-base-tcb" onclick="event.stopPropagation()"></a></h5> <ul><li>Reduce what one needs to trust (in this case, do not have to trust the compiler)</li> <li>Separate verifier from the enforcement</li> <li>Smaller the TCB, the better the design</li></ul> <p>Do not have to trust the compiler to perform fast SFI, we can just look at the disassembly to check for the IRM instructions and dedicated register usage.</p> <h4 id="control-flow-inspection-cfi">Control Flow Inspection (CFI)<a class="fa fa-anchor" href="#control-flow-inspection-cfi" onclick="event.stopPropagation()"></a></h4> <p>Mitigates control flow attacks</p> <p><strong>Challenges:</strong> Diffidult to implement in practice due to inability to determine all possible targets of indirect jumps/calls, compiler optimizatins, runtime compiler generated code, etc.</p> <h5 id="abadi-et-al-inline-cfi">Abadi et al. - inline CFI<a class="fa fa-anchor" href="#abadi-et-al-inline-cfi" onclick="event.stopPropagation()"></a></h5> <pre><code class="hljs"><span>cmp ecx, 0x80480aa   ; is the computed target the one allowed destination?
+</span><span>jne error_label      ; not allowed -&gt; abort / halt
+</span><span>jmp ecx              ; allowed -&gt; do the original jump
+</span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
+    <div class="function-btn-body">
+    
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "></path>
+    </g>
+</svg>
+
+    </div>
+    </div>
+    </button></div></pre><h5 id="randomized-tag">Randomized tag<a class="fa fa-anchor" href="#randomized-tag" onclick="event.stopPropagation()"></a></h5> <ol><li>Each code block must start with a tag</li> <li>The tag should be a random, secret value</li> <li>If f can jump to block g,h,…</li> <li>Then blocks g,h,… should have the same tag</li></ol> <h3 id="fat-pointer-pointer-metadata-e-g-bounds">Fat pointer: pointer + metadata (e.g. bounds)<a class="fa fa-anchor" href="#fat-pointer-pointer-metadata-e-g-bounds" onclick="event.stopPropagation()"></a></h3> <p>used by rust</p> <p>Store the bounds of the memory segment in the pointer itself, so that any dereference can be checked against the bounds.</p> <ul><li>pointer arithmetic is allowed beyond the bounds, as long as pointer is not dereferenced</li> <li>pointers of different size-types of diff bounds</li> <li>trade offs:
+<ul><li>extra memory overhead for storing the metadata</li></ul></li></ul> <p>safe typecasts require update to pointer bounds</p></main> <nav id="page-nav" aria-label="On this page" data-v-6b1b63d2><!--[--><div class="nav-component slim-scroll"><a class="navbar-brand page-nav-title" href="#">On this page</a> <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-6b1b63d2><!--[--><a class="nav-link py-1" href="#spatial-memory-errors">Spatial Memory Errors‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#identifying-memory-segments-from-process-memory-dump">Identifying memory segments from process memory dump‎</a> <a class="nav-link py-1" href="#types">Types‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#buffer-overflow">Buffer overflow‎</a> <a class="nav-link py-1" href="#return-oriented-programming-rop">Return oriented programming (ROP)‎</a> <a class="nav-link py-1" href="#heap-overflow">Heap Overflow‎</a> <a class="nav-link py-1" href="#data-oriented-attacks">Data oriented attacks‎</a> <a class="nav-link py-1" href="#c-type-casting">C++ Type casting‎</a></nav> <a class="nav-link py-1" href="#mitigations">Mitigations‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap"><a class="nav-link py-1" href="#position-independent-executable-pie">Position Independent Executable (PIE)‎</a> <a class="nav-link py-1" href="#stack-canary">Stack canary‎</a> <a class="nav-link py-1" href="#libsafe">Libsafe‎</a> <a class="nav-link py-1" href="#guard-pages">Guard Pages‎</a> <a class="nav-link py-1" href="#non-executable-data-dep">Non-executable Data DEP‎</a> <a class="nav-link py-1" href="#address-space-layout-randomization-aslr">Address Space Layout Randomization (ASLR)‎</a> <a class="nav-link py-1" href="#inline-reference-monitor-irm">Inline reference monitor (IRM)‎</a> <a class="nav-link py-1" href="#fat-pointer-pointer-metadata-e-g-bounds">Fat pointer: pointer + metadata (e.g. bounds)‎</a></nav></nav><!--]--><!--v-if--></nav></div><!--]--><!--v-if--></nav> <div class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;" aria-hidden="true"><!--[--><i class="fas fa-arrow-circle-up"></i><!--]--></div></div> <footer><div class="text-center"><small>CS3235 study notes. Built with <a href="https://markbind.org/">MarkBind</a>.</small></div></footer><!--]--></div>
+</body><script src="/CS3235-notes/markbind/js/bootstrap-utility.min.js"></script>
+<script src="/CS3235-notes/markbind/js/polyfill.min.js"></script>
+<script src="/CS3235-notes/markbind/js/vue.global.prod.min.js"></script>
+<script src="/CS3235-notes/markbind/js/markbind.min.js"></script>
+<script src="spatial.page-vue-render.js"></script>
+<script>
+  MarkBind.setupWithSearch()
+</script>
+    <script type="module">
+    window.mermaidPromise = null;
+    
+    const loadMermaid = () => {
+      if (window.mermaidPromise === null) {
+        window.mermaidPromise = import('https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs')
+          .then(({ default: mermaid }) => {
+            mermaid.initialize({
+              startOnLoad: false,
+            });
+            console.log('Mermaid loaded successfully');
+            return mermaid;
+          })
+          .catch((error) => {
+            console.error('Mermaid failed to load:', error);
+            window.mermaidPromise = false;
+            return null;
+          });
+      }
+      return window.mermaidPromise;
+    };
+
+    const renderMermaidDiagrams = (elements) => {
+      if (!elements || elements.length === 0) {
+        return Promise.resolve();
+      }
+
+      return loadMermaid().then(mermaid => {
+        if (!mermaid) return;
+        return mermaid.run({ nodes: Array.from(elements) })
+          .catch(err => console.error('Error rendering mermaid diagrams:', err));
+      });
+    };
+
+    const setupMermaidObserver = () => {
+      const observer = new MutationObserver((mutations) => {
+        let newMermaidElements = [];
+        
+        mutations.forEach(mutation => {
+          if (mutation.addedNodes.length) {
+            mutation.addedNodes.forEach(node => {
+              if (node.nodeType === 1 && node.classList && 
+                  node.classList.contains('mermaid')) {
+                newMermaidElements.push(node);
+              }
+              
+              if (node.nodeType === 1 && node.querySelectorAll) {
+                const mermaidInNode = node.querySelectorAll('.mermaid');
+                if (mermaidInNode.length) {
+                  newMermaidElements = [...newMermaidElements, ...mermaidInNode];
+                }
+              }
+            });
+          }
+        });
+        
+        if (newMermaidElements.length > 0) {
+          renderMermaidDiagrams(newMermaidElements);
+        }
+      });
+      
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+      
+      return observer;
+    };
+
+    // Initialize on DOM content loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const existingDiagrams = document.querySelectorAll('.mermaid');
+      if (existingDiagrams.length > 0) {
+        renderMermaidDiagrams(existingDiagrams);
+      }
+      
+      setupMermaidObserver();
+    });
+
+  </script>
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+        const copyButtonBody = element.querySelector('.function-btn-body');
+        const tooltipText = element.querySelector(".tooltiptext");
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+        copyButtonBody.innerHTML = `
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="2 2 22 22"
+  >
+    <path d="M 19.28125 5.28125 L 9 15.5625 L 4.71875 11.28125 L 3.28125 12.71875 L 8.28125 17.71875
+    L 9 18.40625 L 9.71875 17.71875 L 20.71875 6.71875 Z"></path>
+  </svg>
+`;
+        console.log("Running tooltip");
+        tooltipText.innerText  = `Copied!`;
+        setTimeout(() => {
+            copyButtonBody.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18" viewBox="0 0 18 18" version="1.1">
+    <g id="surface1">
+      <path d="M 11.273438 0 L 2.546875 0 C 1.746094 0 1.089844 0.613281 1.089844
+      1.363281 L 1.089844 10.910156 L 2.546875 10.910156 L 2.546875 1.363281 L 11.273438
+      1.363281 Z M 13.453125 2.726562 L 5.453125 2.726562 C 4.65625 2.726562 4 3.339844 4
+      4.089844 L 4 13.636719 C 4 14.386719 4.65625 15 5.453125 15 L 13.453125 15 C 14.253906
+      15 14.910156 14.386719 14.910156 13.636719 L 14.910156 4.089844 C 14.910156 3.339844
+      14.253906 2.726562 13.453125 2.726562 Z M 13.453125 13.636719 L 5.453125 13.636719 L
+      5.453125 4.089844 L 13.453125 4.089844 Z M 13.453125 13.636719 "/>
+    </g>
+</svg>
+`;
+            tooltipText.innerText  = `Copy`;
+        }, 3000);
+    }
+    </script>
+</html>
