@@ -1,0 +1,37 @@
+name: Publish notes
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: npm install --global markbind-cli@7.2.1
+      - name: Publish gh-pages branch
+        run: markbind deploy --ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify published branch
+        run: |
+          git fetch origin gh-pages
+          git cat-file -e origin/gh-pages:index.html
+          git show origin/gh-pages:index.html | grep -F '/CS3235-notes/'
+      - name: Request Pages build
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

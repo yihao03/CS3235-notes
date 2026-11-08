@@ -1,0 +1,75 @@
+{
+  "baseUrl": "/CS3235-notes",
+  "titleSuffix": " | CS3235 notes",
+  "enableSearch": true,
+  "headingIndexingLevel": 4,
+  "globalOverride": {
+    "pageNav": 3,
+    "pageNavTitle": "On this page"
+  },
+  "style": {
+    "darkMode": true,
+    "codeTheme": "light",
+    "codeLineNumbers": false
+  },
+  "plugins": [
+    "mermaid",
+    "codeBlockCopyButtons"
+  ],
+  "ignore": [
+    "_markbind/**",
+    "_site/**",
+    ".agents/**",
+    ".git/**",
+    ".codex/**",
+    ".aws/**",
+    "node_modules/**",
+    "site.json",
+    "**/*.md",
+    "**/*.njk",
+    "SITE_README.md",
+    "original-notes/**",
+    "contents/**",
+    ".github/**"
+  ],
+  "pages": [
+    {
+      "src": "index.md",
+      "title": "Computer security"
+    },
+    {
+      "src": "404.md",
+      "searchable": "no"
+    },
+    {
+      "glob": "memory_vulnerabilities/*.md"
+    },
+    {
+      "src": "part2/2a.md",
+      "title": "Sandboxing: original sketch"
+    },
+    {
+      "glob": "part2/webbook-7-12/*.md",
+      "globExclude": [
+        "part2/webbook-7-12/coverage-*.md",
+        "part2/webbook-7-12/NOTE_WRITING_GUIDE.md"
+      ]
+    },
+    {
+      "glob": "part2/webbook-7-12/coverage-*.md",
+      "searchable": "no"
+    },
+    {
+      "src": "part2/webbook-7-12/NOTE_WRITING_GUIDE.md",
+      "searchable": "no"
+    }
+  ],
+  "intrasiteLinkValidation": {
+    "enabled": true
+  },
+  "deploy": {
+    "repo": "https://github.com/yihao03/CS3235-notes.git",
+    "branch": "gh-pages",
+    "message": "Publish CS3235 notes"
+  }
+}
